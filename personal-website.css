@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: var(--dark);
+    background-color: var(--light);
     color: white;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;  
@@ -15,7 +15,7 @@ body{
 }
 
 .section-segmenter:nth-child(even){
-    background-color: var(--light);
+    background-color: var(--dark);
     position: relative;
     left: 0;
     right: 0;
