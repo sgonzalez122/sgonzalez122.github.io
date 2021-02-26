@@ -15,12 +15,12 @@ body{
 }
 
 .section-segmenter:nth-child(even){
-    background-color: rgb(3, 85, 148);
+    background-color: var (--light);
     position: relative;
     left: 0;
     right: 0;
     z-index: 0;
-    padding: 15px 0px 15px 0px;
+    padding: 15px;
 }
 
 .section-segmenter:nth-child(odd){
