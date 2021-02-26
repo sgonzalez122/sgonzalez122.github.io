@@ -14,8 +14,13 @@ body{
     margin: 0;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 .section-segmenter:nth-child(even){
-    background-color: green;
+    background-color: blue;
     position: relative;
     left: 0;
     right: 0;
