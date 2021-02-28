@@ -16,7 +16,7 @@ body{
 
 
 .section-segmenter:nth-child(even){
-    background-color: lightgreen;
+    background-color: var(--light);
     position: relative;
     left: 0;
     right: 0;
@@ -26,7 +26,7 @@ body{
 
 @media only screen and (max-width:600px){
     .section-segmenter:nth-child(even){
-        background-color: red;
+        background-color: var(--light);
         position: relative;
         left: 0;
         right: 0;
