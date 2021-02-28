@@ -15,7 +15,7 @@ body{
 }
 
 .section-segmenter:nth-child(even){
-    background-color: blue;
+    background-color: var(--light);
     position: relative;
     left: 0;
     right: 0;
@@ -76,7 +76,7 @@ content: '\00B7';
     border: 0px solid black;
     border-collapse: collapse;
     margin-top: 15px;
-    
+    width: 1300px;
     
 }
 #navbar a{
@@ -114,7 +114,7 @@ content: '\00B7';
     border: var(--noborder);
     border-collapse: collapse;
     padding: 20px;
-
+    width: 1200px;
 }
 
 #bio-table th{
