@@ -15,13 +15,24 @@ body{
 }
 
 .section-segmenter:nth-child(even){
-    background-color: var(--light);
+    background-color: blue;
     position: relative;
     left: 0;
     right: 0;
     z-index: 0;
     padding: 15px;
-    width: 1300px;
+}
+
+@media only screen and (max-width:768){
+    .section-segmenter:nth-child(even){
+        background-color: blue;
+        position: relative;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        padding: 15px;
+        width: 1300px;
+    }
 }
 
 .section-segmenter:nth-child(odd){
