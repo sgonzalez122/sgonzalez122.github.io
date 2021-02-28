@@ -21,7 +21,7 @@ body{
 }
 
 .section-segmenter:nth-child(even){
-    background-color: lightblue;
+    background-color: lightgreen;
     position: relative;
     left: 0;
     right: 0;
