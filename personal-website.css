@@ -16,7 +16,7 @@ body{
 
 
 .section-segmenter:nth-child(even){
-    background-color: blue;
+    background-color: lightgreen;
     position: relative;
     left: 0;
     right: 0;
@@ -24,7 +24,7 @@ body{
     padding: 15px;
 }
 
-@media only screen and (min-width:600px){
+@media only screen and (max-width:600px){
     .section-segmenter:nth-child(even){
         background-color: red;
         position: relative;
