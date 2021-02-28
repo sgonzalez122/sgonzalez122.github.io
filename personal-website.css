@@ -21,6 +21,7 @@ body{
     right: 0;
     z-index: 0;
     padding: 15px;
+    width: 1300px;
 }
 
 .section-segmenter:nth-child(odd){
