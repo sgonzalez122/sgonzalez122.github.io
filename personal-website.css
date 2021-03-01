@@ -20,7 +20,7 @@ html, body {
 }
 
 .section-segmenter:nth-child(even){
-    background-color: lightgreen;
+    background-color: var(--light);
     position: relative;
     left: 0;
     right: 0;
@@ -119,11 +119,6 @@ content: '\00B7';
     padding-top: 30px;
     /*padding-bottom: 300px;*/
       
-}
-
-#bio{
-    padding-left: 60px;
-    padding-right: 60px;
 }
 
 #avatar{
@@ -315,11 +310,6 @@ content: '\00B7';
 
     
 /* #region Contact Info*/
-#contact{
-    padding-left: 60px;
-    padding-right: 60px;
-}
-
 #contact-table{
     border: var(--border);
     border-collapse: collapse;
