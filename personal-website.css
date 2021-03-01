@@ -20,7 +20,7 @@ html, body {
 }
 
 .section-segmenter:nth-child(even){
-    background-color: var(--light);
+    background-color: lightblue;
     position: relative;
     left: 0;
     right: 0;
