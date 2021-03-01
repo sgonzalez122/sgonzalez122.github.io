@@ -193,7 +193,8 @@ content: '\00B7';
 
 /* #region Experience*/
 #experience{
-    padding: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px
 }
 #experience-table{
     border: var(--noborder);
