@@ -14,6 +14,11 @@ body{
     margin: 0;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 .section-segmenter:nth-child(even){
     background-color: var(--light);
     position: relative;
@@ -123,14 +128,14 @@ content: '\00B7';
 }
 
 #bio-table {
-    border: var(--noborder);
+    border: var(--border);
     border-collapse: collapse;
     padding: 20px;
     width: 1200px;
 }
 
 #bio-table th{
-    border: var(--noborder);
+    border: var(--border);
     border-collapse: collapse;
     /*float: left;*/
     text-align: left;
@@ -144,7 +149,7 @@ content: '\00B7';
 }
 
 #bio-table td{
-    border: var(--noborder);
+    border: var(--border);
     border-collapse: collapse;
     font-weight: normal;
     font-size: 19px;
@@ -160,14 +165,14 @@ content: '\00B7';
 
 /* #region Skills*/
 #skills-table{
-    border: var(--noborder);
+    border: var(--border);
     border-collapse: collapse;
     padding: 20px;
     width: 1200px;
 }
 
 #skills-table th, #skills-table td{
-    border: var(--noborder);
+    border: var(--border);
     border-collapse: collapse;
     /*float: left;*/
     text-align: center;
@@ -196,14 +201,14 @@ content: '\00B7';
     padding: 60px;
 }
 #experience-table{
-    border: var(--noborder);
+    border: var(--border);
     border-collapse: collapse;
     padding: 20px;
     width: 1200px;    
 }
 
 #experience-table th{
-    border: var(--noborder);
+    border: var(--border);
     border-collapse: collapse;
     /*float: left;*/
     text-align: left;
@@ -215,7 +220,7 @@ content: '\00B7';
 }
 
 #experience-table td{
-    border: var(--noborder);
+    border: var(--border);
     border-collapse: collapse;
     /*float: left;*/
     text-align: left;
@@ -235,14 +240,14 @@ content: '\00B7';
 }
 
 #publications-table{
-    border: var(--noborder);
+    border: var(--border);
     border-collapse: collapse;
     padding: 20px;
     width: 1200px; 
 }
 
 #publications-table th{
-    border: var(--noborder);
+    border: var(--border);
     border-collapse: collapse;
     /*float: left;*/
     text-align: left;
@@ -255,7 +260,7 @@ content: '\00B7';
 }
 
 #publications-table td{
-    border: var(--noborder);
+    border: var(--border);
     border-collapse: collapse;
     /*float: left;*/
     text-align: left;
@@ -271,14 +276,14 @@ content: '\00B7';
 
 /* #region Projects*/
 #projects-table{
-    border: var(--noborder);
+    border: var(--border);
     border-collapse: collapse;
     padding: 20px;
     width: 1200px; 
 }
 
 #projects-table th{
-    border: var(--noborder);
+    border: var(--border);
     border-collapse: collapse;
     /*float: left;*/
     text-align: left;
@@ -290,7 +295,7 @@ content: '\00B7';
 }
 
 #projects-table td{
-    border: var(--noborder);
+    border: var(--border);
     border-collapse: collapse;
     /*float: left;*/
     text-align: left;
@@ -306,7 +311,7 @@ content: '\00B7';
     
 /* #region Contact Info*/
 #contact-table{
-    border: var(--noborder);
+    border: var(--border);
     border-collapse: collapse;
     padding: 20px;
     width: 1200px;
@@ -314,7 +319,7 @@ content: '\00B7';
 }
 
 #contact-table th, #contact-table td{
-    border: var(--noborder);
+    border: var(--border);
     border-collapse: collapse;
     /*float: left;*/
     text-align: left;
