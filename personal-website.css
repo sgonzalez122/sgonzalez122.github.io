@@ -121,6 +121,10 @@ content: '\00B7';
       
 }
 
+#bio{
+    padding: 60px;
+}
+
 #avatar{
     width: 250px;
     height: 250px;
@@ -310,6 +314,10 @@ content: '\00B7';
 
     
 /* #region Contact Info*/
+#contact{
+    padding: 60px;
+}
+
 #contact-table{
     border: var(--border);
     border-collapse: collapse;
