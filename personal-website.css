@@ -93,6 +93,7 @@ content: '\00B7';
     border: var(--border);
     border-collapse: collapse;
     padding: 20px;
+    width: 1200px;
 }
 
 #geolyte-table th{
