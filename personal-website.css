@@ -87,15 +87,6 @@ content: '\00B7';
     margin-left: auto;
     margin-right: auto;
 }
-
-.geolyte-helper{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
 /*#region Navigation Table*/
 #nav-table{
     border: 0px solid black;
