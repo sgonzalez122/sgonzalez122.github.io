@@ -15,7 +15,7 @@ body{
 }
 
 .section-segmenter:nth-child(even){
-    background-color: var(--light);
+    background-color: lightblue;
     position: relative;
     left: 0;
     right: 0;
@@ -82,10 +82,19 @@ a.icon-params:hover{
 content: '\00B7';
 }
 
-.center {
+.geolyte-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width:600px){
+    .geolyte-center {
         display: block;
         margin-left: auto;
         margin-right: auto;
+        padding: 650px;
+    }
 }
 
 /*#region Navigation Table*/
