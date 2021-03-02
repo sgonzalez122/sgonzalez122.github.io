@@ -82,6 +82,11 @@ a.icon-params:hover{
 content: '\00B7';
 }
 
+.center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+}
 
 /*#region Navigation Table*/
 #nav-table{
