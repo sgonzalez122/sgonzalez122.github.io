@@ -88,20 +88,6 @@ content: '\00B7';
     margin-right: auto;
 }
 
-/*#region Projects Page*/
-#geolyte-table{
-    border: var(--border);
-    border-collapse: collapse;
-    padding: 20px;
-    width: 1200px;
-}
-
-#geolyte-table th{
-    border: var(--border);
-    border-collapse: collapse;
-}
-
-/*#endregion Projects Page*/
 /*#region Navigation Table*/
 #nav-table{
     border: 0px solid black;
