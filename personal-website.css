@@ -94,14 +94,7 @@ content: '\00B7';
     margin-right: auto;
 }
 
-@media only screen and (max-width:600px){
-    .geolyte-helper {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 650px;
-    }
-}
+
 
 /*#region Navigation Table*/
 #nav-table{
