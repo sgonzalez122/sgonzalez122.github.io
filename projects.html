@@ -10,6 +10,29 @@
         <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
         <link rel="icon" href="images/tab-icon/favicon-32x32.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            .contact-segmenter{
+                background-color: var(--light);
+                position: relative;
+                left: 0;
+                right: 0;
+                z-index: 0;
+                padding: 15px;
+            }
+
+            @media only screen and (max-width:600px){
+                .contact-segmenter{
+                    background-color: var(--light);
+                    position: relative;
+                    left: 0;
+                    right: 0;
+                    z-index: 0;
+                    padding: 15px;
+                    width: 1300px;
+                }
+            }   
+        </style>
     </head>
 <body>
 
@@ -54,7 +77,7 @@
 
 
 <!-- #region Contact Info-->
-<div class="contact section-segmenter" id="contact">
+<div class="contact contact-segmenter" id="contact">
     <table id="contact-table" align="center">
         <thead>	
             <tr>
