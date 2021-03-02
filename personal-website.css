@@ -103,11 +103,11 @@ content: '\00B7';
         display: block;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 500px;
+        padding-left: 300px;
     }
     .helper-text{
         text-align: center;
-        padding-left: 550px; 
+        padding-left: 350px; 
     }
 }
 /*#region Navigation Table*/
