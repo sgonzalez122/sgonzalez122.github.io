@@ -88,28 +88,19 @@ content: '\00B7';
     margin-right: auto;
 }
 
-.geolyte-helper{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+/*#region Projects Page*/
+#geolyte-table{
+    border: var(--border);
+    border-collapse: collapse;
+    padding: 20px;
 }
 
-.helper-text{
-    text-align: center;
+#geolyte-table th{
+    border: var(--border);
+    border-collapse: collapse;
 }
 
-@media only screen and (max-width:600px){
-    .geolyte-helper {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 300px;
-    }
-    .helper-text{
-        text-align: center;
-        padding-left: 350px; 
-    }
-}
+/*#endregion Projects Page*/
 /*#region Navigation Table*/
 #nav-table{
     border: 0px solid black;
