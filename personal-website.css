@@ -168,7 +168,7 @@ content: '\00B7';
     border: var(--noborder);
     border-collapse: collapse;
     padding: 20px;
-    width: 1200px;
+    width: 1300px;
 }
 
 #skills-table th, #skills-table td{
@@ -205,7 +205,7 @@ content: '\00B7';
     border: var(--noborder);
     border-collapse: collapse;
     padding: 20px;
-    width: 1200px;    
+    width: 1300px;    
 }
 
 #experience-table th{
@@ -244,7 +244,7 @@ content: '\00B7';
     border: var(--noborder);
     border-collapse: collapse;
     padding: 20px;
-    width: 1200px; 
+    width: 1300px; 
 }
 
 #publications-table th{
@@ -280,7 +280,7 @@ content: '\00B7';
     border: var(--noborder);
     border-collapse: collapse;
     padding: 20px;
-    width: 1200px; 
+    width: 1300px; 
 }
 
 #projects-table th{
@@ -315,7 +315,7 @@ content: '\00B7';
     border: var(--noborder);
     border-collapse: collapse;
     padding: 20px;
-    width: 1200px;
+    width: 1300px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
