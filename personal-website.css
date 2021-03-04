@@ -131,7 +131,7 @@ content: '\00B7';
     border: var(--noborder);
     border-collapse: collapse;
     padding: 20px;
-    width: 1200px;
+    width: 1300px;
 }
 
 #bio-table th{
