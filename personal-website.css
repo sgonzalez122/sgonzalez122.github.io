@@ -31,7 +31,7 @@ body{
         right: 0;
         z-index: 0;
         padding: 15px;
-        width: 1300px;
+        width: 1400px;
     }
 }
 
@@ -93,7 +93,7 @@ content: '\00B7';
     border: 0px solid black;
     border-collapse: collapse;
     margin-top: 15px;
-    width: 1300px;
+    width: 1400px;
     
 }
 #navbar a{
