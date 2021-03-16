@@ -5,13 +5,18 @@
     --dark: #23242c;
 }
 
-body{
+.body{
     background-color: var(--dark);
     color: white;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;  
     font-weight: normal;
     margin: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
 }
 
 .section-segmenter:nth-child(even){
@@ -23,6 +28,7 @@ body{
     padding: 15px;
 }
 
+/*
 @media only screen and (max-width:600px){
     .section-segmenter:nth-child(even){
         background-color: var(--light);
@@ -33,20 +39,20 @@ body{
         padding: 15px;
         width: 1400px;
     }
-}
+}*/
 
 .section-segmenter:nth-child(odd){
     padding: 15px;
 }
 
 h1, .section-title{
-    font-size: 2.24rem;
+    font-size: 3.75rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
 
 h2{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     color: rgba(255,255,255,.54)
@@ -93,7 +99,7 @@ content: '\00B7';
     border: 0px solid black;
     border-collapse: collapse;
     margin-top: 15px;
-    width: 1400px;
+    /*width: 1300px;*/
     
 }
 #navbar a{
@@ -131,7 +137,7 @@ content: '\00B7';
     border: var(--noborder);
     border-collapse: collapse;
     padding: 20px;
-    width: 1300px;
+    /*width: 1300px;*/
 }
 
 #bio-table th{
@@ -168,7 +174,7 @@ content: '\00B7';
     border: var(--noborder);
     border-collapse: collapse;
     padding: 20px;
-    width: 1300px;
+    /*width: 1300px;*/
 }
 
 #skills-table th, #skills-table td{
@@ -179,14 +185,14 @@ content: '\00B7';
     font-size: 20px;
     font-weight: normal;
     line-height: 28px;
-    width: 5.3%;
+    /*width: 5.3%;*/
     padding: 15px;
     word-break: break-word;
 }
 
 .skills-icons{
     color: #fd5961;
-    font-size: 5rem;
+    font-size: 8rem;
     text-decoration: none;
 }
 
@@ -199,13 +205,13 @@ content: '\00B7';
 /* #region Experience*/
 #experience{
     padding-top: 60px;
-    padding-bottom: 60px
+    padding-bottom: 60px;
 }
 #experience-table{
     border: var(--noborder);
     border-collapse: collapse;
     padding: 20px;
-    width: 1300px;    
+    /*width: 1300px;*/
 }
 
 #experience-table th{
@@ -218,6 +224,7 @@ content: '\00B7';
     line-height: 28px;
     padding: 15px;
     word-break: break-word;
+    
 }
 
 #experience-table td{
@@ -244,7 +251,7 @@ content: '\00B7';
     border: var(--noborder);
     border-collapse: collapse;
     padding: 20px;
-    width: 1300px; 
+    /*width: 1300px;*/
 }
 
 #publications-table th{
@@ -272,7 +279,7 @@ content: '\00B7';
     word-break: break-word;
     font-family: Arial, Helvetica, sans-serif;
 }
-/* #endregion Pub &Pres*/
+/* #endregion Pub & Pres*/
 
 
 /* #region Projects*/
@@ -280,7 +287,7 @@ content: '\00B7';
     border: var(--noborder);
     border-collapse: collapse;
     padding: 20px;
-    width: 1300px; 
+    /*width: 1200px;*/
 }
 
 #projects-table th{
@@ -315,7 +322,7 @@ content: '\00B7';
     border: var(--noborder);
     border-collapse: collapse;
     padding: 20px;
-    width: 1300px;
+    /*width: 1300px;*/
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -327,7 +334,7 @@ content: '\00B7';
     font-size: 20px;
     font-weight: normal;
     line-height: 65px;
-    width: 17.3%;
+    /*width: 17.3%;*/
     padding: 10px;
     word-break: break-word;
     vertical-align: top;
