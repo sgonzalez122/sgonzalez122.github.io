@@ -28,7 +28,7 @@ html, body {
     padding: 15px;
 }
 
-/*
+
 @media only screen and (max-width:600px){
     .section-segmenter:nth-child(even){
         background-color: var(--light);
@@ -39,7 +39,7 @@ html, body {
         padding: 15px;
         width: 1400px;
     }
-}*/
+}
 
 .section-segmenter:nth-child(odd){
     padding: 15px;
