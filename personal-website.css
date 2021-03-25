@@ -121,6 +121,15 @@ content: '\00B7';
 }
 /* #endregion Navigation Table*/
 
+
+/* #region Carousel*/
+.carousel-inner img{
+    width: 100%; 
+    margin: auto;
+}
+/* #endregion Carousel*/
+
+
 /* #region Personal Bio*/
 .bio{
     padding-top: 30px;
