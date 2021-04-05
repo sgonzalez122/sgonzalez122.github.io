@@ -203,7 +203,8 @@ content: '\00B7';
 
 /* #region Featured Publications & Presentations*/
 #publications{
-    padding: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     font-size: 1.5rem; 
     font-family: Georgia, 'Times New Roman', Times, serif;  
     font-weight: normal;
