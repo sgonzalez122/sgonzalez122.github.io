@@ -46,13 +46,13 @@ html, body {
 }*/
 
 h1, .section-title{
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
 
 h2{
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     color: rgba(255,255,255,.54)
@@ -102,33 +102,6 @@ content: '\00B7';
 .backdark{
     background-color: var(--dark);
 }
-/*#region Navigation Table*/
-#nav-table{
-    /*border: 0px solid black;*/
-    border-collapse: separate;
-    margin-top: 15px;
-    /*width: 1300px;*/
-    border-spacing: 2px;
-    
-}
-#navbar a{
-    display: block;
-    background-color: #333;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-weight: normal;
-    font-size: 26px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-#navbar a:hover{
-    background: #ddd;
-    color: black;
-}
-/* #endregion Navigation Table*/
-
 
 /* #region Navbar*/
 /* Add a dark background color with a little bit see-through*/
@@ -174,7 +147,7 @@ content: '\00B7';
     padding-top: 30px;
     /*padding-bottom: 300px;*/
     padding: 50px;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
       
 }
 
@@ -191,7 +164,7 @@ content: '\00B7';
 #skills{
     color: white;
     text-align: center;
-    font-size: 1.9rem; 
+    font-size: 1.5rem; 
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 30px;
 }
@@ -205,7 +178,7 @@ content: '\00B7';
 
 .skills-label{
     color: white;
-    font-size: 1.9rem;        
+    font-size: 1.5rem;        
 }
 /* #endregion Skills*/
 
@@ -213,7 +186,7 @@ content: '\00B7';
 #experience{
     padding-top: 60px;
     padding-bottom: 60px;
-    font-size: 1.9rem; 
+    font-size: 1.5rem; 
     font-family: Georgia, 'Times New Roman', Times, serif;  
     font-weight: normal;  
 }
@@ -232,7 +205,7 @@ content: '\00B7';
 /* #region Featured Publications & Presentations*/
 #publications{
     padding: 60px;
-    font-size: 1.9rem; 
+    font-size: 1.5rem; 
     font-family: Georgia, 'Times New Roman', Times, serif;  
     font-weight: normal;
 }
@@ -243,7 +216,7 @@ content: '\00B7';
     text-align: left;
     word-break: break-word;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.9rem; 
+    font-size: 1.5rem; 
 }
 /* #endregion Pub & Pres*/
 
@@ -286,11 +259,11 @@ content: '\00B7';
 /* #region Contact Info*/
 #contact{
     padding: 30px;
-    font-size: 1.9rem; 
+    font-size: 1.5rem; 
 }
 
 #contact li{
-    font-size: 1.9rem; 
+    font-size: 1.5rem; 
     text-align: left;
     word-break: break-word;
     font-family: Arial, Helvetica, sans-serif;
