@@ -174,7 +174,7 @@ content: '\00B7';
     padding-top: 30px;
     /*padding-bottom: 300px;*/
     padding: 50px;
-      
+    font-size: 19px;  
 }
 
 #avatar{
@@ -182,40 +182,7 @@ content: '\00B7';
     height: 250px;
     border-radius: 50%;
 }
-
-#bio-table {
-    border: var(--noborder);
-    border-collapse: collapse;
-    padding: 20px;
-    /*width: 1300px;*/
-}
-
-#bio-table th{
-    border: var(--noborder);
-    border-collapse: collapse;
-    /*float: left;*/
-    text-align: left;
-    font-size: 20px;
-    font-weight: normal;
-    line-height: 28px;
-    padding: 10px;                
-    height: 350px;
-    word-break: break-word;
-    
-}
-
-#bio-table td{
-    border: var(--noborder);
-    border-collapse: collapse;
-    font-weight: normal;
-    font-size: 19px;
-    line-height: 28px;
-    padding: 10px;
-    padding-top: 0px;
-    vertical-align: top;
-}
-
-   
+  
 /* #endregion Personal Bio*/
 
 
