@@ -135,9 +135,18 @@ content: '\00B7';
 }
 /* #endregion Carousel*/
 
-
-/* #region Personal Bio*/
-#bio{
+/* #region Geolyte*/
+#geolyte{
+    color: white;  
+    background-color: var(--dark);
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 150px;
+ }
+  /* #endregion Geolyte*/
+ 
+/* #region Intro*/
+#intro{
     color: white;
     background-color: var(--light);
     font-size: 1.8rem;
@@ -147,170 +156,80 @@ content: '\00B7';
     padding-top: 30px;
     padding: 50px;
 }
+/* #endregion Intro*/
+ 
 
-#avatar{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-}
-
-.bio-icon{
-    color: #fd5961;
-    font-size: 30pt;
-    padding: 4px;
-}
-
-a.bio-icon:hover{
-    font-size: 300%;
-    text-decoration: none;
-    color: #fd5961;
-}
-/* #endregion Personal Bio*/
-
-
-/* #region Skills*/
-#skills{
+/* #region Structural*/
+#structural-section{
     color: white;
     background-color: var(--dark);
-    font-size: 1.8rem; 
-    text-align: center;
-    font-weight: normal;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 30px;
+    font-size: 1.8rem;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+    font-weight: normal;  
+    padding-top: 30px;
+    padding: 50px;
 }
+/* #endregion Structural*/
 
-.skills-icons{
-    color: #fd5961;
-    font-size: 8rem;
-    text-decoration: none;
-    padding: 4px;
-}
 
-.skills-icon-text{
-    color: #fd5961;
-    font-size: 5.5rem;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    padding: 4px;
-}
-
-.skills-label{
-    color: white;
-    font-size: 1.8rem;        
-}
-/* #endregion Skills*/
-
-/* #region Experience*/
-#experience{
+/* #region Functional*/
+#functional-section{
     color: white;
     background-color: var(--light);
     font-size: 1.8rem;
     text-align: left;
     font-family: Georgia, 'Times New Roman', Times, serif;  
     font-weight: normal;  
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 30px;
+    padding: 50px;
 }
-
-.experience-card{
-    background-color: var(--dark);   
-    text-align: left;
-    word-break: break-word;
-    line-height: 28px;
-    padding: 15px;
-}
-
-.experience-blank-row-sep{
-    background-color: var(--light);
-}
-
-/* #endregion Experience*/
+/* #endregion Functional*/
 
 
-/* #region Featured Publications & Presentations*/
-#publications{
+/* #region Diffusion*/
+#diffusion-section{
     color: white;
     background-color: var(--dark);
-    font-size: 1.8rem; 
-    text-align: left;
-    font-family: Georgia, 'Times New Roman', Times, serif;  
-    font-weight: normal;
-    padding-top: 60px;
-    padding-bottom: 60px;    
-}
-
-.publications-card{
-    background-color: var(--light);
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
-    word-break: break-word;
-    line-height: 30px;
-    padding: 15px;
-}
-
-.publications-blank-row-sep{
-    background-color: var(--dark);
-}
-/* #endregion Pub & Pres*/
-
-
-/* #region MRI Processing*/
-#MRI_processing{
-    color: white;
-    background-color: var(--light);
-    padding: 20px;
     font-size: 1.8rem;
     text-align: left;
     font-family: Georgia, 'Times New Roman', Times, serif;  
-    font-weight: normal; 
-    /*width: 1200px;*/
-}
-
-
-/* #endregion MRI Processing*/
-
-/* #region Geolyte*/
-#geolyte{
-   color: white;  
-   background-color: var(--dark);
-   text-align: center;
-   padding-top: 50px;
-   padding-bottom: 150px;
-}
-
- /* #endregion Geolyte*/
-
-
-/* #region Contact Info*/
-#contact{
-    color: white;
-    background-color: var(--dark);
-    font-size: 1.5rem;
-    text-align: left;
-    margin-left: 0px;
-    margin-right: 0px;
+    font-weight: normal;  
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 50px;
 }
+/* #endregion Diffusion*/
 
-#contact li{
-    font-size: 1.5rem; 
-    text-align: left;
-    word-break: break-word;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    padding: 20px;
-}
 
-.contact a{
-    color: #fd5961;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.contact-icon{
-    font-size: 1.7em;
-}
-/* #endregion Contact Info*/
+ /* #region Contact Info*/
+ #contact{
+     color: white;
+     background-color: var(--light);
+     font-size: 1.5rem;
+     text-align: left;
+     margin-left: 0px;
+     margin-right: 0px;
+     padding-top: 30px;
+     padding-bottom: 30px;
+ }
+ 
+ #contact li{
+     font-size: 1.5rem; 
+     text-align: left;
+     word-break: break-word;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: bold;
+     padding: 20px;
+ }
+ 
+ .contact a{
+     color: #fd5961;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: bold;
+     text-decoration: none;
+ }
+ 
+ .contact-icon{
+     font-size: 1.7em;
+ }
+ /* #endregion Contact Info*/
