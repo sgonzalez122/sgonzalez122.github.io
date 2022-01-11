@@ -1,541 +1,463 @@
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>Stephen Gonzalez</title>
+    <link rel="stylesheet" type="text/css" href="personal-website.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link rel="icon" href="images/tab-icon/favicon-32x32.png">
-    <meta name="viewport" content="width=device-width, initial-scale=0.25">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="personal-website.css">
+    <meta name="viewport" content="width=device-width">
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<body>
 
 
-<!-- #region Navbar-->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            <a class="navbar-brand" href="#" style="color: white !important;font-weight: bold;font-size: 26px;">Stephen A Gonzalez</a>
-        </div>    
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav" style="font-size:20px;">
-                <li><a href="#myCarousel">Home</a></li>
-                <!--<li><a href="#experience">Experience</a></li>-->
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <!--<li><a href="files/Stephen_Gonzalez_CV.pdf">CV</a></li>-->
-            </ul>
-        </div>
-    </div>
-</nav>
-<!-- endregion Navbar-->
 
-<!-- #region Carousel-->
-<div id="myCarousel" class="carousel slide" data-ride="carousel" style="background-color:var(--light)">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-
-    <!-- Wrapper for slides-->
-    <div class="carousel-inner">
-        <div class="item active">
-            <img src="images/carousel/MIP.png" alt="MIP image">
-        </div>
-
-        <div class="item">
-            <img src="images/carousel/7T_struck3.png" alt="unprocessed brain images">
-        </div>
-
-        <div class="item">
-            <img src="images/carousel/DTI_V1.png" alt="unprocessed brain images">
-        </div>
-
-        <div class="item">
-            <img src="images/carousel/cortico_spinal_tract.png" alt="cortico spinal tractography">
-        </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
-<!-- endregion Carousel-->
+<!-- #region Navigation Table-->
+<table id="nav-table" align="center"> 
+    <thead>
+        <tr id="navbar">
+            <th><a href="index.html">Home</a></th>
+            <th><a href="#publications">Publications</a></th>
+            <th><a href="projects.html">Projects</a></th>
+            <th><a href="#contact">Contact</a></th>
+            <!--<th><a href="files/Stephen_Gonzalez_CV.pdf">CV</a></th>-->
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="5"> 
+                <img src="images/MIP_SAG1.png" alt="MIP image" width="1400" class="center">
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!-- endregion Navigation Table -->
+<br><br><br><br>
 
 
 <!-- #region Personal Bio-->
-<section class="center" id="bio">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-4 center" style="text-align: center;">
-                <img id="avatar" src="images/BD2K_headshot.PNG" alt="headshot">
-                <br>
-                    <h2>Stephen Gonzalez<br></h2>
+<section class="bio section-segmenter" id="bio">
 
-                    <span class="text-muted">
-                        Research Technician Assistant<br>
-                        California Institute of Technology
-                        (he/him)
-                    </span><br>
-                
-                    
-                    <a class="bio-icon" href="mailto:stephengonz151@gmail.com">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+    <table id="bio-table" align="center">
+        <thead>
+            <tr>
+                <th style="text-align: center;">
+                    <img id="avatar" src="images/BD2K_headshot.PNG" alt="headshot">
+                    <br>
+                        <span class="section-title" style="font-size: 1.44rem;">
+                            Stephen Gonzalez<br>
+                        </span>
 
-                    <a class="bio-icon" href="https://twitter.com/Stephen_G151" target="_blank" rel="noopener">
-                        <i class="fab fa-twitter"></i>
-                    </a>
+                        <span class="text-muted">
 
-                    <a class="bio-icon" href="https://github.com/sgonzalez122" target="_blank" rel="noopener">
-                        <i class="fab fa-github"></i>
-                    </a>
+                            Research Technician Assistant<br>
+                            California Institute of Technology
+                            (he/him)
+                        </span>
 
-                    <a class="bio-icon" href="https://www.linkedin.com/in/stephen-gonzalez-he-him-364914123/" target="_blank" rel="noopener">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-
-                    <a class="bio-icon" href="files/Stephen_Gonzalez_CV.pdf">
-                        <i class="ai ai-cv"></i>
-                    </a>
-                    
-                
-            </div>
-            <div class="col-12 col-lg-8">
-                <h1>Biography</h1>
+                </th> 
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th width="815" colspan="3">
+                    <span class="section-title">Biography</span>
                     <br><br>
-                    <p>
                         Hi my name is Stephen, I am a research assistant working with <a href="https://www.hss.caltech.edu/people/antonio-rangel" target="_blank" rel="noopener">Antonio Rangel</a> at <a href="https://www.hss.caltech.edu/people/stephen-gonzalez" target="_blank" rel="noopener">Caltech</a>, 
                         where I primarily collect and process eye tracking data, as well as implement task design.
                         I recieved my MS in Neuroimaging and Informatics from the University of Southern California, and previously studied Psychology at the California State University of Fullerton as well as Mount San Antonio College. 
                         My primary research interests involve studying the neurological development of learning disabilities.
                         I am interested in using MRI to search for neurological markers of learning disabilities, such as Dyslexia and Attention Deficit Disorder. 
                         I am also interested in utilizing MRI to study the physical manifestations of anxiety, depression, and PTSD in the brain.
-                    </p>
-                <div class="row">
-                    <div class="col-md-5" >
-                        <h2 class="text-muted">Interests</h2>
-                            <ul>
-                                <li>Psychology</li>
-                                <li>Learning Disabilities</li>
-                                <li>MRI based Neuroimaging</li>
-                            </ul> 
-                    </div>
-                    <div class="col-md-7" >
-                        <h2 class="text-muted">Education</h2>
-                            <ul class="ul-edu fa-ul">
-                                <li>
-                                    <i class="fa-li fas fa-graduation-cap"></i>
-                                    MS in Neuroimaging and Informatics, 2019<br>
-                                    <span class="text-muted">
-                                        University of Southern California
-                                    </span>
-                                </li>
-                                <li>
-                                    <i class="fa-li fas fa-graduation-cap"></i>
-                                    BA in Psychology, 2018<br>
-                                    <span class="text-muted">
-                                        California State University, Fullerton
-                                    </span>
-                        
-                                </li>
-                                <li>
-                                    <i class="fa-li fas fa-graduation-cap"></i>
-                                    AA in Psychology, 2014<br>
-                                    <span class="text-muted">
-                                        Mt. San Antonio College
-                                    </span>
-                                </li>
-                            </ul>
-                    </div>
-                </div>
-            </div>        
-        </div>
-    </div>
+                </th>   
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: center;" >
+                    <a class="icon-params" href="mailto:stephengonz151@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+    
+                    <a class="icon-params" href="https://twitter.com/Stephen_G151" target="_blank" rel="noopener">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+    
+                    <a class="icon-params" href="https://github.com/sgonzalez122" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>
+                    </a>
+    
+                    <a class="icon-params" href="https://www.linkedin.com/in/stephen-gonzalez-he-him-364914123/" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+    
+                    <a class="icon-params" href="files/Stephen_Gonzalez_CV.pdf">
+                        <i class="ai ai-cv"></i>
+                    </a>
+                </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>
+                    <h2>Interests</h2>
+                    <ul>
+                        <li>Psychology</li>
+                        <li>Learning Disabilities</li>
+                        <li>MRI based Neuroimaging</li>
+                    </ul>   
+                </td>
+                <td>
+                    <h2>Education</h2>
+                    <ul class="ul-edu fa-ul">
+                        <li>
+                            <i class="fa-li fas fa-graduation-cap"></i>
+                            MS in Neuroimaging and Informatics, 2019<br>
+                            <span class="text-muted">
+                                University of Southern California
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fa-li fas fa-graduation-cap"></i>
+                            BA in Psychology, 2018<br>
+                            <span class="text-muted">
+                                California State University, Fullerton
+                            </span>
+
+                        </li>
+                        <li>
+                            <i class="fa-li fas fa-graduation-cap"></i>
+                            AA in Psychology, 2014<br>
+                            <span class="text-muted">
+                                Mt. San Antonio College
+                            </span>
+                        </li>
+                    </ul>
+                </td>
+                <td></td>
+
+            </tr>
+        </tbody>    
+    </table>
 </section>
 <!-- endregion Personal Bio-->
 
 
+
 <!-- #region Skills-->
-<section class="center" id="skills">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12"><h1>Skills</h1><br><br></div>
-        </div>
+<section class="section-segmenter" id="skills">   
+    <table id="skills-table" align="center">
+        <thead>	
+            <tr>
+                <th colspan="10">
+                    <span class="section-title">Skills</span>
+                </th>
 
-        <div class="row">
-            <div class="col-12 col-sm-3">
-                <i class="fab fa-r-project skills-icons"></i>
-                <br><span class="skills-label">Statistical Software R</span>
-                <br><span class="text-muted">Proficient</span>
-            </div>
+            </tr>
+        </thead>
 
-            <div class="col-12 col-sm-3">
-                <span class="iconify skills-icons" data-icon="file-icons:matlab" data-inline="false"></span>
-                <br><span class="skills-label">Matlab</span>
-                <br><span class="text-muted">Proficient</span>
-            </div>
+        <tbody>
+            <tr>
 
-            <div class="col-12 col-sm-3">
-                <span class="iconify skills-icons" data-icon="clarity:command-line" data-inline="false"></span>
-                <br><span class="skills-label">Command Line</span>
-                <br><span class="text-muted">Proficient</span>
-            </div>
+                <td>
+                    <i class="fab fa-r-project skills-icons"></i>
+                    <br><span class="skills-label">Statistical Software R</span>
+                    <br><span class="text-muted">Proficient</span>
+                </td>
+                <td>
+                    <span class="iconify skills-icons" data-icon="file-icons:matlab" data-inline="false"></span>
+                    <br><span class="skills-label">Matlab</span>
+                    <br><span class="text-muted">Proficient</span>
+                </td>
+                <td>
+                    <span class="iconify skills-icons" data-icon="clarity:command-line" data-inline="false"></span>
+                    <br><span class="skills-label">Command Line</span>
+                    <br><span class="text-muted">Proficient</span>
+                </td>
+                <td>
+                    <span class="iconify skills-icons" data-icon="file-icons:c" data-inline="false"></span>
+                    <br><span class="skills-label">C++</span>
+                    <br><span class="text-muted">Competent</span>
+                </td>
 
-            <div class="col-12 col-sm-3">
-                <span class="iconify skills-icons" data-icon="file-icons:c" data-inline="false"></span>
-                <br><span class="skills-label">C++</span>
-                <br><span class="text-muted">Competent</span>
-            </div>
-        </div>
+            </tr>
 
-        <div class="row">
-            <div class="col-12 col-sm-3">
-                <br><span class="skills-icon-text">FSL</span>
-                <br><span class="skills-label">FMRIB <br>Software Library</span>
-                <br><span class="text-muted">Data processing & analysis</span>
-            </div>
-            <div class="col-12 col-sm-3">
-                <br><span class="skills-icon-text">AFNI</span>
-                <br><span class="skills-label">Analysis of <br>Functional Neuroimages</span>
-                <br><span class="text-muted">Data processing & analysis</span>
-            </div>
-            <div class="col-12 col-sm-3">
-                <br><span class="skills-icon-text">SPM</span>
-                <br><span class="skills-label">Statistical <br>Parametric Mapping</span>
-                <br><span class="text-muted">Data processing & analysis</span>
-            </div>
-            <div class="col-12 col-sm-3">
-                <br>
-                <span class="iconify skills-icons" data-icon="medical-icon:i-mri-pet" data-inline="false"></span>                    
-                <br><span class="skills-label">MRI</span>
-                <br><span class="text-muted">Data collection, <br>proccessing, & analysis</span>
-            </div>
-        </div>
+            <tr>
+                <td>
+                    <br><span class="skills-icons" style="font-family: Arial, Helvetica, sans-serif;font-size: 3.5rem;">FSL</span>
+                    <br><span class="skills-label">FMRIB <br>Software Library</span>
+                    <br><span class="text-muted">Data processing & analysis</span>
+                </td>
+                <td>
+                    <br><span class="skills-icons" style="font-family: Arial, Helvetica, sans-serif;font-size: 3.5rem;">AFNI</span>
+                    <br><span class="skills-label">Analysis of <br>Functional Neuroimages</span>
+                    <br><span class="text-muted">Data processing & analysis</span>
+                </td>
+                <td>
+                    <br><span class="skills-icons" style="font-family: Arial, Helvetica, sans-serif;font-size: 3.5rem;">SPM</span>
+                    <br><span class="skills-label">Statistical <br>Parametric Mapping</span>
+                    <br><span class="text-muted">Data processing & analysis</span>
+                </td>
+                <td>
+                    <br>
+                    <span class="iconify skills-icons" data-icon="medical-icon:i-mri-pet" data-inline="false"></span>                    
+                    <br><span class="skills-label">MRI:</span>
+                    <br><span class="text-muted">Data collection, <br>proccessing, & analysis</span>
+                </td>
+            </tr>
 
-        <div class="row ">
-            <div class="col-12 col-sm-3">
-                <i class="fab fa-html5 skills-icons"></i>
-                <br><span class="skills-label">HTML</span>
-                <br><span class="text-muted">Novice</span>
-            </div>
-            <div class="col-12 col-sm-3">
-                <i class="fab fa-css3-alt skills-icons"></i>
-                <br><span class="skills-label">CSS</span>
-                <br><span class="text-muted">Novice</span>
-            </div>
-            <div class="col-12 col-sm-3">
-                <span class="iconify skills-icons" data-icon="uim:java-script" data-inline="false"></span>
-                <br><span class="skills-label">JavaScript</span>
-                <br><span class="text-muted">Novice</span>
-            </div>
-            <div class="col-12 col-sm-3">
-                <i class="fas fa-eye skills-icons"></i>
-                <br><span class="skills-label">Eye-Tracking</span>
-                <br><span class="text-muted">Task design & data collection</span>
-            </div>
-        </div>
-    </div>
+            <tr>
+                <td>
+
+                    <i class="fab fa-html5 skills-icons"></i>
+                    <br><span class="skills-label">HTML</span>
+                    <br><span class="text-muted">Novice</span>
+                </td>
+                <td>
+                    <i class="fab fa-css3-alt skills-icons"></i>
+                    <br><span class="skills-label">CSS</span>
+                    <br><span class="text-muted">Novice</span>
+                </td>
+                <td>
+                    <span class="iconify skills-icons" data-icon="uim:java-script" data-inline="false"></span>
+                    <br><span class="skills-label">JavaScript</span>
+                    <br><span class="text-muted">Novice</span>
+                </td>
+                <td>
+                    <i class="fas fa-eye skills-icons"></i>
+                    <br><span class="skills-label">Eye-Tracking</span>
+                    <br><span class="text-muted">Task design & data collection</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>    
 </section>
+
 <!-- endregion Skills-->
 
 
 <!-- #region Experience-->
-<section class="center" id="experience">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-5">
-                <h1>Experience<br><br></h1>
-            </div>
-            <div class="col-12 col-lg-7">
-                <div class="row">
-                    <!--Card-->
-                    <div class="col-12 experience-card">
-                        Research Technician Assistant, <a href="https://www.rnl.caltech.edu/" target="_blank" rel="noopener">Rangel Neuroeconomics Lab</a><br>
-                        Advisor: <a href="https://www.hss.caltech.edu/people/antonio-rangel" target="_blank" rel="noopener">Dr. Antonio Rangel</a><br>
-                        <div class="text-muted">
-                            <span>California Institute of Technology</span><br>
-                            <span>Sep 2019 - Present </span>
-                        </div>
+<section class="section-segmenter center" id="experience">
+    <table id="experience-table" align="center">
+        <thead>	
+            <tr>
+                <th style="width:40%; ">
+                    <span class="section-title" >Experience</span>
+                </th>
+                <th style="background-color: var(--dark);width: 50%;">
+                    Research Technician Assistant, <a href="https://www.rnl.caltech.edu/" target="_blank" rel="noopener">Rangel Neuroeconomics Lab</a><br>
+                    Advisor: <a href="https://www.hss.caltech.edu/people/antonio-rangel" target="_blank" rel="noopener">Dr. Antonio Rangel</a><br>
+                    <div class="text-muted">
+                        <span>California Institute of Technology</span><br>
+                        <span>Sep 2019 - Present </span>
                     </div>
+                </th>
+                <th style="width:5%;"></th>
+            </tr>
+        </thead>
 
-                    <!--Blank Row Seperator-->
-                    <div class="col-12"><br></div>
+        <tbody>
+            <tr> <!--Blank Row Seperator-->
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td> <!-- Removed the underline text decoration on these, because they ARE NOT actually links-->
+                <td style="background-color: var(--dark);">
+                    Research Assistant, <a style="text-decoration: none">CANDL Lab</a><br>
+                    Advisor: <a style="text-decoration: none">Dr. Kristi Clark</a><br>
+                    <div class="text-muted">
+                        <span>University of Southern California</span><br>
+                        <span> June 2017 - May 2019 </span>
+                    </div>    
+                </td>
+            </tr>
 
-                    <!--Card-->
-                    <div class="col-12 experience-card">
-                        Research Assistant, <a style="text-decoration: none">CANDL Lab</a><br>
-                        Advisor: <a style="text-decoration: none">Dr. Kristi Clark</a><br>
-                        <div class="text-muted">
-                            <span>University of Southern California</span><br>
-                            <span> June 2017 - May 2019 </span>
-                        </div>
-                    </div>
-                    
-                    <!--Blank Row Seperator-->
-                    <div class="col-12"><br></div>
-                    
-                    <!--Card-->
-                    <div class="col-12 experience-card">
-                        Graduate Student, <a href="http://niin.usc.edu/" target="_blank" rel="noopener">NIIN Program</a><br>
-                        <div class="text-muted">
-                            <span>University of Southern California</span><br>
-                            <span> Aug 2019 - May 2019 </span>
-                        </div>
-                    </div>
-                    
-                    <!--Blank Row Seperator-->
-                    <div class="col-12"><br></div>
-        
-                    <!--Card-->
-                    <div class="col-12 experience-card">
-                        Research Scholar, <a href="http://bd3reap.fullerton.edu/Students/cohort_1.htm" target="_blank" rel="noopener">BD3-REAP</a><br>
-                        Advisors: <a href="http://hhd.fullerton.edu/pubh/faculty/McEligotArchana.php" target="_blank" rel="noopener">Dr. Archana McEligot</a> & <a href="http://www.fullerton.edu/math/faculty/behseta/index.php" target="_blank" rel="noopener"> Dr. Sam Behseta</a><br>
-                        <div class="text-muted">
-                            <span>California State University, Fullerton</span><br>
-                            <span> Jan 2017 - May 2018 </span>
-                    </div>
-                </div>    
-            </div>
-        </div>
-    </div>
-</section>
+            <tr> <!--Blank Row Seperator-->
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td style="background-color: var(--dark);">
+                    Graduate Student, <a href="http://niin.usc.edu/" target="_blank" rel="noopener">NIIN Program</a><br>
+                    <div class="text-muted">
+                        <span>University of Southern California</span><br>
+                        <span> Aug 2019 - May 2019 </span>
+                    </div>    
+                </td>
+            </tr>
+
+            <tr> <!--Blank Row Seperator-->
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td style="background-color: var(--dark);">
+                    Research Scholar, <a href="http://bd3reap.fullerton.edu/Students/cohort_1.htm" target="_blank" rel="noopener">BD3-REAP</a><br>
+                    Advisors: <a href="http://hhd.fullerton.edu/pubh/faculty/McEligotArchana.php" target="_blank" rel="noopener">Dr. Archana McEligot</a> & <a href="http://www.fullerton.edu/math/faculty/behseta/index.php" target="_blank" rel="noopener"> Dr. Sam Behseta</a><br>
+                    <div class="text-muted">
+                        <span>California State University, Fullerton</span><br>
+                        <span> Jan 2017 - May 2018 </span>
+                    </div>    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    
 <!-- endregion Experience-->
 
 
 <!-- #region Featured Publications & Presentations-->
-<section class="center" id="publications">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-5">
-                <h1>Featured<br> 
-                    Publications & <br>
-                    Presentations<br><br>
-                </h1>
-                
-            </div>
-            <div class="col-12 col-lg-7">
-                <div class="row">
-                    <!--Card-->
-                    <div class="col-12 publications-card">
-                        <strong>Gonzalez, S.</strong>, Barakat, R., Rajan, M., Clark, K. (March, 2019). 
-                        <a href="files/CNS2019_SAG.pdf"><em>Assessing the Relationship Between Reading Ability and Dyslexia: A Behavioral and fMRI Study.</em></a>
-                        <span class="text-muted">Poster presentation at the Cognitive Neuroscience Society conference. San Francisco, CA.</span>
-                    </div>
+<section class="section-segmenter center" id="publications">
+    <table id="publications-table" align="center">
+        <thead>
+            <tr>
+                <th style="width:36%;">
+                    <span class="section-title">Featured<br> Publications & Presentations</span>
+                </th>
+                <th style="width:50%; background-color: var(--light);">
+                    <strong>Gonzalez, S.</strong>, Barakat, R., Rajan, M., Clark, K. (March, 2019). 
+                    <a href="files/CNS2019_SAG.pdf"><em>Assessing the Relationship Between Reading Ability and Dyslexia: A Behavioral and fMRI Study.</em></a>
+                    <span class="text-muted">Poster presentation at the Cognitive Neuroscience Society conference. San Francisco, CA.</span>
+                </th>
 
-                    <!--Blank Row Seperator-->
-                    <div class="col-12 publications-blank-row-sep"><br></div>
+            </tr>
+        </thead>
 
-                    <!--Card-->
-                    <div class="col-12 publications-card">
-                        McEligot, A.J., Cruz, S.S., <strong>Gonzalez, S.</strong>, Pogoda, J.M. (2017).
-                        <a href="https://journals.calstate.edu/cjhp/article/view/2119" target="_blank" rel="noopener"><em>The association between dietary folate supplementation and total folate intakes with depression in a diverse adult population.</em></a>
-                        <span class="text-muted">California Jounal of Health Promotion.</span>
-                    </div>
-                    
-                    <!--Blank Row Seperator-->
-                    <div class="col-12 publications-blank-row-sep"><br></div>
-                    
-                    <!--Card-->
-                    <div class="col-12 publications-card">
-                        <strong>Gonzalez, S.</strong>, Lynch, K., Orozco, M., & Clark, K. (November, 2017).
-                        <a href="files/BD2K Poster_v2.pdf"><em>Dyslexia: Related Behaviors and Neuronal Abnormalities.</em></a>
-                        <span class="text-muted">Poster presentation at the Southern California Conference for Undergraduate Research. Pomona, CA.</span>
-                    </div>
-                    
-                    <!--Blank Row Seperator-->
-                    <div class="col-12 publications-blank-row-sep"><br></div>
-        
-                    <!--Card-->
-                    <div class="col-12 publications-card">
-                        Bacigalupi, S., Crawford, J., Gibson, V., <strong>Gonzalez, S.</strong>, & Lohff, I. (April, 2015).
-                        <a href="files/Facial Expressions poster for WPA.pdf"><em>Understanding Emotion: How gender plays an important role.</em></a>
-                        <span class="text-muted">Poster presentation at the Western Psychological Association Conference. Las Vegas, NV.</span>
-                    </div>
-                </div>    
-            </div>
-        </div>
-    </div>
+        <tbody>
+            <tr> <!--Blank Row Seperator-->
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td style="background-color: var(--light);">
+                    McEligot, A.J., Cruz, S.S., <strong>Gonzalez, S.</strong>, Pogoda, J.M. (2017). 
+                    <a href="https://journals.calstate.edu/cjhp/article/view/2119" target="_blank" rel="noopener"><em>The association between dietary folate folate supplementation and total folate intakes with depression in a diverse adult population.</em></a>
+                    <span class="text-muted">California Jounal of Health Promotion.</span>
+                </td>
+
+            </tr>
+
+            <tr> <!--Blank Row Seperator-->
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td style="background-color: var(--light);">
+                    <strong>Gonzalez, S.</strong>, Lynch, K., Orozco, M., & Clark, K. (November, 2017).
+                    <a href="files/BD2K Poster_v2.pdf"><em>Dyslexia: Related Behaviors and Neuronal Abnormalities.</em></a>
+                    <span class="text-muted">Poster presentation at the Southern California Conference for Undergraduate Research. Pomona, CA.</span>
+                </td>
+
+            </tr>
+
+            <tr> <!--Blank Row Seperator-->
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td style="background-color: var(--light);">
+                    Bacigalupi, S., Crawford, J., Gibson, V., <strong>Gonzalez, S.</strong>, & Lohff, I. (April, 2015).
+                    <a href="files/Facial Expressions poster for WPA.pdf"><em>Understanding Emotion: How gender plays an important role.</em></a>
+                    <span class="text-muted">Poster presentation at the Western Psychological Association Conference. Las Vegas, NV.</span>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
 </section>
 
 <!-- endregion -->
 
 
-<!-- #region MRI Processing-->
-<section class="center" id="MRI_processing">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-5">
-                <h1>MRI Processing<br><br></h1>
-            </div>
+<!-- #region Projects-->
+<!--
+<section class="section-segmenter center" id="projects">
+    <table id="projects-table" align="center">
+        <thead>
+            <tr>
+                <th style="width:43%;">
+                    <span class="section-title">Projects</span>
+                </th>
+                <th style="width:50%;">Ex1</th>
+                <th style="width:5%;"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>Blank Row Seperator</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Ex2</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td>Blank Row Seperator</td>
+            </tr>
 
-            <div class="col-12 col-lg-7">
-                <div class="row">
-                    <div class="col-12">
-                        <!-- Button Tool Bar-->
-                        <div class="btn-group btn-group-lg">
-                            <a class="btn btn-primary btn-lg" data-toggle="pill" href="#struct">Structural Imaging</a>
-                            <a class="btn btn-primary btn-lg" data-toggle="pill" href="#fMRI">Functional Imaging</a>
-                            <a class="btn btn-primary btn-lg" data-toggle="pill" href="#dwi">Diffusion Imaging</a>
-                        </div>
-                        <br><br><br>
-                       
-                       <!-- Tab Content --> 
-                       <div class="tab-content">
-                           <!-- Structural -->
-                            <div id="struct" class="tab-pane fade in active">
-                                <div class="row">
-                                    <!-- Description -->
-                                    <div class="col-lg-6">
-                                        <h2>Title</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, eros in lacinia tempor, dolor neque tristique est,
-                                            ac condimentum lectus mi ut odio. Nulla facilisi. Ut volutpat convallis dui, sed mollis felis sollicitudin eget. Praesent felis eros, 
-                                            pulvinar sit amet nulla eu, venenatis suscipit sem. Aenean a magna quis erat lobortis lobortis quis id lectus. Integer sit amet dapibus lorem. 
-                                            Integer a elit eu nibh tempor dapibus. Phasellus interdum eros odio, sit amet congue lacus blandit in.</p>
-                                    </div>
-                                    
-                                    <!-- Media -->
-                                    <div class="col-lg-6">
-                                        <video height="430" width="500" style="border: 9px outset rgb(107, 110, 119);" autoplay loop muted>
-                                            <source src="videos/3T_N4_sagittal.mp4" type="video/mp4">
-                                        </video>
-                                    </div>
-                                </div>
-                            </div>
+            <tr>
+                <td></td>
+                <td>Ex3</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
 
-                            <!-- Functional -->
-                            <div id="fMRI" class="tab-pane fade">
-                                <div class="row">
-                                    <!-- Description -->
-                                    <div class="col-lg-6">
-                                        <h2>Title</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, eros in lacinia tempor, dolor neque tristique est,
-                                            ac condimentum lectus mi ut odio. Nulla facilisi. Ut volutpat convallis dui, sed mollis felis sollicitudin eget. Praesent felis eros, 
-                                            pulvinar sit amet nulla eu, venenatis suscipit sem. Aenean a magna quis erat lobortis lobortis quis id lectus. Integer sit amet dapibus lorem. 
-                                            Integer a elit eu nibh tempor dapibus. Phasellus interdum eros odio, sit amet congue lacus blandit in.</p>
-                                    </div>
-
-                                    <!-- Media -->
-                                    <div class="col-lg-6">
-                                        <img height="450" width="600" style="border: 9px outset rgb(107, 110, 119);" src="images/fMRI_DMN_lightbox.png" alt="default mode network">
-                                    </div>
-                                </div>
-                                
-                            </div>
-
-                            <!-- Diffusion -->
-                            <div id="dwi" class="tab-pane fade">
-                                <div class="row">
-                                    <!-- Description -->
-                                    <div class="col-lg-6">
-                                        <h2>Title</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, eros in lacinia tempor, dolor neque tristique est,
-                                            ac condimentum lectus mi ut odio. Nulla facilisi. Ut volutpat convallis dui, sed mollis felis sollicitudin eget. Praesent felis eros, 
-                                            pulvinar sit amet nulla eu, venenatis suscipit sem. Aenean a magna quis erat lobortis lobortis quis id lectus. Integer sit amet dapibus lorem. 
-                                            Integer a elit eu nibh tempor dapibus. Phasellus interdum eros odio, sit amet congue lacus blandit in.</p>
-                                    </div>
-
-                                    <!-- Media -->
-                                    <div class="col-lg-6">
-                                        <video height="400" width="500" style="border: 9px outset rgb(107, 110, 119);" autoplay loop muted>
-                                            <source src="videos/gqi.odf.whole.brain.fiber.track.rotation.movie.mp4" type="video/mp4">
-                                        </video>
-                                    </div>
-                                </div>
-                            </div>
-                       </div>
-
-                    </div>                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+</section>-->
 
 <!-- endregion -->
 
 <!-- #region Contact Info-->
-<section class="center" id="contact">
-    <footer class="container">
-        <div class="row" >
-            <div class="col-12 col-lg-5">
-                <h1>Contact<br><br></h1>
-            </div>
-            
-            <div class="col-12 col-lg-7">
-                <ul class="fa-ul">
-                    <li>
-                        <i class="fa-li fas fa-envelope contact-icon" aria-hidden="true"></i>
-                        <a href="mailto:stephengonz151@gmail.com">stephengonz151@gmail.com</a>
-                    </li>
-                    <li>
-                        <i class="fa-li fas fa-map-marker contact-icon" aria-hidden="true"></i>
-                        1200 E. California Blvd., Pasadena, CA 91125
-                    </li>
-                    <li>
-                        <i class="fa-li fa fa-phone contact-icon" aria-hidden='true'></i>
-                        Office: 626-395-8111
-                    </li>
-                    <li>
-                        <i class="fa-li fas fa-inbox contact-icon" aria-hidden="true"></i>
-                        MC 228-77
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-</section>
+<div class="contact section-segmenter" id="contact">
+    <table id="contact-table" align="center">
+        <thead>	
+            <tr>
+                <th>
+                    <h1>Contact info</h1>
+                </th>
+                <th>
+                    <ul class="fa-ul">
+                        <li style="font-family: Arial, Helvetica, sans-serif;font-weight: bold;">
+                            <i class="fa-li fas fa-envelope contact-icon" aria-hidden="true"></i>
+                            <a href="mailto:stephengonz151@gmail.com">stephengonz151@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fa-li fas fa-map-marker contact-icon" aria-hidden="true"></i>
+                            1200 E. California Blvd., Pasadena, CA 91125
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-phone contact-icon" aria-hidden='true'></i>
+                            Office: 626-395-8111
+                        </li>
+                        <li>
+                            <i class="fa-li fas fa-inbox contact-icon" aria-hidden="true"></i>
+                            MC 228-77
+                        </li>
+                    </ul>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr></tr>
+        </tbody>
+
+    </table>    
+</div>
 
 <!-- endregion -->
-
-<script>
-    $(document).ready(function(){
-      // Add smooth scrolling to all links in navbar + footer link
-      $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-    
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-    
-        // Prevent default anchor click behavior
-        event.preventDefault();
-    
-        // Store hash
-        var hash = this.hash;
-    
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 900, function(){
-    
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-          });
-        } // End if
-      });
-    })
-</script>
 
 </body>
 </html>
