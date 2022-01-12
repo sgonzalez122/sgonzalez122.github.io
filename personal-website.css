@@ -5,7 +5,7 @@
     --dark: #23242c;
 }
 
-.body{
+body{
     background-color: var(--dark);
     color: white;
     font-size: 20px;
@@ -14,12 +14,7 @@
     margin: 0;
 }
 
-html, body {
-    height: 100%;
-    width: 100%;
-}
-
-/*.section-segmenter:nth-child(even){
+.section-segmenter:nth-child(even){
     background-color: var(--light);
     position: relative;
     left: 0;
@@ -27,7 +22,6 @@ html, body {
     z-index: 0;
     padding: 15px;
 }
-
 
 @media only screen and (max-width:600px){
     .section-segmenter:nth-child(even){
@@ -43,18 +37,19 @@ html, body {
 
 .section-segmenter:nth-child(odd){
     padding: 15px;
-}*/
+}
 
-h1{
-    font-size: 3rem;
+h1, .section-title{
+    font-size: 2.24rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
 
 h2{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
+    color: rgba(255,255,255,.54)
 }
  
 a{
@@ -65,21 +60,18 @@ a{
 a:hover{
     text-decoration: none;
     text-decoration: underline;
+}
+
+.icon-params {
     color: #fd5961;
+    font-size: 30pt;
+    padding: 4px;
 }
 
-.btn, .btn a{
-    color: black;
-    background-color: #fd5961 ;
-}
-
-.btn:hover, .btn a:hover{
-    background-color: #fa8288 ;
-}
-
-.btn-primary:focus{
-    background-color: #ff3d47;
-    box-shadow: 0 0 0 .4rem #fd7b81;
+a.icon-params:hover{
+    font-size: 300%;
+    text-decoration: none;
+    color: #fd5961;
 }
 
 .text-muted{
@@ -96,56 +88,37 @@ content: '\00B7';
     margin-right: auto;
 }
 
+/*#region Navigation Table*/
+#nav-table{
+    border: 0px solid black;
+    border-collapse: collapse;
+    margin-top: 15px;
+    width: 1400px;
+    
+}
+#navbar a{
+    display: block;
+    background-color: #333;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 26px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
-/* #region Navbar*/
-/* Add a dark background color with a little bit see-through*/
-.navbar{
-    margin-bottom: 0;
-    background-color: #2d2d30;
-    border: 0;
-    font-size: 26px !important;
-    letter-spacing: 4px;
-    opacity: 0.9;
+#navbar a:hover{
+    background: #ddd;
+    color: black;
 }
-/* Add a gray color to all the navbar links*/
-.navbar li a, .navbar .navbar-brand{
-    color: #d5d5d5 !important;
-}
-/* On hover, the links will turn white*/
-.navbar-nav li a:hover{
-    background: #ddd !important;
-    color: black !important;
-}
-/* The active link*/
-.navbar-nav li.active a{
-    /*color: #fff !important;*/
-    background-color:#2d2d30 !important;
-}
-/* Remove border color from the collapsible button*/
-.navbar-default .navbar-toggle{
-    border-color: transparent;
-}
-/* #endregion Navbar*/
-
-/* #region Carousel*/
-.carousel-inner img{
-    width: 100%; 
-    margin: auto;
-    margin-top: 49px;
-}
-/* #endregion Carousel*/
-
+/* #endregion Navigation Table*/
 
 /* #region Personal Bio*/
-#bio{
-    color: white;
-    background-color: var(--light);
-    font-size: 1.8rem;
-    text-align: left;
-    font-family: Georgia, 'Times New Roman', Times, serif;  
-    font-weight: normal;  
+.bio{
     padding-top: 30px;
-    padding: 50px;
+    /*padding-bottom: 300px;*/
+      
 }
 
 #avatar{
@@ -154,153 +127,210 @@ content: '\00B7';
     border-radius: 50%;
 }
 
-.bio-icon{
-    color: #fd5961;
-    font-size: 30pt;
-    padding: 4px;
+#bio-table {
+    border: var(--noborder);
+    border-collapse: collapse;
+    padding: 20px;
+    width: 1300px;
 }
 
-a.bio-icon:hover{
-    font-size: 300%;
-    text-decoration: none;
-    color: #fd5961;
+#bio-table th{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+    padding: 10px;                
+    height: 350px;
+    word-break: break-word;
+    
 }
+
+#bio-table td{
+    border: var(--noborder);
+    border-collapse: collapse;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 28px;
+    padding: 10px;
+    padding-top: 0px;
+    vertical-align: top;
+}
+
+   
 /* #endregion Personal Bio*/
 
 
 /* #region Skills*/
-#skills{
-    color: white;
-    background-color: var(--dark);
-    font-size: 1.8rem; 
+#skills-table{
+    border: var(--noborder);
+    border-collapse: collapse;
+    padding: 20px;
+    width: 1300px;
+}
+
+#skills-table th, #skills-table td{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
     text-align: center;
+    font-size: 20px;
     font-weight: normal;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 30px;
+    line-height: 28px;
+    width: 5.3%;
+    padding: 15px;
+    word-break: break-word;
 }
 
 .skills-icons{
     color: #fd5961;
-    font-size: 8rem;
+    font-size: 5rem;
     text-decoration: none;
-    padding: 4px;
-}
-
-.skills-icon-text{
-    color: #fd5961;
-    font-size: 5.5rem;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    padding: 4px;
 }
 
 .skills-label{
     color: white;
-    font-size: 1.8rem;        
+        
 }
 /* #endregion Skills*/
 
 /* #region Experience*/
 #experience{
-    color: white;
-    background-color: var(--light);
-    font-size: 1.8rem;
-    text-align: left;
-    font-family: Georgia, 'Times New Roman', Times, serif;  
-    font-weight: normal;  
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 60px
+}
+#experience-table{
+    border: var(--noborder);
+    border-collapse: collapse;
+    padding: 20px;
+    width: 1300px;    
 }
 
-.experience-card{
-    background-color: var(--dark);   
+#experience-table th{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
     text-align: left;
-    word-break: break-word;
+    font-size: 20px;
+    font-weight: normal;
     line-height: 28px;
     padding: 15px;
+    word-break: break-word;
 }
 
-.experience-blank-row-sep{
-    background-color: var(--light);
+#experience-table td{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+    
+    padding: 15px;
+    word-break: break-word;
 }
-
 /* #endregion Experience*/
 
 
 /* #region Featured Publications & Presentations*/
 #publications{
-    color: white;
-    background-color: var(--dark);
-    font-size: 1.8rem; 
-    text-align: left;
-    font-family: Georgia, 'Times New Roman', Times, serif;  
-    font-weight: normal;
-    padding-top: 60px;
-    padding-bottom: 60px;    
+    padding: 60px;
 }
 
-.publications-card{
-    background-color: var(--light);
+#publications-table{
+    border: var(--noborder);
+    border-collapse: collapse;
+    padding: 20px;
+    width: 1300px; 
+}
+
+#publications-table th{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
     text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
-    word-break: break-word;
+    font-size: 20px;
+    font-weight: normal;
     line-height: 30px;
     padding: 15px;
-}
-
-.publications-blank-row-sep{
-    background-color: var(--dark);
-}
-/* #endregion Pub & Pres*/
-
-
-/* #region MRI Processing*/
-#MRI_processing{
-    color: white;
-    background-color: var(--light);
-    padding: 20px;
-    font-size: 1.8rem;
-    text-align: left;
-    font-family: Georgia, 'Times New Roman', Times, serif;  
-    font-weight: normal; 
-    /*width: 1200px;*/
-}
-
-
-/* #endregion MRI Processing*/
-
-/* #region Geolyte*/
-#geolyte{
-   color: white;  
-   background-color: var(--dark);
-   text-align: center;
-   padding-top: 50px;
-   padding-bottom: 150px;
-}
-
- /* #endregion Geolyte*/
-
-
-/* #region Contact Info*/
-#contact{
-    color: white;
-    background-color: var(--dark);
-    font-size: 1.5rem;
-    text-align: left;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-#contact li{
-    font-size: 1.5rem; 
-    text-align: left;
     word-break: break-word;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+}
+
+#publications-table td{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 30px;
+    padding: 15px;
+    word-break: break-word;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* #endregion Pub &Pres*/
+
+
+/* #region Projects*/
+#projects-table{
+    border: var(--noborder);
+    border-collapse: collapse;
     padding: 20px;
+    width: 1300px; 
+}
+
+#projects-table th{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+    padding: 15px;
+    word-break: break-word;
+}
+
+#projects-table td{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+    
+    padding: 15px;
+    word-break: break-word;
+}
+/* #endregion Projects*/
+
+    
+/* #region Contact Info*/
+#contact-table{
+    border: var(--noborder);
+    border-collapse: collapse;
+    padding: 20px;
+    width: 1300px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#contact-table th, #contact-table td{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 65px;
+    width: 17.3%;
+    padding: 10px;
+    word-break: break-word;
+    vertical-align: top;
 }
 
 .contact a{
