@@ -182,15 +182,14 @@
             </div>
         </div>
         <br>
-        <a data-toggle="collapse" data-target="#structural-content">Collapse Section</a>
-        
+        <a data-toggle="collapse" id="element" data-target="#structural-content" onClick="javascript:changeText()">Hide</a>
         <!-- Content -->
         <div class="row collapse in" id="structural-content">
             <!-- Button Tool Bar-->
             <div class="btn-group btn-group-lg">
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#raw">Raw Data</a>
-                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#bet">Brain Extraction</a>
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#bias-field">Bias Field Correction</a>
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#bet">Brain Extraction</a>
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#registration">Registration</a>
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tissue-class">Tissue Classification</a>
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#sub-seg">Sub-Cortical Segmentation</a>
@@ -199,16 +198,268 @@
             <!-- Tab Content -->
             <div class="tab-content">
                 <!-- Raw Data -->
+                <br>
+                <div id="raw" class="tab-pane fade in active">
+                    <div class="row">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-4 center">
+                            <div class="btn-group btn-group-lg">
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#3T_raw">&nbsp;&nbsp;&nbsp;&nbsp;3T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#7T_raw">&nbsp;&nbsp;&nbsp;&nbsp;7T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4"></div>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <br>
+                        <!-- 3T -->
+                        <div id="3T_raw" class="tab-pane fade in active">
+                            <!-- Description -->
+                            <div class="row">
+                                <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
+                                    <h2>Raw Data</h2>
+                                    <P>
+                                        Here we have a T1 weighted image, collected from a 3T scanner. Image weighting and contrast is beyond the scope of this demonstration, 
+                                        but effectively this means that, in T1 images, areas of tissue containing fat will produce high signal and appear bright on the image, 
+                                        whereas areas of tissue containing water or Cerebrospinal Fluid (CSF) produce low signal and will appear dark on the image. Image resolution 
+                                        is not as good as in the 7T example, but the tissue intensity accross the image is more consistant than in the 7T. Some slight ringing artifacting 
+                                        can be seein in the frontal region in the sagittal image, which is a result of head motion but is reletivley insignifitant here. The skull, and 
+                                        other bits, are still present in the image, which we are not interested in and will be removed in a following step. 
+                                    </P>
+                                </div>
+                                <div class="col-12 col-lg-3"></div>
+                            </div>
 
-                <!-- Brain Extraction -->
+                            <!-- Media -->
+                            <div class="row center">
+                                <h2>3T</h2>
+                                <div class="col-12  center">
+                                    <img height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/raw/all_raw_3T_screens.png" alt="unprocessed brain images">
+                                </div>
+                            </div>
+                        </div>
 
+                        <!-- 7T -->
+                        <div id="7T_raw" class="tab-pane fade">
+                            <!-- Description -->
+                            <div class="row">
+                                <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
+                                    <h2>Raw Data</h2>
+                                    <p>
+                                        Here we have a T1 weighted image, collected from a 7T scanner. Since the image weighting is the same, the same areas will appear
+                                        bright (fat) or dark (water/csf). However, due to the increased magnetic field strengh, we can achieve an image with higher resolution, 
+                                        which is apparent here. The drawback of this is magnetic susceptibility artifacting, which results in image intensity inconsistencies, such that 
+                                        areas will be brither or darker than they should. This can be seen here in the temporal areas of the coronal image, where the white matter tissue
+                                        appears darker than in other areas of the brain. While the white matter and grey matter are still distingishable to us, this artifacting can cause 
+                                        issues in computer program processing tools where there might be a mis-classification of white matter as grey matter. Luckily, we can correct for
+                                        these inhomogenieties which we will go over in the next step. 
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-3">
+                                   
+                                </div>
+                            </div>
+
+                            <!-- Media -->
+                            <div class="row center">
+                                <h2>7T</h2>
+                                <div class="col-12  center">
+                                    <img height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/raw/all_raw_7T_screens.png" alt="unprocessed brain images">
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                </div>
+                    
+                
                 <!-- Bias Field Correction -->
+                
+                <div id="bias-field" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-4 center">
+                            <div class="btn-group btn-group-lg">
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#3T_bias">&nbsp;&nbsp;&nbsp;&nbsp;3T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#7T_bias">&nbsp;&nbsp;&nbsp;&nbsp;7T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4"></div>
+                    </div>
 
+                    <div class="tab-content">
+                        <br>
+                        <!-- 3T -->
+                        <div id="3T_bias" class="tab-pane fade in active">
+                            <!-- Description -->
+                            <div class="row">
+                                <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
+                                    <h2>Bias Field Correction</h2>
+                                    <p>
+                                        The magnetic field of a scanner should, in theory, be homogenious, but this is not the case. It is stronger in some areas and weaker in others. 
+                                        This can lead to bias in signal intensity throughout an image. Areas where the magnetic field is stronger will produce stronger signal 
+                                        than there should be, and vice versa. As a result some areas will appear brighter or darker than they should. This can be seen in the
+                                        example image below, particularly in areas where white matter boarders gray matter, (red arrows). This voxel intensity artifacting can cause 
+                                        problems in processing tools and so we correct for it using Bias Field Correciton. Here I used <code>N4ITKBiasFieldCorrection</code> from 
+                                        3D Slicer. <br>Before and after comparisons can be made by clicking on the example image below. Click on the image to switch between the uncorrected
+                                        and corrected images in order to see the differences. You'll notice that the signal intensity in the corrected image is much more uniform and 
+                                        consistant between tissue types. The differences here are subtle, but can be significant to processing tools which is why we need to correct 
+                                        for them. These differences are more obvious in the 7T image.                                  
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-3"></div>
+                            </div>
+
+                            <!-- Media -->
+                            <div class="row center">
+                                <h2>3T</h2>
+                                <div class="col-12 center">
+                                    <img height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/bias_field/3T_raw.png" id="3T_bias_Img" onclick="changeImg_3T_bias()"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7T -->
+                        <div id="7T_bias" class="tab-pane fade">
+                            <!-- Description -->
+                            <div class="row">
+                                <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
+                                    <h2>Bias Field Correction</h2>
+                                    <p>
+                                       As the strength of the magnetic field increases so does magnetic susceptibility artifacting. This is much more obvious here in the 7T image below. 
+                                       Artifacting like this can cause problems in cortical segmentation and tissue classificaiton algorithms, which is why we want to correct for it. 
+                                       Again I use <code>N4ITKBiasFieldCorrection</code> to correct the biasing. Click on the image to switch between the corrected and uncorrected images, 
+                                       to see the result of the correction. Clicking the collapsable will show the bias field using a color gradient. Red signifies areas that suffered 
+                                       greater signal deteriation, from inhomogenieties in the magnetic field.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-3"></div>
+                            </div>
+                            <!-- Media -->
+                            <div class="row center">
+                                <h2>7T</h2>
+                                <div class="col-12 center">
+                                    <img height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/bias_field/7T_raw.png" id="7T_bias_Img" onclick="changeImg_7T_bias()"/>
+                                    
+                                    <br><br>
+                                    <a data-toggle="collapse" data-target="#7T_bias_field">Show Bias Field</a>
+                                    <div class="collapse" id="7T_bias_field">
+                                        <img height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/bias_field/7T_biasField.png"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <!-- Brain Extraction -->
+                <div id="bet" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-4 center">
+                            <div class="btn-group btn-group-lg">
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#3T_bet">&nbsp;&nbsp;&nbsp;&nbsp;3T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#7T_bet">&nbsp;&nbsp;&nbsp;&nbsp;7T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4"></div>
+                    </div>
+
+                    <div class="tab-content">
+                        <!-- 3T -->
+                        <div id="3T_bet" class="tab-pane fade">
+                            <!-- Description -->
+                            <!-- Media -->
+                        </div>
+   
+                        <!-- 7T -->
+                        <div id="7T_bet" class="tab-pane fade">
+                        <!-- Description -->
+                        <!-- Media -->
+                        </div>
+                    </div>
+                </div>
                 <!-- Registration -->
+                <div id="registration" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-4 center">
+                            <div class="btn-group btn-group-lg">
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#3T_reg">&nbsp;&nbsp;&nbsp;&nbsp;3T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#7T_reg">&nbsp;&nbsp;&nbsp;&nbsp;7T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4"></div>
+                    </div>
 
+                    <div class="tab-content">
+                        <!-- 3T -->
+                        <div id="3T_reg" class="tab-pane fade">
+                            <!-- Description -->
+                            <!-- Media -->
+                        </div>
+   
+                        <!-- 7T -->
+                        <div id="7T_reg" class="tab-pane fade">
+                            <!-- Description -->
+                            <!-- Media -->
+                        </div>
+                    </div>
+                </div>
                 <!-- Tissue Classification -->
+                <div id="tissue-class" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-4 center">
+                            <div class="btn-group btn-group-lg">
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#3T_tissue-class">&nbsp;&nbsp;&nbsp;&nbsp;3T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#7T_tissue-class">&nbsp;&nbsp;&nbsp;&nbsp;7T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4"></div>
+                    </div>
 
+                    <div class="tab-content">
+                        <!-- 3T -->
+                        <div id="3T_tissue-class" class="tab-pane fade">
+                            <!-- Description -->
+                            <!-- Media -->
+                        </div>
+   
+                        <!-- 7T -->
+                        <div id="7T_tissue-class" class="tab-pane fade">
+                           <!-- Description -->
+                           <!-- Media -->
+                        </div>
+                    </div>
+                </div>
                 <!-- Sub-Cortical Segmentation-->
+                <div id="sub-seg" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-4 center">
+                            <div class="btn-group btn-group-lg">
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#3T_sub-seg">&nbsp;&nbsp;&nbsp;&nbsp;3T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#7T_sub-seg">&nbsp;&nbsp;&nbsp;&nbsp;7T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4"></div>
+                    </div>
+
+                    <div class="tab-content">
+                        <!-- 3T -->
+                        <div id="3T_sub-seg" class="tab-pane fade">
+                            <!-- Description -->
+                            <!-- Media -->
+                        </div>
+   
+                        <!-- 7T -->
+                        <div id="7T_sub-seg" class="tab-pane fade">
+                           <!-- Description -->
+                           <!-- Media -->
+                        </div>
+                    </div>
+                </div>  
             </div>
         </div>
     </div>
@@ -395,6 +646,44 @@
         } // End if
       });
     })
+</script>
+
+<script>
+    function changeImg_3T_bias() {
+        var image = document.getElementById('3T_bias_Img');
+        if (image.src.match("images/bias_field/3T_raw.png")) {
+            image.src = "images/bias_field/3T_N4.png";
+        }
+        else {
+            image.src = "images/bias_field/3T_raw.png";
+        }
+    }
+</script>
+
+<script>
+    function changeImg_7T_bias() {
+        var image = document.getElementById('7T_bias_Img');
+        if (image.src.match("images/bias_field/7T_raw.png")) {
+            image.src = "images/bias_field/7T_N4.png";
+        }
+        else {
+            image.src = "images/bias_field/7T_raw.png";
+        }
+    }
+</script>
+
+
+
+
+<script>
+    function changeText() {
+    var element = document.getElementById('element');
+    if (element.innerHTML === 'Hide') element.innerHTML = 'Show';
+    else {
+        element.innerHTML = 'Hide';
+    }
+    
+}
 </script>
 </body>
 </html>
