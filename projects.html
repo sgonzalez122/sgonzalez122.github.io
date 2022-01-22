@@ -182,9 +182,9 @@
             </div>
         </div>
         <br>
-        <a data-toggle="collapse" id="element" data-target="#structural-content" onClick="javascript:changeText()">Hide</a>
+        <a data-toggle="collapse" id="view-hide-struc" data-target="#structural-content" onClick="javascript:viewHideCollapse('View', 'Hide', 'view-hide-struc')">View</a>
         <!-- Content -->
-        <div class="row collapse in" id="structural-content">
+        <div class="row collapse " id="structural-content">
             <!-- Button Tool Bar-->
             <div class="btn-group btn-group-lg">
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#raw">Raw Data</a>
@@ -315,7 +315,8 @@
                             <div class="row center">
                                 <h2>3T</h2>
                                 <div class="col-12 center">
-                                    <img height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/bias_field/3T_raw.png" id="3T_bias_Img" onclick="changeImg_3T_bias()"/>
+                                    <img id="3T_bias_Img" src="images/bias_field/3T_raw.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                     onclick="javascript:changeImg('images/bias_field/3T_raw.png','images/bias_field/3T_N4.png','3T_bias_Img')"/>
                                 </div>
                             </div>
                         </div>
@@ -340,10 +341,12 @@
                             <div class="row center">
                                 <h2>7T</h2>
                                 <div class="col-12 center">
-                                    <img height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/bias_field/7T_raw.png" id="7T_bias_Img" onclick="changeImg_7T_bias()"/>
-                                    
+                                    <img id="7T_bias_Img" src="images/bias_field/7T_raw.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                     onclick="javascript:changeImg('images/bias_field/7T_raw.png','images/bias_field/7T_N4.png','7T_bias_Img')"/>
+
                                     <br><br>
-                                    <a data-toggle="collapse" data-target="#7T_bias_field">Show Bias Field</a>
+                                    
+                                    <a data-toggle="collapse" id="view-hide-bias" data-target="#7T_bias_field" onClick="javascript:viewHideCollapse('View Bias Field', 'Hide Bias Field', 'view-hide-bias')">View Bias Field</a>
                                     <div class="collapse" id="7T_bias_field">
                                         <img height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/bias_field/7T_biasField.png"/>
                                     </div>
@@ -367,15 +370,43 @@
 
                     <div class="tab-content">
                         <!-- 3T -->
-                        <div id="3T_bet" class="tab-pane fade">
+                        <div id="3T_bet" class="tab-pane fade in active">
                             <!-- Description -->
                             <!-- Media -->
+                            <div class="row center">
+                                <h2>3T</h2>
+                                <div class="col-12 center">
+                                    <img id="3T_bet_Img" src="images/bet/3T.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                     onclick="javascript:changeImg('images/bet/3T.png','images/bet/3T_BET.png','3T_bet_Img')"/>
+
+                                    <br><br>
+                                
+                                    <a data-toggle="collapse" id="view-hide-3T-bet-overlay" data-target="#3T_bet_overlay" onClick="javascript:viewHideCollapse('View Overlay', 'Hide Overlay', 'view-hide-3T-bet-overlay')">View Overlay</a>
+                                    <div class="collapse" id="3T_bet_overlay">
+                                        <img height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/bet/3T_BET_overlay.png"/>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
    
                         <!-- 7T -->
                         <div id="7T_bet" class="tab-pane fade">
-                        <!-- Description -->
-                        <!-- Media -->
+                            <!-- Description -->
+                            <!-- Media -->
+                            <div class="row center">
+                                <h2>7T</h2>
+                                <div class="col-12 center">
+                                    <img id="7T_bet_Img" src="images/bet/7T.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                    onclick="javascript:changeImg('images/bet/7T.png','images/bet/7T_BET.png','7T_bet_Img')"/>
+
+                                    <br><br>
+                                
+                                    <a data-toggle="collapse" id="view-hide-7T-bet-overlay" data-target="#7T_bet_overlay" onClick="javascript:viewHideCollapse('View Overlay', 'Hide Overlay', 'view-hide-7T-bet-overlay')">View Overlay</a>
+                                    <div class="collapse" id="7T_bet_overlay">
+                                        <img height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/bet/7T_BET_overlay.png"/>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -491,10 +522,10 @@
             </div>
         </div>
         <br>
-        <a data-toggle="collapse" data-target="#functional-content">Collapse Section</a>
+        <a data-toggle="collapse" id="view-hide-func" data-target="#functional-content" onClick="javascript:viewHideCollapse('View', 'Hide', 'view-hide-func')">View</a>
 
         <!-- Content -->
-        <div class="row collapse in" id="functional-content">
+        <div class="row collapse" id="functional-content">
             <!-- Button Tool Bar-->
             <div class="btn-group btn-group-lg">
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab1">Tab 1</a>
@@ -551,10 +582,10 @@
             </div>
         </div>
         <br>
-        <a data-toggle="collapse" data-target="#diffusion-content">Collapse Section</a>
+        <a data-toggle="collapse" id="view-hide-diff" data-target="#diffusion-content" onClick="javascript:viewHideCollapse('View', 'Hide', 'view-hide-diff')">View</a>
 
         <!-- Content -->
-        <div class="row collapse in" id="diffusion-content">
+        <div class="row collapse" id="diffusion-content">
             <!-- Button Tool Bar-->
             <div class="btn-group btn-group-lg">
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab1">Tab 1</a>
@@ -648,42 +679,27 @@
     })
 </script>
 
-<script>
-    function changeImg_3T_bias() {
-        var image = document.getElementById('3T_bias_Img');
-        if (image.src.match("images/bias_field/3T_raw.png")) {
-            image.src = "images/bias_field/3T_N4.png";
-        }
-        else {
-            image.src = "images/bias_field/3T_raw.png";
-        }
-    }
-</script>
 
 <script>
-    function changeImg_7T_bias() {
-        var image = document.getElementById('7T_bias_Img');
-        if (image.src.match("images/bias_field/7T_raw.png")) {
-            image.src = "images/bias_field/7T_N4.png";
-        }
-        else {
-            image.src = "images/bias_field/7T_raw.png";
+    function changeImg(img1,img2,imgId){
+        var image = document.getElementById(imgId);
+        if (image.src.match(img1)){
+            image.src = img2;
+        } else {
+            image.src = img1
         }
     }
 </script>
 
 
-
-
 <script>
-    function changeText() {
-    var element = document.getElementById('element');
-    if (element.innerHTML === 'Hide') element.innerHTML = 'Show';
-    else {
-        element.innerHTML = 'Hide';
+    function viewHideCollapse(text1,text2,vhcID){
+        var element = document.getElementById(vhcID);
+        if (element.innerHTML === text1) element.innerHTML = text2;
+        else {
+            element.innerHTML = text1;
+        }
     }
-    
-}
 </script>
 </body>
 </html>
