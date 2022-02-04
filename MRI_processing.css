@@ -60,6 +60,7 @@ h2{
 a{
     text-decoration: none;
     color: #fd5961;
+    cursor: pointer;
 }
 
 a:hover{
@@ -103,6 +104,147 @@ code {
     padding: 2px;
     font-size: 105%;
   }
+
+/* #region popup */
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #fd5961;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  font-family: Consolas,"courier new";
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  cursor: text;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 14%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+/* #endregion popup */
+
+
+/* #region Box Modal */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 21%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #555;
+    font-family: Consolas,"courier new";
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  .modal-button{
+    background-color: var(--dark);
+    border-color: #fd5961;
+    color: #fd5961;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 5px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .modal-button:hover{
+      background-color: #fd5961;
+      color:#fff;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    opacity: .7;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-header {
+    padding: 0;
+    border-bottom: 0;
+    background-color: #555;
+    color: white;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+  }
+
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+/* #endregion Box Modal */
+
 
 /* #region Navbar*/
 /* Add a dark background color with a little bit see-through*/
@@ -237,23 +379,6 @@ code {
   padding: 8px 12px;
   position: absolute;
   top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-
-}
-
-.dot:hover {
-  background-color: #717171;
 }
 
 /* Fading animation */
