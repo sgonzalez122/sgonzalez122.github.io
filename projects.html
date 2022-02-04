@@ -302,10 +302,10 @@
                                         than there should be, and vice versa. As a result some areas will appear brighter or darker than they should. This can be seen in the
                                         example image below, particularly in areas where white matter boarders gray matter, (red arrows). This voxel intensity artifacting can cause 
                                         problems in processing tools and so we correct for it using Bias Field Correciton. Here I used <code>N4ITKBiasFieldCorrection</code> from 
-                                        3D Slicer. <br>Before and after comparisons can be made by clicking on the example image below. Click on the image to switch between the uncorrected
-                                        and corrected images in order to see the differences. You'll notice that the signal intensity in the corrected image is much more uniform and 
-                                        consistant between tissue types. The differences here are subtle, but can be significant to processing tools which is why we need to correct 
-                                        for them. These differences are more obvious in the 7T image.                                  
+                                        3D Slicer, and you can view the code down below. Before and after comparisons can be made by <b><em>clicking</em></b> on the example image below. 
+                                        <b><em>Click</em></b> on the image to switch between the uncorrected and corrected images in order to see the differences. You'll notice that the signal
+                                        intensity in the corrected image is much more uniform and consistant between tissue types. The differences here are subtle, but can be significant 
+                                        to processing tools which is why we need to correct for them, and are more obvious in the 7T image.                                  
                                     </p>
                                 </div>
                                 <div class="col-12 col-lg-3"></div>
@@ -317,6 +317,44 @@
                                 <div class="col-12 center">
                                     <img id="3T_bias_Img" src="images/bias_field/3T_raw.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
                                      onclick="javascript:changeImg('images/bias_field/3T_raw.png','images/bias_field/3T_N4.png','3T_bias_Img')"/>
+
+                                     <br><br>
+
+                                     <!-- Pop Up -->
+                                    <div class="popup" onclick="myFunction('3T_bias_pop')" >
+                                        <a id="view-hide-bias-code-3T" onClick="javascript:viewHideCollapse('View Code','Hide Code','view-hide-bias-code-3T')">View Code</a>
+                                        <span class="popuptext" id="3T_bias_pop">
+                                                N4ITKBiasFieldCorrection --bffwhm 0.15 <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--splinedistance 50 --outputbiasfield <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accelerated_Sagittal_MPRAGE_3T_biasField.nii <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accelerated_Sagittal_MPRAGE_3T.nii <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accelerated_Sagittal_MPRAGE_3T_N4.nii
+                                        </span>
+                                    </div>
+
+                                    <!-- Model Box -->
+                                    <!-- Trigger/Open The Modal -->
+                                    <button class="modal-button" href="#Modal-3T-bias">View Code</button>
+                                    
+                                    <!-- The Modal -->
+                                    <div id="Modal-3T-bias" class="modal">
+
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <span class="close">x</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>
+                                                    N4ITKBiasFieldCorrection --bffwhm 0.15 <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--splinedistance 50 --outputbiasfield <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accelerated_Sagittal_MPRAGE_3T_biasField.nii <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accelerated_Sagittal_MPRAGE_3T.nii <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accelerated_Sagittal_MPRAGE_3T_N4.nii
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -330,9 +368,9 @@
                                     <p>
                                        As the strength of the magnetic field increases so does magnetic susceptibility artifacting. This is much more obvious here in the 7T image below. 
                                        Artifacting like this can cause problems in cortical segmentation and tissue classificaiton algorithms, which is why we want to correct for it. 
-                                       Again I use <code>N4ITKBiasFieldCorrection</code> to correct the biasing. Click on the image to switch between the corrected and uncorrected images, 
-                                       to see the result of the correction. Clicking the collapsable will show the bias field using a color gradient. Red signifies areas that suffered 
-                                       greater signal deteriation, from inhomogenieties in the magnetic field.
+                                       An example of the bias field using a color gradiant is provided below as well. Red signifies areas that suffered greater signal deterioration, 
+                                       from inhomogenieties in the magnetic field. Again I use <code>N4ITKBiasFieldCorrection</code> to correct the biasing, and the code can be viewed 
+                                       below. You can also <b><em>click</em></b> on the image to switch between the corrected and uncorrected images, to see the result of the correction. 
                                     </p>
                                 </div>
                                 <div class="col-12 col-lg-3"></div>
@@ -345,8 +383,50 @@
                                      onclick="javascript:changeImg('images/bias_field/7T_raw.png','images/bias_field/7T_N4.png','7T_bias_Img')"/>
 
                                     <br><br>
+                                    <!-- Pop Up-->
+                                    <div class="popup" onclick="myFunction('7T_bias_pop')" >
+                                        <a id="view-hide-bias-code-7T" onClick="javascript:viewHideCollapse('View Code','Hide Code','view-hide-bias-code-7T')">View Code</a>
+                                        <span class="popuptext" id="7T_bias_pop">
+                                            N4ITKBiasFieldCorrection <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--bffwhm 0.15 
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--splinedistance 50 <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--outputbiasfield <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t1_mprage_sag_7T_biasField.nii <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t1_mprage_sag_7T.nii <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t1_mprage_sag7T_N4.nii
+                                        </span>
+                                      </div>
                                     
+                                    <!-- Model Box -->
+                                    <!-- Trigger/Open The Modal -->
+                                    <button class="modal-button" href="#Modal-7T-bias">View Code</button>
+                                    
+                                    <!-- The Modal -->
+                                    <div id="Modal-7T-bias" class="modal">
+
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <span class="close">x</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>
+                                                    N4ITKBiasFieldCorrection --bffwhm 0.15 <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--splinedistance 50 --outputbiasfield <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t1_mprage_sag_7T_biasField.nii <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t1_mprage_sag_7T.nii <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t1_mprage_sag7T_N4.nii
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                      
+
+                                    <br>
+                                    <!-- Collapsable -->
                                     <a data-toggle="collapse" id="view-hide-bias" data-target="#7T_bias_field" onClick="javascript:viewHideCollapse('View Bias Field', 'Hide Bias Field', 'view-hide-bias')">View Bias Field</a>
+
+                                    <!-- Collapsable Contents-->
                                     <div class="collapse" id="7T_bias_field">
                                         <img height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/bias_field/7T_biasField.png"/>
                                     </div>
@@ -372,6 +452,21 @@
                         <!-- 3T -->
                         <div id="3T_bet" class="tab-pane fade in active">
                             <!-- Description -->
+                            <div class="row">
+                                <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
+                                    <h2>Brain Extraction</h2>
+                                    <p>
+                                       Because the brain is our primary interest here, we must isolate it from the non-important areas. Portions of the image, 
+                                       such as neck, eyes, nose, and skull are of no interest to us, and so we must remove them from the image. We do this because, similarly to Bias 
+                                       Field Correction, it will allow image processing algorithms to perform much smoother and quicker if these areas are not present in the image. 
+                                       Therefore we perform what is called "Brain Extraction". There are many tools available to do so, but here I use FMRIB's Software Lirbrary 
+                                       (<a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/" target="_blank" rel="noopener">FSL</a>) Brain Extraction Toolkit 
+                                       (<a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/BET/UserGuide" target="_blank" rel="noopener">BET</a>). 
+                                       Click on the image to see the image after running BET on the data. You can also view an overlay by clicking the overlay collapsable. 
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-3"></div>
+                            </div>
                             <!-- Media -->
                             <div class="row center">
                                 <h2>3T</h2>
@@ -392,6 +487,20 @@
                         <!-- 7T -->
                         <div id="7T_bet" class="tab-pane fade">
                             <!-- Description -->
+                            <div class="row">
+                                <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
+                                    <h2>Brain Extraction</h2>
+                                    <p>
+                                       Brain Extraction was also run on the 7T image all the same using FSL's BET. Just as in the 3T image, BET does an excellent job of removing
+                                       non-brain areas, and isolating brain tissue. You'll notice that the "-f" option uses a value of "0.3" instead of "0.4". The "-f" option adjusts 
+                                       the fractional intensity threshold, which basically controlls the outline the algorithm uses to isolate the brain. Larger values are more restrictive and will result
+                                       in more areas being removed, whereas smaller values are more lenient and will result in less areas being removed. I chose the values here simply by trial 
+                                       and error and stuck with which option gave the best resultant image. You can also click on the image here to see the results of BET on the 7T image, as well
+                                       as view the overlay by clicking the overlay collapsable. 
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-3"></div>
+                            </div>
                             <!-- Media -->
                             <div class="row center">
                                 <h2>7T</h2>
@@ -451,19 +560,6 @@
                                 <a class="prev" onclick="plusSlides(-1,0)">&#10094</a>
                                 <a class="next" onclick="plusSlides(1,0)">&#10095</a>
                             </div>
-                            <br><br>
-
-                            <!-- The docs/circles -->
-                            <div class="col-lg-4"></div>
-                            <div class="col-lg-4">
-                                <div class="carousel-indicators" style="text-align:left">
-                                    <span class="dot" onclick="currentSlide(1)"></span>
-                                    <span class="dot" onclick="currentSlide(2)"></span>
-                                    <span class="dot" onclick="currentSlide(3)"></span>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-4"></div>
                         </div>
    
                         <!-- 7T -->
@@ -493,20 +589,6 @@
                                 <a class="prev" onclick="plusSlides(-1,1)">&#10094</a>
                                 <a class="next" onclick="plusSlides(1,1)">&#10095</a>
                             </div>
-                            <br><br>
-
-                            <!-- The docs/circles -->
-                            <div class="col-lg-4"></div>
-                            <div class="col-lg-4">
-                                <div class="carousel-indicators" style="text-align:left">
-                                    <span class="dot" onclick="currentSlide(1)"></span>
-                                    <span class="dot" onclick="currentSlide(2)"></span>
-                                    <span class="dot" onclick="currentSlide(3)"></span>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-4"></div>
-
                         </div>
                     </div>
                 </div>
@@ -724,6 +806,7 @@
 
 <!-- endregion -->
 
+<!-- Smooth Scroll -->
 <script>
     $(document).ready(function(){
       // Add smooth scrolling to all links in navbar + footer link
@@ -752,7 +835,7 @@
     })
 </script>
 
-
+<!-- Change Image on Click -->
 <script>
     function changeImg(img1,img2,imgId){
         var image = document.getElementById(imgId);
@@ -764,7 +847,7 @@
     }
 </script>
 
-
+<!-- View Hide Collapable -->
 <script>
     function viewHideCollapse(text1,text2,vhcID){
         var element = document.getElementById(vhcID);
@@ -775,6 +858,8 @@
     }
 </script>
 
+
+<!-- Slide Show -->
 <script>
     var slideIndex = [1,1];
     var slideId = ["mySlides1", "mySlides2"]
@@ -795,7 +880,55 @@
       }
       x[slideIndex[no]-1].style.display = "block";  
     }
-    </script>
+</script>
+
+<!-- Pop Up -->
+<script>
+    // When the user clicks on div, open the popup
+    function myFunction(popID) {
+      var popup = document.getElementById(popID);
+      popup.classList.toggle("show");
+    }
+</script>
+
+<!-- Box Modal -->
+<script>
+    // Get the button that opens the modal
+    var btn = document.querySelectorAll("button.modal-button");
+
+    // All page modals
+    var modals = document.querySelectorAll('.modal');
+
+    // Get the <span> element that closes the modal
+    var spans = document.getElementsByClassName("close");
+
+    // When the user clicks the button, open the modal
+    for (var i = 0; i < btn.length; i++) {
+    btn[i].onclick = function(e) {
+        e.preventDefault();
+        modal = document.querySelector(e.target.getAttribute("href"));
+        modal.style.display = "block";
+    }
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    for (var i = 0; i < spans.length; i++) {
+    spans[i].onclick = function() {
+        for (var index in modals) {
+        if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+        }
+    }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+        for (var index in modals) {
+        if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+        }
+        }
+    }
+</script>
 </body>
 </html>
 
