@@ -319,19 +319,6 @@
                                      onclick="javascript:changeImg('images/bias_field/3T_raw.png','images/bias_field/3T_N4.png','3T_bias_Img')"/>
 
                                      <br><br>
-
-                                     <!-- Pop Up -->
-                                    <div class="popup" onclick="myFunction('3T_bias_pop')" >
-                                        <a id="view-hide-bias-code-3T" onClick="javascript:viewHideCollapse('View Code','Hide Code','view-hide-bias-code-3T')">View Code</a>
-                                        <span class="popuptext" id="3T_bias_pop">
-                                                N4ITKBiasFieldCorrection --bffwhm 0.15 <br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--splinedistance 50 --outputbiasfield <br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accelerated_Sagittal_MPRAGE_3T_biasField.nii <br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accelerated_Sagittal_MPRAGE_3T.nii <br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accelerated_Sagittal_MPRAGE_3T_N4.nii
-                                        </span>
-                                    </div>
-
                                     <!-- Model Box -->
                                     <!-- Trigger/Open The Modal -->
                                     <button class="modal-button" href="#Modal-3T-bias">View Code</button>
@@ -383,20 +370,6 @@
                                      onclick="javascript:changeImg('images/bias_field/7T_raw.png','images/bias_field/7T_N4.png','7T_bias_Img')"/>
 
                                     <br><br>
-                                    <!-- Pop Up-->
-                                    <div class="popup" onclick="myFunction('7T_bias_pop')" >
-                                        <a id="view-hide-bias-code-7T" onClick="javascript:viewHideCollapse('View Code','Hide Code','view-hide-bias-code-7T')">View Code</a>
-                                        <span class="popuptext" id="7T_bias_pop">
-                                            N4ITKBiasFieldCorrection <br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--bffwhm 0.15 
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--splinedistance 50 <br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--outputbiasfield <br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t1_mprage_sag_7T_biasField.nii <br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t1_mprage_sag_7T.nii <br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t1_mprage_sag7T_N4.nii
-                                        </span>
-                                      </div>
-                                    
                                     <!-- Model Box -->
                                     <!-- Trigger/Open The Modal -->
                                     <button class="modal-button" href="#Modal-7T-bias">View Code</button>
@@ -421,10 +394,8 @@
                                         </div>
                                     </div>
                                       
-
-                                    <br>
                                     <!-- Collapsable -->
-                                    <a data-toggle="collapse" id="view-hide-bias" data-target="#7T_bias_field" onClick="javascript:viewHideCollapse('View Bias Field', 'Hide Bias Field', 'view-hide-bias')">View Bias Field</a>
+                                    <button class="myButton" id="view-hide-bias" data-toggle='collapse' href="#7T_bias_field" onClick="javascript:viewHideCollapse('View Bias Field', 'Hide Bias Field', 'view-hide-bias')">View Bias Field</button>
 
                                     <!-- Collapsable Contents-->
                                     <div class="collapse" id="7T_bias_field">
@@ -475,8 +446,32 @@
                                      onclick="javascript:changeImg('images/bet/3T.png','images/bet/3T_BET.png','3T_bet_Img')"/>
 
                                     <br><br>
-                                
-                                    <a data-toggle="collapse" id="view-hide-3T-bet-overlay" data-target="#3T_bet_overlay" onClick="javascript:viewHideCollapse('View Overlay', 'Hide Overlay', 'view-hide-3T-bet-overlay')">View Overlay</a>
+                                    <!-- Model Box -->
+                                    <!-- Trigger/Open The Modal -->
+                                    <button class="modal-button" href="#Modal-3T-bet">View Code</button>
+                                    
+                                    <!-- The Modal -->
+                                    <div id="Modal-3T-bet" class="modal">
+
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <span class="close">x</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>
+                                                    bet Accelerated_Sagittal_MPRAGE_3T_N4.nii <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;Accelerated_Sagittal_MPRAGE_3T_N4_BET.nii <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;-m -f 0.4 -c 88 123 138 -R 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Collapsable -->
+                                    <button class="myButton" id="view-hide-3T-bet-overlay" data-toggle='collapse' href="#3T_bet_overlay" onClick="javascript:viewHideCollapse('View Overlay', 'Hide Overlay', 'view-hide-3T-bet-overlay')">View Overlay</button>
+
+                                    <!-- Collapsable Contents-->
                                     <div class="collapse" id="3T_bet_overlay">
                                         <img height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/bet/3T_BET_overlay.png"/>
                                     </div>
@@ -509,8 +504,32 @@
                                     onclick="javascript:changeImg('images/bet/7T.png','images/bet/7T_BET.png','7T_bet_Img')"/>
 
                                     <br><br>
-                                
-                                    <a data-toggle="collapse" id="view-hide-7T-bet-overlay" data-target="#7T_bet_overlay" onClick="javascript:viewHideCollapse('View Overlay', 'Hide Overlay', 'view-hide-7T-bet-overlay')">View Overlay</a>
+                                    <!-- Model Box -->
+                                    <!-- Trigger/Open The Modal -->
+                                    <button class="modal-button" href="#Modal-7T-bet">View Code</button>
+                                    
+                                    <!-- The Modal -->
+                                    <div id="Modal-7T-bet" class="modal">
+
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <span class="close">x</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>
+                                                    bet t1_mprage_sag_7T_N4.nii <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;t1_mprage_sag_7T_N4_BET.nii <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;-m -f 0.3 -c 119 151 192 -R
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Collapsable -->
+                                    <button class="myButton" id="view-hide-7T-bet-overlay" data-toggle='collapse' href="#7T_bet_overlay" onClick="javascript:viewHideCollapse('View Overlay', 'Hide Overlay', 'view-hide-7T-bet-overlay')">View Overlay</button>
+
+                                    <!-- Collapsable Contents-->
                                     <div class="collapse" id="7T_bet_overlay">
                                         <img height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/bet/7T_BET_overlay.png"/>
                                     </div>
@@ -536,9 +555,22 @@
                         <!-- 3T -->
                         <div id="3T_reg" class="tab-pane fade in active">
                             <!-- Description -->
+                            <div class="row">
+                                <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
+                                    <h2>Registration</h2>
+                                    <p>
+                                        Now that we have a clean extraction of the brain we need to assure that our images are registered in the same 3-Dimensional space. Fresh off the scanner, images are not automatically
+                                        placed into the same space. Therefore, we must register them to the same space so that we can make comparisons. Otherwise we would be making comparisons between
+                                        tissues with different coordinates. There are 2 kinds of image registration, Linear and Non-Linear. The specificities of these types of registration are beyond the scope of this 
+                                        demonstration, but you can imagine a Linear registration as a drag and drop kind of movement. Transformations are only made 
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-3"></div>
+                            </div>
                             <!-- Media -->
                             <!-- Slideshow container -->
-                            <br>
+                           
+                            <h2>3T</h2>
                             <div class="slideshow-container">
                                 <!-- Full-width images with number and caption text-->
                                 <div class="mySlides1 fade in active">
@@ -879,15 +911,6 @@
          x[i].style.display = "none";  
       }
       x[slideIndex[no]-1].style.display = "block";  
-    }
-</script>
-
-<!-- Pop Up -->
-<script>
-    // When the user clicks on div, open the popup
-    function myFunction(popID) {
-      var popup = document.getElementById(popID);
-      popup.classList.toggle("show");
     }
 </script>
 
