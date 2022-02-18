@@ -731,7 +731,15 @@
                                 <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
                                     <h2>Tissue Classification</h2>
                                     <p>
-                                         
+                                         Here's where things get a bit more interesting. Tissue Classification is a process in which we segment the tissue types into individual parts, 
+                                         Grey Matter (GM), White Matter (WM), and Cerebrospinal Fluid (CSF). For this step I used FMRIB's Automated Segmentation Tool 
+                                         (<a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FAST" target="_blank" rel="noopener">FAST</a>). This tool will first perform a "hard" segmentation 
+                                         where the tissue types will be defined dichotomously, as either fully belonging to a one tissue type or another. This is refered to as a binary segmentation 
+                                         and can be seen below in the first slide. However, this is an oversimplification of the true anatomy. Indeed there are many voxel in an image that 
+                                         are 100% one tissue type or another, but that is not the case for all voxels. There are many voxels that possess a mixture of tissue types, which is where the 
+                                         partial volume estimation (PVE) comes in. An example of a PVE map can be seen below in slide 2. Additionally, you can view the code I used to run the classificaiton, 
+                                         videos for both the "hard" segmentation and the PVE maps, as well as a calculation of the volume for each tissue type. 
+                                
                                     </p>
                                 </div>
                                 <div class="col-12 col-lg-3"></div>
@@ -742,9 +750,11 @@
                             <div class="slideshow-container">
                                 <!-- Full-width images with number and caption text-->
                                 <div class="mySlides3 fade in active">
-                                    <h4><em>Pure Segmentation</em></h4>
+                                    <h4><em>Binary Segmentation</em></h4>
                                     <p>
-                                         
+                                        An example of the processed image is provided below. <b><em>Click</em></b> on the image to see the results of the "hard" segmentation. 
+                                        The image is colored so that the CSF appears Green, the Grey Matter appears Blue, and the White Matter appears Red. You'll notice that there is no 
+                                        gradual change in the coloring, they are either classified/colored as belonging to one or another. Hence why it's called a binary or "hard" segmentation.
                                     </p><br>
                                     <img id="3T_tissue-class_seg" src="images/tissue_class/3T_seg_underlay.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
                                      onclick="javascript:changeImg('images/tissue_class/3T_seg_underlay.png','images/tissue_class/3T_seg_overlay.png','3T_tissue-class_seg')"/>
@@ -753,7 +763,10 @@
                                 <div class="mySlides3 fade in">
                                     <h4><em>Partial Volume Estimation</em></h4>
                                     <p>
-                                         
+                                        <b><em>Click</em></b> on the image to see the results of the Partial Volume Estimation. The PVE maps are colored such that the Grey Matter (GM) ranges from 
+                                        a Cyan to Dark Blue, cyan being classified as 100% GM and dark blue being a mixture of pirmarily GM and one of the other two tissue types. 
+                                        Similarly the White Matter (WM) ranges from Yellow to Red, such that Yellow areas represent 100% pure WM and Red areas represent a mixture of mostly WM and one or more of the 
+                                        othe two tissue types. Lastly CSF is ranges from light to dark green, the ligher areas being pure CSF and the darker areas being a mixture. 
                                     </p><br>
                                     <img id="3T_tissue-class_pve" src="images/tissue_class/3T_pve_underlay.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
                                      onclick="javascript:changeImg('images/tissue_class/3T_pve_underlay.png','images/tissue_class/3T_pve_overlay.png','3T_tissue-class_pve')"/>
@@ -839,73 +852,73 @@
                                 <br>
                                 <div class="panel-group" id="accordion">
                                     <div class="panel panel-default">
-                                      <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                          <a data-toggle="collapse" data-parent="#accordion" href="#PVE_CSF_3T">PVE: Cerebrospinal Fluid</a>
-                                        </h4>
-                                      </div>
-                                      <div id="PVE_CSF_3T" class="panel-collapse collapse">
-                                        <div class="panel-body">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
-                                                <source src="videos/tissue-class/3T_pve_0_csf/3T_pve_csf_sagittal.mp4" type="video/mp4">
-                                            </video> 
-                                            &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
-                                                <source src="videos/tissue-class/3T_pve_0_csf/3T_pve_csf_coronal.mp4" type="video/mp4">
-                                            </video> 
-                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
-                                                <source src="videos/tissue-class/3T_pve_0_csf/3T_pve_csf_axial.mp4" type="video/mp4">
-                                            </video> 
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#PVE_CSF_3T">PVE: Cerebrospinal Fluid</a>
+                                            </h4>
                                         </div>
-                                      </div>
+                                        <div id="PVE_CSF_3T" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
+                                                    <source src="videos/tissue-class/3T_pve_0_csf/3T_pve_csf_sagittal.mp4" type="video/mp4">
+                                                </video> 
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/3T_pve_0_csf/3T_pve_csf_coronal.mp4" type="video/mp4">
+                                                </video> 
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/3T_pve_0_csf/3T_pve_csf_axial.mp4" type="video/mp4">
+                                                </video> 
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="panel panel-default">
-                                      <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                          <a data-toggle="collapse" data-parent="#accordion" href="#PVE_GM_3T">PVE: Grey Matter</a>
-                                        </h4>
-                                      </div>
-                                      <div id="PVE_GM_3T" class="panel-collapse collapse">
-                                        <div class="panel-body">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
-                                                <source src="videos/tissue-class/3T_pve_1_gm/3T_pve_gm_sagittal.mp4" type="video/mp4">
-                                            </video> 
-                                            &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
-                                                <source src="videos/tissue-class/3T_pve_1_gm/3T_pve_gm_coronal.mp4" type="video/mp4">
-                                            </video> 
-                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
-                                                <source src="videos/tissue-class/3T_pve_1_gm/3T_pve_gm_axial.mp4" type="video/mp4">
-                                            </video>
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#PVE_GM_3T">PVE: Grey Matter</a>
+                                            </h4>
                                         </div>
-                                      </div>
+                                        <div id="PVE_GM_3T" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
+                                                    <source src="videos/tissue-class/3T_pve_1_gm/3T_pve_gm_sagittal.mp4" type="video/mp4">
+                                                </video> 
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/3T_pve_1_gm/3T_pve_gm_coronal.mp4" type="video/mp4">
+                                                </video> 
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/3T_pve_1_gm/3T_pve_gm_axial.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="panel panel-default">
-                                      <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                          <a data-toggle="collapse" data-parent="#accordion" href="#PVE_WM_3T">PVE: White Matter</a>
-                                        </h4>
-                                      </div>
-                                      <div id="PVE_WM_3T" class="panel-collapse collapse">
-                                        <div class="panel-body">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
-                                                <source src="videos/tissue-class/3T_pve_2_wm/3T_pve_wm_sagittal.mp4" type="video/mp4">
-                                            </video> 
-                                            &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
-                                                <source src="videos/tissue-class/3T_pve_2_wm/3T_pve_wm_coronal.mp4" type="video/mp4">
-                                            </video> 
-                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
-                                                <source src="videos/tissue-class/3T_pve_2_wm/3T_pve_wm_axial.mp4" type="video/mp4">
-                                            </video>
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#PVE_WM_3T">PVE: White Matter</a>
+                                            </h4>
                                         </div>
-                                      </div>
+                                        <div id="PVE_WM_3T" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
+                                                    <source src="videos/tissue-class/3T_pve_2_wm/3T_pve_wm_sagittal.mp4" type="video/mp4">
+                                                </video> 
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/3T_pve_2_wm/3T_pve_wm_coronal.mp4" type="video/mp4">
+                                                </video> 
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/3T_pve_2_wm/3T_pve_wm_axial.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div> 
                             </div>
@@ -919,7 +932,10 @@
                                 <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
                                     <h2>Tissue Classification</h2>
                                     <p>
-                                     
+                                        There are little differences to mention between the 3T and 7T results. So I will use this to talk more about various other details about the methods I used and 
+                                        the process in general. For starters I used the "-N" option in my run of FAST, this prefents the tool from performing running bias field correction. Since 
+                                        I had already done this I didn't feel it necessary to do it again. As for the volume calculation, if I had more data I could use this to make comparisons between subjects 
+                                        or groups for differences in either Grey Matter or White Matter volume. 
                                     </p>
                                 </div>
                                 <div class="col-12 col-lg-3"></div>
@@ -932,7 +948,9 @@
                                 <div class="mySlides4 fade in active">
                                     <h4><em>Pure Segmentation</em></h4>
                                     <p>
-                                         
+                                        An example of the processed image is provided below. <b><em>Click</em></b> on the image to see the results of the "hard" segmentation. 
+                                        The image is colored so that the CSF appears Green, the Grey Matter appears Blue, and the White Matter appears Red. You'll notice that there is no 
+                                        gradual change in the coloring, they are either classified/colored as belonging to one or another. Hence why it's called a binary or "hard" segmentation.
                                     </p><br>
                                     <img id="7T_tissue-class_seg" src="images/tissue_class/7T_seg_underlay.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
                                      onclick="javascript:changeImg('images/tissue_class/7T_seg_underlay.png','images/tissue_class/7T_seg_overlay.png','7T_tissue-class_seg')"/>
@@ -941,7 +959,10 @@
                                 <div class="mySlides4 fade in">
                                     <h4><em>Partial Volume Estimation</em></h4>
                                     <p>
-                                         
+                                        <b><em>Click</em></b> on the image to see the results of the Partial Volume Estimation. The PVE maps are colored such that the Grey Matter (GM) ranges from 
+                                        a Cyan to Dark Blue, cyan being classified as 100% GM and dark blue being a mixture of pirmarily GM and one of the other two tissue types. 
+                                        Similarly the White Matter (WM) ranges from Yellow to Red, such that Yellow areas represent 100% pure WM and Red areas represent a mixture of mostly WM and one or more of the 
+                                        othe two tissue types. Lastly CSF is ranges from light to dark green, the ligher areas being pure CSF and the darker areas being a mixture.
                                     </p><br>
                                     <img id="7T_tissue-class_pve" src="images/tissue_class/7T_pve_underlay.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
                                      onclick="javascript:changeImg('images/tissue_class/7T_pve_underlay.png','images/tissue_class/7T_pve_overlay.png','7T_tissue-class_pve')"/>
@@ -1010,15 +1031,15 @@
                             <div class="collapse" id="seg_vid_7T">
                                 <br>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <video height="325" width="380" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
+                                <video height="355" width="360" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
                                     <source src="videos/tissue-class/7T_seg/7T_seg_sagittal.mp4" type="video/mp4">
                                 </video> 
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                <video height="325" width="380" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                <video height="355" width="360" style="border: 9px outset rgb(107, 110, 119);" controls muted>
                                     <source src="videos/tissue-class/7T_seg/7T_seg_coronal.mp4" type="video/mp4">
                                 </video> 
                                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <video height="325" width="380" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                <video height="355" width="360" style="border: 9px outset rgb(107, 110, 119);" controls muted>
                                     <source src="videos/tissue-class/7T_seg/7T_seg_axial.mp4" type="video/mp4">
                                 </video> 
                             </div>
@@ -1028,73 +1049,73 @@
                                 <br>
                                 <div class="panel-group" id="accordion">
                                     <div class="panel panel-default">
-                                      <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                          <a data-toggle="collapse" data-parent="#accordion" href="#PVE_CSF_7T">PVE: Cerebrospinal Fluid</a>
-                                        </h4>
-                                      </div>
-                                      <div id="PVE_CSF_7T" class="panel-collapse collapse">
-                                        <div class="panel-body">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
-                                                <source src="videos/tissue-class/7T_pve_0_csf/7T_pve_csf_sagittal.mp4" type="video/mp4">
-                                            </video> 
-                                            &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
-                                                <source src="videos/tissue-class/7T_pve_0_csf/7T_pve_csf_coronal.mp4" type="video/mp4">
-                                            </video> 
-                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
-                                                <source src="videos/tissue-class/7T_pve_0_csf/7T_pve_csf_axial.mp4" type="video/mp4">
-                                            </video> 
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#PVE_CSF_7T">PVE: Cerebrospinal Fluid</a>
+                                            </h4>
                                         </div>
-                                      </div>
+                                        <div id="PVE_CSF_7T" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
+                                                    <source src="videos/tissue-class/7T_pve_0_csf/7T_pve_csf_sagittal.mp4" type="video/mp4">
+                                                </video> 
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/7T_pve_0_csf/7T_pve_csf_coronal.mp4" type="video/mp4">
+                                                </video> 
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/7T_pve_0_csf/7T_pve_csf_axial.mp4" type="video/mp4">
+                                                </video> 
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="panel panel-default">
-                                      <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                          <a data-toggle="collapse" data-parent="#accordion" href="#PVE_GM_7T">PVE: Grey Matter</a>
-                                        </h4>
-                                      </div>
-                                      <div id="PVE_GM_7T" class="panel-collapse collapse">
-                                        <div class="panel-body">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
-                                                <source src="videos/tissue-class/7T_pve_1_gm/7T_pve_gm_sagittal.mp4" type="video/mp4">
-                                            </video> 
-                                            &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
-                                                <source src="videos/tissue-class/7T_pve_1_gm/7T_pve_gm_coronal.mp4" type="video/mp4">
-                                            </video> 
-                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
-                                                <source src="videos/tissue-class/7T_pve_1_gm/7T_pve_gm_axial.mp4" type="video/mp4">
-                                            </video>
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#PVE_GM_7T">PVE: Grey Matter</a>
+                                            </h4>
                                         </div>
-                                      </div>
+                                        <div id="PVE_GM_7T" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
+                                                    <source src="videos/tissue-class/7T_pve_1_gm/7T_pve_gm_sagittal.mp4" type="video/mp4">
+                                                </video> 
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/7T_pve_1_gm/7T_pve_gm_coronal.mp4" type="video/mp4">
+                                                </video> 
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/7T_pve_1_gm/7T_pve_gm_axial.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="panel panel-default">
-                                      <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                          <a data-toggle="collapse" data-parent="#accordion" href="#PVE_WM_7T">PVE: White Matter</a>
-                                        </h4>
-                                      </div>
-                                      <div id="PVE_WM_7T" class="panel-collapse collapse">
-                                        <div class="panel-body">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
-                                                <source src="videos/tissue-class/7T_pve_2_wm/7T_pve_wm_sagittal.mp4" type="video/mp4">
-                                            </video> 
-                                            &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
-                                                <source src="videos/tissue-class/7T_pve_2_wm/7T_pve_wm_coronal.mp4" type="video/mp4">
-                                            </video> 
-                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
-                                                <source src="videos/tissue-class/7T_pve_2_wm/7T_pve_wm_axial.mp4" type="video/mp4">
-                                            </video>
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#PVE_WM_7T">PVE: White Matter</a>
+                                            </h4>
                                         </div>
-                                      </div>
+                                        <div id="PVE_WM_7T" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
+                                                    <source src="videos/tissue-class/7T_pve_2_wm/7T_pve_wm_sagittal.mp4" type="video/mp4">
+                                                </video> 
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/7T_pve_2_wm/7T_pve_wm_coronal.mp4" type="video/mp4">
+                                                </video> 
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/7T_pve_2_wm/7T_pve_wm_axial.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
