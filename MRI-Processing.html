@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Projects</title>
+    <title>MRI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="MRI_processing.css">
+    <link rel="stylesheet" type="text/css" href="MRI-Processing.css">
 </head>
 <style>
     /*#region Projects Page*/
@@ -129,14 +129,10 @@
     <div class="container">
         <div class="row">
             <!-- Media -->
-            <div class="col-12 col-lg-5 center">
-                <video height="325" width="400" style="border: 9px outset rgb(107, 110, 119);" autoplay loop muted>
-                    <source src="videos/gqi.odf.whole.brain.fiber.track.rotation.movie.mp4" type="video/mp4">
-                </video> 
-            </div>
+            
 
             <!-- Description -->
-            <div class="col-12 col-lg-7 center">
+            <div class="col-12  center">
                 <h1>MRI Processing</h1>
                 <br>
 
@@ -176,7 +172,7 @@
             <!-- Media -->
             <div class="col-12 col-lg-5 center"> 
                 <br>
-                <video height="325" width="380" style="border: 9px outset rgb(107, 110, 119);" autoplay loop muted>
+                <video class="responsive" height="325" width="380" style="border: 9px outset rgb(107, 110, 119);" autoplay loop muted>
                     <source src="videos/raw/7T_N4_sagittal.mp4" type="video/mp4">
                 </video> 
             </div>
@@ -1124,6 +1120,9 @@
                 </div>
                 <!-- Sub-Cortical Segmentation-->
                 <div id="sub-seg" class="tab-pane fade">
+                    <center><h1>Work in Progress, come back later</h1></center>
+                    <img class="center" src="images/Geolytes/Geolyte1.png" alt="Geolyte Place Holder">
+                    <!--
                     <div class="row">
                         <div class="col-lg-4"></div>
                         <div class="col-lg-4 center">
@@ -1134,8 +1133,8 @@
                         </div>
                         <div class="col-lg-4"></div>
                     </div>
-
-                    <div class="tab-content">
+                    -->
+                    <comment><div class="tab-content">
                         <!-- 3T -->
                         <div id="3T_sub-seg" class="tab-pane fade in active">
                             <!-- Description -->
@@ -1147,8 +1146,8 @@
                            <!-- Description -->
                            <!-- Media -->
                         </div>
-                    </div>
-                </div>  
+                    </div></comment>
+                </div>   
             </div>
         </div>
     </div>
@@ -1163,7 +1162,7 @@
         <div class="row">
             <!-- Media -->
             <div class="col-12 col-lg-5 center">
-                <img height="300" width="400" style="border: 9px outset rgb(107, 110, 119);" src="images/fMRI_DMN_lightbox.png" alt="default mode network">
+                <img class="responsive" height="300" width="400" style="border: 9px outset rgb(107, 110, 119);" src="images/fMRI_DMN_lightbox.png" alt="default mode network">
             </div>
 
             <!-- Description -->
@@ -1172,10 +1171,13 @@
                 <br>
 
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, eros in lacinia tempor, dolor neque tristique est,
-                    ac condimentum lectus mi ut odio. Nulla facilisi. Ut volutpat convallis dui, sed mollis felis sollicitudin eget. Praesent felis eros, 
-                    pulvinar sit amet nulla eu, venenatis suscipit sem. Aenean a magna quis erat lobortis lobortis quis id lectus. Integer sit amet dapibus lorem. 
-                    Integer a elit eu nibh tempor dapibus. Phasellus interdum eros odio, sit amet congue lacus blandit in.
+                    This section will present functional data collected on myslef at USC, specifically resting state data. Structural data was processed using the 
+                    methods described in the Structural section (Skull Striping, Bias Field Correction, etc). Functional data was corrected for EPI distortions using 
+                    Blip-Up and Blip-Down Field Maps following the <a href="https://lcni.uoregon.edu/kb-articles/kb-0003" target="_blank" rel="noopener">Instructions</a> 
+                    provided by The Lewis Center for Neuroimaging at the University of Oregon. Both structural and functional data were registered to MNI space. 
+                    An independent component analysis was run using FSL's <a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/MELODIC" target="_blank" rel="noopener">MELODIC</a>, 
+                    and FSL's MELODIC viewer was used to label each Independent Component. 
+                    
                 </p>
             </div>
         </div>
@@ -1184,18 +1186,23 @@
 
         <!-- Content -->
         <div class="row collapse" id="functional-content">
+            <center><h1 class="center">Work in Progress, come back later</h1></center>
+            <img class="center" src="images/Geolytes/Geolyte1.png" alt="Geolyte Place Holder"> 
+
+
             <!-- Button Tool Bar-->
+            <!--
             <div class="btn-group btn-group-lg">
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab1">Tab 1</a>
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab2">Tab 2</a>
-                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab3">Tab 3 </a>
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab3">Tab 3</a>
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab4">Tab 4</a>
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab5">Tab 5</a>
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab6">Tab 6</a>
-            </div>
+            </div> -->
 
             <!-- Tab Content -->
-            <div class="tab-content">
+            <!-- <div class="tab-content"> -->
                 <!-- Tab 1 -->
 
                 <!-- Tab 2 -->
@@ -1207,7 +1214,7 @@
                 <!-- Tab 5 -->
                 
                 <!-- Tab 6 -->
-            </div>
+            <!-- </div> -->
         </div>
     </div>
 </section>
@@ -1234,7 +1241,7 @@
 
             <!-- Media -->
             <div class="col-12 col-lg-5 center">
-                <video height="325" width="400" style="border: 9px outset rgb(107, 110, 119);" autoplay loop muted>
+                <video class="responsive" height="325" width="400" style="border: 9px outset rgb(107, 110, 119);" autoplay loop muted>
                     <source src="videos/gqi.odf.whole.brain.fiber.track.rotation.movie.mp4" type="video/mp4">
                 </video> 
             </div>
@@ -1244,7 +1251,11 @@
 
         <!-- Content -->
         <div class="row collapse" id="diffusion-content">
+            <center><h1>Work in Progress, come back later</h1></center>
+            <img class="center" src="images/Geolytes/Geolyte1.png" alt="Geolyte Place Holder">
+
             <!-- Button Tool Bar-->
+            <!----
             <div class="btn-group btn-group-lg">
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab1">Tab 1</a>
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab2">Tab 2</a>
@@ -1252,10 +1263,10 @@
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab4">Tab 4</a>
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab5">Tab 5</a>
                 <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab6">Tab 6</a>
-            </div>
+            </div> -->
 
             <!-- Tab Content -->
-            <div class="tab-content">
+            <!-- <div class="tab-content"> -->
                 <!-- Tab 1 -->
 
                 <!-- Tab 2 -->
@@ -1267,7 +1278,7 @@
                 <!-- Tab 5 -->
                 
                 <!-- Tab 6 -->
-            </div>
+            <!-- </div> -->
         </div>
     </div>
 </section>
@@ -1306,7 +1317,6 @@
         </div>
     </footer>
 </section>
-
 <!-- endregion -->
 
 <!-- Smooth Scroll -->
