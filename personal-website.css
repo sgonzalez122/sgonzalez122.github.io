@@ -96,6 +96,10 @@ content: '\00B7';
     margin-right: auto;
 }
 
+.responsive{
+    width: 100%;
+    height: auto;
+  }
 
 /* #region Navbar*/
 /* Add a dark background color with a little bit see-through*/
