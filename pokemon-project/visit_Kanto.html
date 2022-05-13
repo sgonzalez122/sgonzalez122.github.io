@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Project: Travel webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="kanto.css">
+</head>
+<style>
+    .locations:nth-child(even){
+        background-color: rgb(3, 85, 148);
+    }
+</style>
+
+<body>
+    <h1 class="center">Welcome to Kanto</h1> 
+
+    <!-- Model Box -->
+    <!-- Trigger/Open The Modal -->
+    <button class="modal-button" href="#Modal-3T-bias">View Description</button>
+
+    <!-- The Modal -->
+    <div id="Modal-3T-bias" class="modal">
+
+        <!-- Modal Content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Brief Description <span class="close">x</span></h2>
+            </div>
+            <div class="modal-body">
+                <p>
+                    The first example is a travel web page I made right after I finished Khan Acadamies initial course 
+                    on HTML and CSS. The assignment was to take all the skills I learned and make a travel page for a place I'd like to visit. In all honesty, I 
+                    am not much of a travel person, so I decided to make a page based on the idea of traveling to the fictional location of the Kanto region, from the 
+                    Pokemon series. You'll notice the page is unfinished. While I was working on the project I got to a point where I realized that the work I was doing 
+                    could be better put to use on the personal web site I had in my head, and so I decided to move on to working on my personal web site. 
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!--Navication Table-->
+    <table id="nav-tab" class="center"> 
+        <thead>
+            <tr>
+                <th><a href="#pallet-town">Pallet Town</a></th>
+                <th><a href="#pewter-city">Pewter City</a></th>
+                <th><a href="#cerulean-city">Cerulean City</a></th>
+                <th><a href="#vermillion-city">Vermillion City</a></th>
+                <th><a href="#celadon-city">Celadon City</a></th>
+                <th><a href="#fuchsia-city">Fuchsia City</a></th>
+                <th><a href="#saffron-city">Saffron City</a></th>
+                <th><a href="#cinnabar-island">Cinnabar Island</a></th>
+                <th><a href="#viridian-city">Viridian City</a></th>
+                <th><a href="#indigo-league">Indigo League</a></th>
+
+
+            </tr>
+        </thead>
+    </table>
+
+    <br>
+    <img src="kanto_images/kanto_HGSS.webp" alt="Kanto Region Map" width="800" class="center">
+
+    <section>
+    <h2>Description</h2>
+    <p>Kanto is a lovely region with beautiful sights to see.<br>
+        Visit the Pewter City museum and see ancient Pokemon Fossils.<br>
+        Test your luck at the Celadon City Casino and win fabulous prizes.<br>
+        Visit the Safari Zone in Fuchsia City, to catch rare and exotic Pokemon.<br>
+        We're certain whereever you travel on the Island, you'll enjoy your time here. </p>
+    <br>
+    <br>
+    </section>
+
+
+    <!-- #region -->
+    <!-- (((BADGE LIST START))) -->
+    <h2 id="indigo-league">Indigo League</h2>
+    <h3>Indigo League Badge List:</h3>
+    <div id="scroll-bar">
+        <table id="badge_table">
+            <thead>
+                <tr>
+                    <th>Badge</th>
+                    <th>Location</th>
+                    <th>Gym Leader</th>
+                    <th>Type Specialization</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--Brock-->
+                <tr>
+                    <td>
+                        <img src="kanto_images/boulder_badge.png" alt="Boulder Badge" height="100">
+                        <br>
+                        Boulder Badge
+                    </td>
+                    <td>
+                        <img src="kanto_images/pewter_city.png" alt="Pewter City Gym" width="300">
+                        <br>
+                        Pewter City Gym
+                    </td>
+                    <td>
+                        <img src="kanto_images/brock.webp" alt="Brock, the Pewter City Gym Leader" height="250">
+                        <br>
+                        Brock
+                    </td>
+                    <td>
+                        <img src="kanto_images/rock_type.png" alt="Rock Type Icon" height="150">
+                        <br>
+                        <br>
+                        <br>
+                        <img src="kanto_images/rock_type2.png" alt="Rock Icon" height="60">
+                    </td>
+                </tr>
+
+                <!--Misty-->
+                <tr>
+                    <td>
+                        <img src="kanto_images/cascade_badge.png" alt="Cascade Badge" height="100">
+                        <br>
+                        Cascade Badge
+                    </td>
+                    <td>
+                        <img src="kanto_images/cerulean_city.png" alt="Cerulean City Gym" width="300">
+                        <br>
+                        Cerulean City Gym
+                    </td>
+                    <td>
+                        <img src="kanto_images/misty.webp" alt="Misty, the Cerulean City Gym Leader" height="250">
+                        <br>
+                        Misty
+                    </td>
+                    <td>
+                        <img src="kanto_images/water_type.png" alt="Water Type Icon" height="150">
+                        <br>
+                        <br>
+                        <br>
+                        <img src="kanto_images/water_type2.png" alt="Water Icon" height="60">
+                    </td>
+                </tr>
+
+                <!--Lt. Surge-->
+                <tr>
+                    <td>
+                        <img src="kanto_images/thunder_badge.png" alt="Thunder Badge" height="100">
+                        <br>
+                        Thunder Badge
+                    </td>
+                    <td>
+                        <img src="kanto_images/vermillion_city.png" alt="Vermillion City Gym" width="300">
+                        <br>
+                        Vermillion City Gym
+                    </td>
+                    <td>
+                        <img src="kanto_images/Lt_surge.png" alt="Lt. Surge, the Vermillion City Gym Leader" height="250">
+                        <br>
+                        Lt. Surge
+                    </td>
+                    <td>
+                        <img src="kanto_images/electric_type.png" alt="Electric Type Icon" height="150">
+                        <br>
+                        <br>
+                        <br>
+                        <img src="kanto_images/electric_type2.png" alt="Electric Icon" height="60">
+                    </td>
+                </tr>
+
+                <!--Erika-->
+                <tr>
+                    <td>
+                        <img src="kanto_images/rainbow_badge.png" alt="Ranbow Badge" height="100">
+                        <br>
+                        Rainbow Badge
+                    </td>
+                    <td>
+                        <img src="kanto_images/celadon_city.png" alt="Celadon City Gym" width="300">
+                        <br>
+                        Celadon City Gym
+                    </td>
+                    <td>
+                        <img src="kanto_images/erika.webp" alt="Erika, the Celadon City Gym Leader" height="250">
+                        <br>
+                        Erika
+                    </td>
+                    <td>
+                        <img src="kanto_images/grass_type.png" alt="Grass Type Icon" height="150">
+                        <br>
+                        <br>
+                        <br>
+                        <img src="kanto_images/grass_type2.png" alt="Grass Icon" height="60">
+                    </td>
+                </tr>
+
+                <!--Koga-->
+                <tr>
+                    <td>
+                        <img src="kanto_images/soul_badge.png" alt="Sould Badge" height="100">
+                        <br>
+                        Soul Badge
+                    </td>
+                    <td>
+                        <img src="kanto_images/fuchsia_city.png" alt="Fuchsia City Gym" width="300">
+                        <br>
+                        Fuchsia City Gym
+                    </td>
+                    <td>
+                        <img src="kanto_images/koga.webp" alt="Koga, the Fuchsia City Gym Leader" height="250">
+                        <br>
+                        Koga
+                    </td>
+                    <td>
+                        <img src="kanto_images/poison_type.png" alt="Poison Type Icon" height="150">
+                        <br>
+                        <br>
+                        <br>
+                        <img src="kanto_images/poison_type2.png" alt="Poison Icon" height="60">
+                    </td>
+                </tr>
+
+                <!--Sabrina-->
+                <tr>
+                    <td>
+                        <img src="kanto_images/marsh_badge.png" alt="Marsh Badge" height="100">
+                        <br>
+                        Marsh Badge
+                    </td>
+                    <td>
+                        <img src="kanto_images/saffron_city.png" alt="Saffron City Gym" width="300">
+                        <br>
+                        Saffron City Gym
+                    </td>
+                    <td>
+                        <img src="kanto_images/sabrina.webp" alt="Sabrina, the Saffron City Gym Leader" height="250">
+                        <br>
+                        Sabrina
+                    </td>
+                    <td>
+                        <img src="kanto_images/psychic_type.png" alt="Psychic Type Icon" height="150">
+                        <br>
+                        <br>
+                        <br>
+                        <img src="kanto_images/psychic_type2.png" alt="Psychic Icon" height="60">
+                    </td>
+                </tr>
+
+                <!--Blaine-->
+                <tr>
+                    <td>
+                        <img src="kanto_images/volcano_badge.png" alt="Volcano Badge" height="100">
+                        <br>
+                        Volcano Badge
+                    </td>
+                    <td>
+                        <img src="kanto_images/cinnabar_island.png" alt="Cinnabar Island Gym" width="300">
+                        <br>
+                        Cinnabar Island Gym
+                    </td>
+                    <td>
+                        <img src="kanto_images/blaine.webp" alt="Blaine, the Cinnabar Island Gym Leader" height="250">
+                        <br>
+                        Blaine
+                    </td>
+                    <td>
+                        <img src="kanto_images/fire_icon.png" alt=" Fire Type Icon" height="150">
+                        <br>
+                        <br>
+                        <br>
+                        <img src="kanto_images/fire_type2.png" alt="Fire Icon" height="60">
+                    </td>
+                </tr>
+
+                <!--Blue-->
+                <tr>
+                    <td>
+                        <img src="kanto_images/earth_badge.png" alt="Earth Badge" height="100">
+                        <br>
+                        Earth Badge
+                    </td>
+                    <td>
+                        <img src="kanto_images/viridian_city.png" alt="Viridian City Gym" width="300">
+                        <br>
+                        Viridian City Gym
+                    </td>
+                    <td>
+                        <img src="kanto_images/blue_gymLeader.webp" alt="Blue, the Viridian City Gym Leader" height="250">
+                        <br>
+                        Blue
+                    </td>
+                    <td>
+                        <img src="kanto_images/normal_type.png" alt="Normal Type Icon" height="150">
+                        <br>
+                        No Specialization
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <!-- endregion -->
+    <!-- (((BADGE LIST END))) -->
+
+
+    <section class="locations">
+        <h2 id="pallet-town">Pallet Town</h2>
+        <br>
+        <br>
+    </section>
+    
+    <section class="locations">
+        <h2 id="pewter-city">Pewter City</h2>
+        <br>
+        <br>
+    </section>
+    
+    <section class="locations">
+        <h2 id="cerulean-city">Cerulean City</h2>
+        <br>
+        <br>
+    </section>    
+
+    <section class="locations">
+        <h2 id="vermillion-city">Vermillion City</h2>
+        <br>    
+        <br>
+    </section>
+    
+    <section class="locations">
+        <h2 id="celadon-city">Celadon City</h2>
+        <br>
+        <br>
+    </section>
+
+    <section class="locations">
+        <h2 id="fuchsia-city">Fuchsia City</h2>
+        <br>
+        <br>
+    </section>
+
+    <section class="locations">
+        <h2 id="saffron-city">Saffron City</h2>
+        <br>
+        <br>
+    </section>
+
+    <section class="locations">
+        <h2 id="cinnabar-island">Cinnabar Island</h2>
+        <br>
+        <br>
+    </section>
+
+    <section class="locations">
+        <h2 id="viridian-city">Viridian City</h2>
+        <br>
+        <br>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    Read more on <a href="https://pokemon.fandom.com/wiki/Kanto">Pokemon Fandome Wiki</a>
+
+
+<!-- Box Modal -->
+<script>
+    // Get the button that opens the modal
+    var btn = document.querySelectorAll("button.modal-button");
+
+    // All page modals
+    var modals = document.querySelectorAll('.modal');
+
+    // Get the <span> element that closes the modal
+    var spans = document.getElementsByClassName("close");
+
+    // When the user clicks the button, open the modal
+    for (var i = 0; i < btn.length; i++) {
+    btn[i].onclick = function(e) {
+        e.preventDefault();
+        modal = document.querySelector(e.target.getAttribute("href"));
+        modal.style.display = "block";
+    }
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    for (var i = 0; i < spans.length; i++) {
+    spans[i].onclick = function() {
+        for (var index in modals) {
+        if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+        }
+    }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+        for (var index in modals) {
+        if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+        }
+        }
+    }
+</script>
+</body>
+</html>
