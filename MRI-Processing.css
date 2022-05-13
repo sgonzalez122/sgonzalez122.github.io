@@ -121,6 +121,11 @@ code {
     font-size: 105%;
   }
 
+.responsive{
+  width: 100%;
+  height: auto;
+}
+
 /* #region popup */
 /* Popup container - can be anything you want */
 .popup {
