@@ -1,0 +1,437 @@
+:root{
+    --border: 1px solid white;
+    --noborder: none;
+    --light: #262933;
+    --dark: #23242c;
+}
+
+body{
+    background-color: var(--dark);
+    color: white;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+    font-weight: normal;
+    margin: 0;
+}
+
+.section-segmenter:nth-child(even){
+    background-color: var(--light);
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    padding: 15px;
+}
+
+@media only screen and (max-width:600px){
+    .section-segmenter:nth-child(even){
+        background-color: var(--light);
+        position: relative;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        padding: 15px;
+        width: 1400px;
+    }
+}
+
+.section-segmenter:nth-child(odd){
+    padding: 15px;
+}
+
+h1, .section-title{
+    font-size: 2.24rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgba(255,255,255,.54)
+}
+ 
+a{
+    text-decoration: none;
+    color: #fd5961;
+}
+
+a:hover{
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+.icon-params {
+    color: #fd5961;
+    font-size: 30pt;
+    padding: 4px;
+}
+
+a.icon-params:hover{
+    font-size: 300%;
+    text-decoration: none;
+    color: #fd5961;
+}
+
+.text-muted{
+    color: rgba(255,255,255,.54)
+}
+
+.middot-divider::after {
+content: '\00B7';
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* #region Box Modal */
+/* The Modal (background) */
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 21%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    color: black;
+  }
+  
+  .modal-body{
+    position: relative;
+    padding: 0px;    
+  }
+  
+  .modal-button{
+    background-color: inherit;
+    border-color: #fd5961;
+    color: #fd5961;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 5px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .modal-button:hover{
+      background-color: #fd5961;
+      color:#fff;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    opacity: .7;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 0;
+    border-bottom: 0;
+    background-color: #555;
+    color: white;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  /* #endregion Box Modal */
+
+
+/*#region Navigation Table*/
+#nav-table{
+    border: 0px solid black;
+    border-collapse: collapse;
+    margin-top: 15px;
+    width: 1400px;
+    
+}
+#navbar a{
+    display: block;
+    background-color: #333;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 26px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#navbar a:hover{
+    background: #ddd;
+    color: black;
+}
+/* #endregion Navigation Table*/
+
+/* #region Personal Bio*/
+.bio{
+    padding-top: 30px;
+    /*padding-bottom: 300px;*/
+      
+}
+
+#avatar{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+#bio-table {
+    border: var(--noborder);
+    border-collapse: collapse;
+    padding: 20px;
+    width: 1300px;
+}
+
+#bio-table th{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+    padding: 10px;                
+    height: 350px;
+    word-break: break-word;
+    
+}
+
+#bio-table td{
+    border: var(--noborder);
+    border-collapse: collapse;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 28px;
+    padding: 10px;
+    padding-top: 0px;
+    vertical-align: top;
+}
+
+   
+/* #endregion Personal Bio*/
+
+
+/* #region Skills*/
+#skills-table{
+    border: var(--noborder);
+    border-collapse: collapse;
+    padding: 20px;
+    width: 1300px;
+}
+
+#skills-table th, #skills-table td{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+    width: 5.3%;
+    padding: 15px;
+    word-break: break-word;
+}
+
+.skills-icons{
+    color: #fd5961;
+    font-size: 5rem;
+    text-decoration: none;
+}
+
+.skills-label{
+    color: white;
+        
+}
+/* #endregion Skills*/
+
+/* #region Experience*/
+#experience{
+    padding-top: 60px;
+    padding-bottom: 60px
+}
+#experience-table{
+    border: var(--noborder);
+    border-collapse: collapse;
+    padding: 20px;
+    width: 1300px;    
+}
+
+#experience-table th{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+    padding: 15px;
+    word-break: break-word;
+}
+
+#experience-table td{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+    
+    padding: 15px;
+    word-break: break-word;
+}
+/* #endregion Experience*/
+
+
+/* #region Featured Publications & Presentations*/
+#publications{
+    padding: 60px;
+}
+
+#publications-table{
+    border: var(--noborder);
+    border-collapse: collapse;
+    padding: 20px;
+    width: 1300px; 
+}
+
+#publications-table th{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 30px;
+    padding: 15px;
+    word-break: break-word;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#publications-table td{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 30px;
+    padding: 15px;
+    word-break: break-word;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* #endregion Pub &Pres*/
+
+
+/* #region Projects*/
+#projects-table{
+    border: var(--noborder);
+    border-collapse: collapse;
+    padding: 20px;
+    width: 1300px; 
+}
+
+#projects-table th{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+    padding: 15px;
+    word-break: break-word;
+}
+
+#projects-table td{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+    
+    padding: 15px;
+    word-break: break-word;
+}
+/* #endregion Projects*/
+
+    
+/* #region Contact Info*/
+#contact-table{
+    border: var(--noborder);
+    border-collapse: collapse;
+    padding: 20px;
+    width: 1300px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#contact-table th, #contact-table td{
+    border: var(--noborder);
+    border-collapse: collapse;
+    /*float: left;*/
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 65px;
+    width: 17.3%;
+    padding: 10px;
+    word-break: break-word;
+    vertical-align: top;
+}
+
+.contact a{
+    color: #fd5961;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-icon{
+    font-size: 1.7em;
+}
+/* #endregion Contact Info*/
