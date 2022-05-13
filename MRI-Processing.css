@@ -1,0 +1,509 @@
+:root{
+    --border: 1px solid white;
+    --noborder: none;
+    --light: #262933;
+    --dark: #23242c;
+}
+
+.body{
+    background-color: var(--dark);
+    color: white;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+    font-weight: normal;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/*.section-segmenter:nth-child(even){
+    background-color: var(--light);
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    padding: 15px;
+}
+
+
+@media only screen and (max-width:600px){
+    .section-segmenter:nth-child(even){
+        background-color: var(--light);
+        position: relative;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        padding: 15px;
+        width: 1400px;
+    }
+}
+
+.section-segmenter:nth-child(odd){
+    padding: 15px;
+}*/
+
+h1{
+    font-size: 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+ 
+a{
+    text-decoration: none;
+    color: #fd5961;
+    cursor: pointer;
+}
+
+a:hover{
+    text-decoration: none;
+    text-decoration: underline;
+    color: #fd5961;
+}
+
+.btn, .btn a{
+    color: black;
+    background-color: #fd5961 ;
+}
+
+.btn:hover, .btn a:hover{
+    background-color: #fa8288 ;
+}
+
+.btn-primary:focus{
+    background-color: #ff3d47;
+    box-shadow: 0 0 0 .4rem #fd7b81;
+}
+
+.myButton {
+    background-color: inherit;
+    border-color: #fd5961;
+    color: #fd5961;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 5px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.myButton:hover{
+    background-color: #fd5961;
+    color:#fff;
+}
+
+.text-muted{
+    color: rgba(255,255,255,.54)
+}
+
+.middot-divider::after {
+content: '\00B7';
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+code {
+    font-family: Consolas,"courier new";
+    color: rgb(17, 224, 52);
+    background-color: #6a728d;
+    padding: 2px;
+    font-size: 105%;
+  }
+
+.responsive{
+  width: 100%;
+  height: auto;
+}
+
+/* #region popup */
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #fd5961;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  font-family: Consolas,"courier new";
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  cursor: text;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 14%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+/* #endregion popup */
+
+
+/* #region Box Modal */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 21%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #555;
+    font-family: Consolas,"courier new";
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  .modal-body{
+    position: relative;
+    padding: 0px;    
+  }
+
+  .modal-button{
+    background-color: inherit;
+    border-color: #fd5961;
+    color: #fd5961;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 5px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .modal-button:hover{
+      background-color: #fd5961;
+      color:#fff;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    opacity: .7;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-header {
+    padding: 0;
+    border-bottom: 0;
+    background-color: #555;
+    color: white;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+  }
+
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+/* #endregion Box Modal */
+
+/* #region Accordian Drop Down Panels */
+.panel{
+  background-color: #3d3d3e;
+}
+
+.panel-default{
+  background-color: #3d3d3e;
+  border-color:rgb(76, 78, 82);
+}
+
+.panel-default > .panel-heading{
+  color: white;
+  background-color: #4d4c4c;
+  border-color: rgb(76, 78, 82);
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border-color: rgb(76, 78, 82);
+}
+/* #endregion Accordian Drop Down Panels */
+
+/* #region Navbar*/
+/* Add a dark background color with a little bit see-through*/
+.navbar{
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 26px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+}
+/* Add a gray color to all the navbar links*/
+.navbar li a, .navbar .navbar-brand{
+    color: #d5d5d5 !important;
+}
+/* On hover, the links will turn white*/
+.navbar-nav li a:hover{
+    background: #ddd !important;
+    color: black !important;
+}
+/* The active link*/
+.navbar-nav li.active a{
+    /*color: #fff !important;*/
+    background-color:#2d2d30 !important;
+}
+/* Remove border color from the collapsible button*/
+.navbar-default .navbar-toggle{
+    border-color: transparent;
+}
+/* #endregion Navbar*/
+
+/* #region Carousel*/
+.carousel-inner img{
+    width: 100%; 
+    margin: auto;
+    margin-top: 49px;
+}
+/* #endregion Carousel*/
+
+/* #region Geolyte*/
+#geolyte{
+    color: white;  
+    background-color: var(--dark);
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 150px;
+ }
+  /* #endregion Geolyte*/
+ 
+/* #region Intro*/
+#intro{
+    color: white;
+    background-color: var(--light);
+    font-size: 1.8rem;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+    font-weight: normal;  
+    padding-top: 30px;
+    padding: 50px;
+}
+/* #endregion Intro*/
+ 
+
+/* #region Structural*/
+#structural-section{
+    color: white;
+    background-color: var(--dark);
+    font-size: 1.8rem;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+    font-weight: normal;  
+    padding-top: 30px;
+    padding: 50px;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 900px;
+  position: relative;
+  
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 62%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* #endregion Structural*/
+
+
+/* #region Functional*/
+#functional-section{
+    color: white;
+    background-color: var(--light);
+    font-size: 1.8rem;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+    font-weight: normal;  
+    padding-top: 30px;
+    padding: 50px;
+}
+/* #endregion Functional*/
+
+
+/* #region Diffusion*/
+#diffusion-section{
+    color: white;
+    background-color: var(--dark);
+    font-size: 1.8rem;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+    font-weight: normal;  
+    padding-top: 30px;
+    padding: 50px;
+}
+/* #endregion Diffusion*/
+
+
+ /* #region Contact Info*/
+ #contact{
+     color: white;
+     background-color: var(--light);
+     font-size: 1.5rem;
+     text-align: left;
+     margin-left: 0px;
+     margin-right: 0px;
+     padding-top: 30px;
+     padding-bottom: 30px;
+ }
+ 
+ #contact li{
+     font-size: 1.5rem; 
+     text-align: left;
+     word-break: break-word;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: bold;
+     padding: 20px;
+ }
+ 
+ .contact a{
+     color: #fd5961;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: bold;
+     text-decoration: none;
+ }
+ 
+ .contact-icon{
+     font-size: 1.7em;
+ }
+ /* #endregion Contact Info*/
