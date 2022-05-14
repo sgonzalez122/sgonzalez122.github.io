@@ -2,12 +2,12 @@ body {
         background-color: rgb(10, 105, 173);
         color:rgb(0, 0, 0);
     }
-
+/*
 @media only screen and (max-width: 1430px) {
   body {
     background-color: lightblue;
   }
-}
+} */
 
     h1 {
         text-align: center;
