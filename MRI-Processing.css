@@ -216,7 +216,8 @@ code {
   
   .modal-body{
     position: relative;
-    padding: 0px;    
+    padding: 0px;
+    word-wrap: break-word;
   }
 
   .modal-button{
