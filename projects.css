@@ -198,7 +198,7 @@ content: '\00B7';
 /* #region Web Development */
 #web-development{
     color: white;
-    background-color: var(--dark);
+    background-color: var(--light);
     font-size: 1.8rem;
     text-align: left;
     font-family: Georgia, 'Times New Roman', Times, serif;  
@@ -211,7 +211,7 @@ content: '\00B7';
 /* #region MRI Processing */
 #mri-processing{
     color: white;
-    background-color: var(--light);
+    background-color: var(--dark);
     font-size: 1.8rem;
     text-align: left;
     font-family: Georgia, 'Times New Roman', Times, serif;  
@@ -224,7 +224,7 @@ content: '\00B7';
 /* #region Code Demos */
 #code-demo{
     color: white;
-    background-color: var(--dark);
+    background-color: var(--light);
     font-size: 1.8rem;
     text-align: left;
     font-family: Georgia, 'Times New Roman', Times, serif;  
@@ -237,7 +237,7 @@ content: '\00B7';
  /* #region Contact Info*/
  #contact{
     color: white;
-    background-color: var(--light);
+    background-color: var(--dark);
     font-size: 1.5rem;
     text-align: left;
     margin-left: 0px;
