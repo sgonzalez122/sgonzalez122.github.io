@@ -89,7 +89,7 @@
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <!-- <li data-target="#myCarousel" data-slide-to="3"></li> -->
     </ol>
 
     <!-- Wrapper for slides-->
@@ -105,10 +105,10 @@
         <div class="item">
             <img src="images/carousel/DTI_V1.png" alt="unprocessed brain images">
         </div>
-
+        <!--
         <div class="item">
             <img src="images/carousel/cortico_spinal_tract.png" alt="cortico spinal tractography">
-        </div>
+        </div> -->
     </div>
 
     <!-- Left and right controls -->
@@ -1232,10 +1232,17 @@
                 <br>
 
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, eros in lacinia tempor, dolor neque tristique est,
-                    ac condimentum lectus mi ut odio. Nulla facilisi. Ut volutpat convallis dui, sed mollis felis sollicitudin eget. Praesent felis eros, 
-                    pulvinar sit amet nulla eu, venenatis suscipit sem. Aenean a magna quis erat lobortis lobortis quis id lectus. Integer sit amet dapibus lorem. 
-                    Integer a elit eu nibh tempor dapibus. Phasellus interdum eros odio, sit amet congue lacus blandit in.
+                    This section will present diffusion weighted data collected on myself at USC. Non-Diffusion weighted B0 images 
+                    were prepared using FLS <a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Fslutils" target="_blank" rel="noopener">fslmerge</a>, 
+                    <a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Fslutils" target="_blank" rel="noopener">fslmaths</a>, and 
+                    <a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/topup" target="_blank" rel="noopener">topup</a>. 
+                    Diffusion Data was corrected for susceptibility distortions, EDDY currents, and movement using 
+                    <a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/eddy" target="_blank" rel="noopener">eddy</a>. 
+                    Fractional Anisotropy (FA) and Mean Diffusivity (MD) images were generated using fsl's 
+                    <a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FDT/UserGuide#DTIFIT" target="_blank" rel="noopener">dtifit</a>, 
+                    with which I was able to generate tensors. I was also able to use fsl to generate an FA skeleton that could be used for 
+                    Tract-Based Spatial Statistics (TBSS). Lastly using <a href="https://dsi-studio.labsolver.org/" target="_blank" rel="noopener">DSI Studio</a>, 
+                    I was able to produce a estimated whole brain reconstruciton of the white matter architacture of my brain, seen on the right. 
                 </p>
             </div>
 
