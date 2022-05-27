@@ -141,7 +141,7 @@ content: '\00B7';
 
 /* #region Slideshow container */
 .slideshow-container {
-    max-width: 400px;
+    /*max-width: 400px; */
     position: relative;
     
   }
