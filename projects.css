@@ -69,17 +69,22 @@ a:hover{
 }
 
 .btn, .btn a{
-    color: black;
-    background-color: #fd5961 ;
+    color: white;
+    background-color: var(--light) ;
 }
 
 .btn:hover, .btn a:hover{
-    background-color: #fa8288 ;
+    background-color: #fd5961 ;
+    color: black;
+}
+
+.btn-primary{
+    border-color: #fd5961;
 }
 
 .btn-primary:focus{
-    background-color: #ff3d47;
-    box-shadow: 0 0 0 .4rem #fd7b81;
+    background-color:  #fd5961;
+    color: black;
 }
 
 .text-muted{
