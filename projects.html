@@ -120,28 +120,33 @@
                 </p>
             </div>
 
-            
-
             <!-- Media -->
             <div class="col-12 col-lg-5">
-                <div class="slideshow-container">
-                    <div class="mySlides1 fade in active">
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <div id="travel" class="tab-pane fade in active">
                         <a href="pokemon-project/visit_Kanto.html" target="_blank" rel="noopener">
                             <img class="responsive" height="325" width="400" style="border: 9px outset rgb(107, 110, 119);" src="images/visiting-kanto-screen.png" alt="Visiting Kanto Web Page screenshot">
                         </a>
-                        <p style="padding-left: 38%; font-weight: bold;"><a href="pokemon-project/visit_Kanto.html" target="_blank" rel="noopener">Travel Site</a></p>
                     </div>
                     
-                    <div class="mySlides1 fade in">
+                    <div id="site-v1" class="tab-pane fade in">
                         <a href="site-version-1/index.html" target="_blank" rel="noopener">
                             <img class="responsive" height="325" width="400" style="border: 9px outset rgb(107, 110, 119);" src="images/site-V1-screen.png" alt="Personal Site Version 1 screenshot">    
                         </a>
-                        <p style="padding-left: 23%; font-weight: bold;"><a href="site-version-1/index.html" target="_blank" rel="noopener">Personal Site Version 1.0</a></p>
                     </div>
-
-                    <!-- Next and previous buttons -->
-                    <a class="prev" onclick="plusSlides(-1,0)">&#10094</a>
-                    <a class="next" onclick="plusSlides(1,0)">&#10095</a>
+                </div>
+                <br>
+                <!-- Button Tool Bar-->
+                <div class="row">
+                    <div class="col-lg-2 col-xs-2"></div>
+                    <div class="col-lg-8 center col-xs-8">
+                        <div class="btn-group btn-group-lg">
+                            <a class="btn btn-primary btn-lg" data-toggle="pill" href="#travel">Travel Page</a>
+                            <a class="btn btn-primary btn-lg" data-toggle="pill" href="#site-v1">Site Version 1.0</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-xs-2"></div>
                 </div>
             </div>
         </div>
@@ -192,47 +197,45 @@
             <div class="col-12 col-lg-7">
                 <h1>Code Demo's</h1>
                 <br>
-
                 <p>
                     This section provides a snapshot of the programming projects I have worked on and this skills I have optained in programming for scientific research. 
                     These include a variety of examples ranging from behavioral tasks to data visualization. The first example is a behavioral task 
                     for an experiment investigating human decision making. The task records participants decisions, reaction times, as well as eye-tracking data, and was 
                     programmed in Matlab. The next example demonsgtrates some graphs vizualising the data from the eye-tracking task, and was programmed in R. 
                     The last exmaple is a random number generator that generates unique subject ID's for experiments, and was also programmed in R. 
-
                 </p>
-                
             </div>
 
-            
 
             <!-- Media -->
             <div class="col-12 col-lg-5">
-                <div class="slideshow-container">
-                    <div class="mySlides2 fade in active">
+                <div class="tab-content">
+                    <div id="task-demo" class="tab-pane fade in active">
                         <a href="https://github.com/sgonzalez122/aDDM_win_loss_lottery/tree/Task-Demo" target="_blank" rel="noopener">
                             <img class="responsive" height="325" width="400" style="border: 9px outset rgb(107, 110, 119);" src="images/win_choice.png" alt="lottery stimulus">    
                         </a>
-                        <p style="padding-left: 37%; font-weight: bold;"><a href="https://github.com/sgonzalez122/aDDM_win_loss_lottery/tree/Task-Demo" target="_blank" rel="noopener">Task Demo</a></p>
                     </div>
                     
-                    <div class="mySlides2 fade in">
+                    <div id="graph-demo" class="tab-pane fade in">
                         <a href="https://github.com/sgonzalez122/graph-examples" target="_blank" rel="noopener">
                             <img class="responsive" height="325" width="400" style="border: 9px outset rgb(107, 110, 119);" src="images/graphs.jpg" alt="lottery graphs">    
                         </a>
-                        <p style="padding-left: 37%; font-weight: bold;"><a href="https://github.com/sgonzalez122/graph-examples" target="_blank" rel="noopener">Graph Demo</a></p>
                     </div> 
 
-                    <div class="mySlides2 fade in">
+                    <div id="SID-gen" class="tab-pane fade in">
                         <a href="https://github.com/sgonzalez122/SID_RNG" target="_blank" rel="noopener">
                             <img class="responsive" height="325" width="400" style="border: 9px outset rgb(107, 110, 119);" src="images/dice.png" alt="Dice">    
                         </a>
-                        <p style="padding-left: 27%; font-weight: bold;"><a href="https://github.com/sgonzalez122/SID_RNG" target="_blank" rel="noopener">Subject ID Generator</a></p>
                     </div>
-
-                    <!-- Next and previous buttons -->
-                    <a class="prev" onclick="plusSlides(-1,1)">&#10094</a>
-                    <a class="next" onclick="plusSlides(1,1)">&#10095</a>
+                </div>
+                <br>
+                <!-- Button Tool Bar-->
+                <div class="row">
+                    <div class="btn-group btn-group-lg">
+                        <a class="btn btn-primary btn-lg" data-toggle="pill" href="#task-demo">Task Demo</a>
+                        <a class="btn btn-primary btn-lg" data-toggle="pill" href="#graph-demo">Graph Demo</a>
+                        <a class="btn btn-primary btn-lg" data-toggle="pill" href="#SID-gen">Subject ID Generator</a>
+                    </div>
                 </div>
             </div>
         </div>
