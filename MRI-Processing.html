@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MRI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="icon" href="images/tab-icon/favicon-32x32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=0.45">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="MRI-Processing.css">
+</head>
+<style>
+    /*#region Projects Page*/
+    #geolyte-table{
+        border: var(--noborder);
+        border-collapse: collapse;
+        padding: 20px;
+        width: 1300px;
+    }
+
+    #geolyte-table th{
+        border: var(--noborder);
+        border-collapse: collapse;
+    }
+    /*#endregion Projects Page*/
+
+  
+
+    @media only screen and (max-width:600px){
+        .helper-text{
+            font-size: 60px;
+        }
+
+        .geolyte-helper{
+            width: 450px;
+        }
+        
+        .contact-segmenter{
+            background-color: var(--light);
+            position: relative;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            padding: 15px;
+            width: 1400px;
+            margin-top: 600px;
+        }
+    }
+</style>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+<!-- #region Navbar-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand" href="#" style="color: white !important;font-weight: bold;font-size: 26px;">Stephen A Gonzalez</a>
+        </div>    
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav" style="font-size:20px;">
+                <li><a href="index.html">Home</a></li>
+                <!--<li><a href="#experience">Experience</a></li>-->
+                <!--<li><a href="index.html#publications" data-target="#publications">Publications</a></li>-->
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="MRI-Processing.html">MRI</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!--<li><a href="files/Stephen_Gonzalez_CV.pdf">CV</a></li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- endregion Navbar-->
+
+
+<!-- #region Carousel-->
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="background-color:var(--light)">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <!-- <li data-target="#myCarousel" data-slide-to="3"></li> -->
+    </ol>
+
+    <!-- Wrapper for slides-->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="images/carousel/MIP.png" alt="MIP image">
+        </div>
+
+        <div class="item">
+            <img src="images/carousel/7T_struck3.png" alt="unprocessed brain images">
+        </div>
+
+        <div class="item">
+            <img src="images/carousel/DTI_V1.png" alt="unprocessed brain images">
+        </div>
+        <!--
+        <div class="item">
+            <img src="images/carousel/cortico_spinal_tract.png" alt="cortico spinal tractography">
+        </div> -->
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- endregion Carousel-->
+    
+
+<!-- #region Intro/Description -->
+<section class="center" id="intro">
+    <div class="container">
+        <div class="row">
+            <!-- Media -->
+            
+
+            <!-- Description -->
+            <div class="col-12  center">
+                <h1>MRI Processing</h1>
+                <br>
+
+                <p>
+                    The purpose of this section is to demonstrate the skills I've learned from USC's Neuroimaging and Informatics Masters Program 
+                    (<a href="http://niin.usc.edu/" target="_blank" rel="noopener">NIIN</a>). Throughout this demonstration I will walk through 
+                    the steps I've taken to process and visualize MRI brain scans I recieved during my study at USC. 
+                    The data presented here were collected on a Siemens Prsima 3T as well as a Magnetom Terra 7T scanner.  
+                    No images presented here are of anyone other than myself. 
+                    With the exeption of Atlases & Templates, all images are from my own scan sessions.
+                    
+                </p>
+                
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- endregion Intro/Description -->
+
+
+<!-- #region Structural -->
+<section class="center" id="structural-section">
+    <div class="container">
+        <!-- Description -->
+        <div class="row">
+            <div class="col-12 col-lg-7 center">
+                <h1>Structural Imaging</h1>
+                <p>
+                    This section will cover processing for two T1 weighted Magnetization Prepared Rapid Acquisition Gradient Echo images (MPRAGE).
+                    One image collected from a 3T scanner and one from a 7T scanner. The 'T' stands for 'Tesla', which referes to the strength of the scanner's magnet. 
+                    Scanner's with higher Tesla strengths can yeild highly detailed images with enhanced resolution, but are also susceptible to artifacting. 
+                    The data presented here were processed using FMRIB's Software Library (FSL), and visuzalized using FSLeyes and 3D Slicer.  
+                </p>
+            </div>
+
+            <!-- Media -->
+            <div class="col-12 col-lg-5 center"> 
+                <br>
+                <video class="responsive" height="325" width="380" style="border: 9px outset rgb(107, 110, 119);" autoplay loop muted>
+                    <source src="videos/raw/7T_N4_sagittal.mp4" type="video/mp4">
+                </video> 
+            </div>
+        </div>
+        <br>
+        <a data-toggle="collapse" id="view-hide-struc" data-target="#structural-content" onClick="viewHideCollapse('View', 'Hide', 'view-hide-struc')">View</a>
+        <!-- Content -->
+        <div class="row collapse " id="structural-content">
+            <!-- Button Tool Bar-->
+            <div class="col-lg-1"></div>
+            <div class="btn-group btn-group-lg col-lg-10" >
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#raw">Raw Data</a>
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#bias-field">Bias Field Correction</a>
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#bet">Brain Extraction</a>
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#registration">Registration</a>
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tissue-class">Tissue Classification</a>
+                <!-- <a class="btn btn-primary btn-lg" data-toggle="pill" href="#sub-seg">Sub-Cortical Segmentation</a> -->
+            </div>
+            <div class="col-lg-1"></div>
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Raw Data -->
+                <br><br><br>
+                <div id="raw" class="tab-pane fade in active">
+                    <div class="row">
+                        <div class="col-lg-4 col-xs-4"></div>
+                        <div class="col-lg-4 center col-xs-8">
+                            <div class="btn-group btn-group-lg">
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#3T_raw">&nbsp;&nbsp;&nbsp;&nbsp;3T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#7T_raw">&nbsp;&nbsp;&nbsp;&nbsp;7T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xs-0"></div>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <br>
+                        <!-- 3T -->
+                        <div id="3T_raw" class="tab-pane fade in active">
+                            <!-- Description -->
+                            <div class="row">
+                                <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
+                                    <h2>Raw Data</h2>
+                                    <P>
+                                        Here we have a T1 weighted image, collected from a 3T scanner. Image weighting and contrast is beyond the scope of this demonstration, 
+                                        but effectively this means that, in T1 images, areas of tissue containing fat will produce high signal and appear bright on the image, 
+                                        whereas areas of tissue containing water or Cerebrospinal Fluid (CSF) produce low signal and will appear dark on the image. Image resolution 
+                                        is not as good as in the 7T example, but the tissue intensity accross the image is more consistant than in the 7T. Some slight ringing artifacting 
+                                        can be seein in the frontal region in the sagittal image, which is a result of head motion but is reletivley insignifitant here. The skull, and 
+                                        other bits, are still present in the image, which we are not interested in and will be removed in a following step. Click below to view a video scrolling 
+                                        through each slice in the 3 different planes (Sagittal, Coronal, Axial). 
+                                    </P>
+                                </div>
+                                <div class="col-12 col-lg-3"></div>
+                            </div>
+
+                            <!-- Media -->
+                            <div class="row center">
+                                <h2>3T</h2>
+                                <div class="col-12  center">
+                                    <img class="responsive-two" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/raw/all_raw_3T_screens.png" alt="unprocessed brain images">
+                                </div>
+                                <br>
+                                <!-- Collapsable -->
+                                <button class="myButton" id="view-hide-raw-3T-vid" data-toggle='collapse' href="#raw_vid_3T" onClick="javascript:viewHideCollapse('View Video', 'Hide Video', 'view-hide-raw-3T-vid')">View Video</button>
+                                
+                                <!-- Collapsable Contents-->
+                                <div class="collapse" id="raw_vid_3T">
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <video height="325" width="380" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
+                                        <source src="videos/raw/3T_N4_sagittal.mp4" type="video/mp4">
+                                    </video> 
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <video height="325" width="380" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                        <source src="videos/raw/3T_N4_coronal.mp4" type="video/mp4">
+                                    </video> 
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <video height="325" width="380" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                        <source src="videos/raw/3T_N4_axial.mp4" type="video/mp4">
+                                    </video> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7T -->
+                        <div id="7T_raw" class="tab-pane fade">
+                            <!-- Description -->
+                            <div class="row">
+                                <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
+                                    <h2>Raw Data</h2>
+                                    <p>
+                                        Here we have a T1 weighted image, collected from a 7T scanner. Since the image weighting is the same, the same areas will appear
+                                        bright (fat) or dark (water/csf). However, due to the increased magnetic field strengh, we can achieve an image with higher resolution, 
+                                        which is apparent here. The drawback of this is magnetic susceptibility artifacting, which results in image intensity inconsistencies, such that 
+                                        areas will be brither or darker than they should. This can be seen here in the temporal areas of the coronal image, where the white matter tissue
+                                        appears darker than in other areas of the brain. While the white matter and grey matter are still distingishable to us, this artifacting can cause 
+                                        issues in computer program processing tools where there might be a mis-classification of white matter as grey matter. Luckily, we can correct for
+                                        these inhomogenieties which we will go over in the next step. 
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-3">
+                                   
+                                </div>
+                            </div>
+
+                            <!-- Media -->
+                            <div class="row center">
+                                <h2>7T</h2>
+                                <div class="col-12  center">
+                                    <img class="responsive-two" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/raw/all_raw_7T_screens.png" alt="unprocessed brain images">
+                                </div>
+                                <br>
+                                <!-- Collapsable -->
+                                <button class="myButton" id="view-hide-raw-7T-vid" data-toggle='collapse' href="#raw_vid_7T" onClick="javascript:viewHideCollapse('View Video', 'Hide Video', 'view-hide-raw-7T-vid')">View Video</button>
+                                <br>
+                                <!-- Collapsable Contents-->
+                                <div class="collapse" id="raw_vid_7T">
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <video height="325" width="380" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
+                                        <source src="videos/raw/7T_N4_sagittal.mp4" type="video/mp4">
+                                    </video> 
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <video height="325" width="380" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                        <source src="videos/raw/7T_N4_coronal.mp4" type="video/mp4">
+                                    </video> 
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <video height="325" width="380" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                        <source src="videos/raw/7T_N4_axial.mp4" type="video/mp4">
+                                    </video> 
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                </div>
+                <!-- Bias Field Correction -->  
+                <div id="bias-field" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-lg-4 col-xs-4"></div>
+                        <div class="col-lg-4 center col-xs-8">
+                            <div class="btn-group btn-group-lg">
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#3T_bias">&nbsp;&nbsp;&nbsp;&nbsp;3T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#7T_bias">&nbsp;&nbsp;&nbsp;&nbsp;7T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xs-0"></div>
+                    </div>
+
+                    <div class="tab-content">
+                        <br>
+                        <!-- 3T -->
+                        <div id="3T_bias" class="tab-pane fade in active">
+                            <!-- Description -->
+                            <div class="row">
+                                <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
+                                    <h2>Bias Field Correction</h2>
+                                    <p>
+                                        The magnetic field of a scanner should, in theory, be homogenious, but this is not the case. It is stronger in some areas and weaker in others. 
+                                        This can lead to bias in signal intensity throughout an image. Areas where the magnetic field is stronger will produce stronger signal 
+                                        than there should be, and vice versa. As a result some areas will appear brighter or darker than they should. This can be seen in the
+                                        example image below, particularly in areas where white matter boarders gray matter, (red arrows). This voxel intensity artifacting can cause 
+                                        problems in processing tools and so we correct for it using Bias Field Correciton. Here I used <code>N4ITKBiasFieldCorrection</code> from 
+                                        3D Slicer, and you can view the code down below. Before and after comparisons can be made by <b><em>clicking</em></b> on the example image below. 
+                                        <b><em>Click</em></b> on the image to switch between the uncorrected and corrected images in order to see the differences. You'll notice that the signal
+                                        intensity in the corrected image is much more uniform and consistant between tissue types. The differences here are subtle, but can be significant 
+                                        to processing tools which is why we need to correct for them, and are more obvious in the 7T image.                                  
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-3"></div>
+                            </div>
+
+                            <!-- Media -->
+                            <div class="row center">
+                                <h2>3T</h2>
+                                <p><b><em>Click</em></b> image to see results</p>
+                                <div class="col-12 center">
+                                    <img id="3T_bias_Img" class="responsive-two" src="images/bias_field/3T_raw.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                     onclick="javascript:changeImg('images/bias_field/3T_raw.png','images/bias_field/3T_N4.png','3T_bias_Img')"/>
+
+                                     <br><br>
+                                    <!-- Model Box -->
+                                    <!-- Trigger/Open The Modal -->
+                                    <button class="modal-button" href="#Modal-3T-bias">View Code</button>
+                                    
+                                    <!-- The Modal -->
+                                    <div id="Modal-3T-bias" class="modal">
+
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <span class="close">x</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>
+                                                    N4ITKBiasFieldCorrection --bffwhm 0.15 <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--splinedistance 50 --outputbiasfield <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accelerated_Sagittal_MPRAGE_3T_biasField.nii <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accelerated_Sagittal_MPRAGE_3T.nii <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accelerated_Sagittal_MPRAGE_3T_N4.nii
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7T -->
+                        <div id="7T_bias" class="tab-pane fade">
+                            <!-- Description -->
+                            <div class="row">
+                                <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
+                                    <h2>Bias Field Correction</h2>
+                                    <p>
+                                       As the strength of the magnetic field increases so does magnetic susceptibility artifacting. This is much more obvious here in the 7T image below. 
+                                       Artifacting like this can cause problems in cortical segmentation and tissue classificaiton algorithms, which is why we want to correct for it. 
+                                       An example of the bias field using a color gradiant is provided below as well. Red signifies areas that suffered greater signal deterioration, 
+                                       from inhomogenieties in the magnetic field. Again I use <code>N4ITKBiasFieldCorrection</code> to correct the biasing, and the code can be viewed 
+                                       below. You can also <b><em>click</em></b> on the image to switch between the corrected and uncorrected images, to see the result of the correction. 
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-3"></div>
+                            </div>
+                            <!-- Media -->
+                            <div class="row center">
+                                <h2>7T</h2>
+                                <p><b><em>Click</em></b> image to see results</p>
+                                <div class="col-12 center">
+                                    <img id="7T_bias_Img" class="responsive-two" src="images/bias_field/7T_raw.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                     onclick="javascript:changeImg('images/bias_field/7T_raw.png','images/bias_field/7T_N4.png','7T_bias_Img')"/>
+
+                                    <br><br>
+                                    <!-- Model Box -->
+                                    <!-- Trigger/Open The Modal -->
+                                    <button class="modal-button" href="#Modal-7T-bias">View Code</button>
+                                    
+                                    <!-- The Modal -->
+                                    <div id="Modal-7T-bias" class="modal">
+
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <span class="close">x</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>
+                                                    N4ITKBiasFieldCorrection --bffwhm 0.15 <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--splinedistance 50 --outputbiasfield <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t1_mprage_sag_7T_biasField.nii <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t1_mprage_sag_7T.nii <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t1_mprage_sag7T_N4.nii
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                      
+                                    <!-- Collapsable -->
+                                    <button class="myButton" id="view-hide-bias" data-toggle='collapse' href="#7T_bias_field" onClick="javascript:viewHideCollapse('View Bias Field', 'Hide Bias Field', 'view-hide-bias')">View Bias Field</button>
+
+                                    <!-- Collapsable Contents-->
+                                    <div class="collapse" id="7T_bias_field">
+                                        <img class="responsive-two" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/bias_field/7T_biasField.png"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <!-- Brain Extraction -->
+                <div id="bet" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-lg-4 col-xs-4"></div>
+                        <div class="col-lg-4 center col-xs-8">
+                            <div class="btn-group btn-group-lg">
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#3T_bet">&nbsp;&nbsp;&nbsp;&nbsp;3T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#7T_bet">&nbsp;&nbsp;&nbsp;&nbsp;7T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xs-0"></div>
+                    </div>
+
+                    <div class="tab-content">
+                        <!-- 3T -->
+                        <div id="3T_bet" class="tab-pane fade in active">
+                            <!-- Description -->
+                            <div class="row">
+                                <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
+                                    <h2>Brain Extraction</h2>
+                                    <p>
+                                       Because the brain is our primary interest here, we must isolate it from the non-important areas. Portions of the image, 
+                                       such as neck, eyes, nose, and skull are of no interest to us, and so we must remove them from the image. We do this because, similarly to Bias 
+                                       Field Correction, it will allow image processing algorithms to perform much smoother and quicker if these areas are not present in the image. 
+                                       Therefore we perform what is called "Brain Extraction". There are many tools available to do so, but here I use FMRIB's Software Lirbrary 
+                                       (<a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/" target="_blank" rel="noopener">FSL</a>) Brain Extraction Toolkit 
+                                       (<a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/BET/UserGuide" target="_blank" rel="noopener">BET</a>). 
+                                       <b><em>Click</em></b> on the image to see the image after running BET on the data. You can also view an overlay by clicking the overlay collapsable. 
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-3"></div>
+                            </div>
+                            <!-- Media -->
+                            <div class="row center">
+                                <h2>3T</h2>
+                                <p><b><em>Click</em></b> image to see results</p>
+                                <div class="col-12 center">
+                                    <img id="3T_bet_Img" class="responsive-two" src="images/bet/3T.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                     onclick="javascript:changeImg('images/bet/3T.png','images/bet/3T_BET.png','3T_bet_Img')"/>
+
+                                    <br><br>
+                                    <!-- Model Box -->
+                                    <!-- Trigger/Open The Modal -->
+                                    <button class="modal-button" href="#Modal-3T-bet">View Code</button>
+                                    
+                                    <!-- The Modal -->
+                                    <div id="Modal-3T-bet" class="modal">
+
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <span class="close">x</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>
+                                                    bet Accelerated_Sagittal_MPRAGE_3T_N4.nii <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;Accelerated_Sagittal_MPRAGE_3T_N4_BET.nii <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;-m -f 0.4 -c 88 123 138 -R 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Collapsable -->
+                                    <button class="myButton" id="view-hide-3T-bet-overlay" data-toggle='collapse' href="#3T_bet_overlay" onClick="javascript:viewHideCollapse('View Overlay', 'Hide Overlay', 'view-hide-3T-bet-overlay')">View Overlay</button>
+
+                                    <!-- Collapsable Contents-->
+                                    <div class="collapse" id="3T_bet_overlay">
+                                        <img class="responsive-two" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/bet/3T_BET_overlay.png"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+   
+                        <!-- 7T -->
+                        <div id="7T_bet" class="tab-pane fade">
+                            <!-- Description -->
+                            <div class="row">
+                                <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
+                                    <h2>Brain Extraction</h2>
+                                    <p>
+                                       Brain Extraction was also run on the 7T image all the same using FSL's BET. Just as in the 3T image, BET does an excellent job of removing
+                                       non-brain areas, and isolating brain tissue. You'll notice that the "-f" option uses a value of "0.3" instead of "0.4". The "-f" option adjusts 
+                                       the fractional intensity threshold, which basically controlls the outline the algorithm uses to isolate the brain. Larger values are more restrictive and will result
+                                       in more areas being removed, whereas smaller values are more lenient and will result in less areas being removed. I chose the values here simply by trial 
+                                       and error and stuck with which option gave the best resultant image. You can also <b><em>click</em></b> on the image here to see the results of BET on the 7T image, as well
+                                       as view the overlay by clicking the overlay collapsable. 
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-3"></div>
+                            </div>
+                            <!-- Media -->
+                            <div class="row center">
+                                <h2>7T</h2>
+                                <p><b><em>Click</em></b> image to see results</p>
+                                <div class="col-12 center">
+                                    <img id="7T_bet_Img" class="responsive-two" src="images/bet/7T.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                    onclick="javascript:changeImg('images/bet/7T.png','images/bet/7T_BET.png','7T_bet_Img')"/>
+
+                                    <br><br>
+                                    <!-- Model Box -->
+                                    <!-- Trigger/Open The Modal -->
+                                    <button class="modal-button" href="#Modal-7T-bet">View Code</button>
+                                    
+                                    <!-- The Modal -->
+                                    <div id="Modal-7T-bet" class="modal">
+
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <span class="close">x</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>
+                                                    bet t1_mprage_sag_7T_N4.nii <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;t1_mprage_sag_7T_N4_BET.nii <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;-m -f 0.3 -c 119 151 192 -R
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Collapsable -->
+                                    <button class="myButton" id="view-hide-7T-bet-overlay" data-toggle='collapse' href="#7T_bet_overlay" onClick="javascript:viewHideCollapse('View Overlay', 'Hide Overlay', 'view-hide-7T-bet-overlay')">View Overlay</button>
+
+                                    <!-- Collapsable Contents-->
+                                    <div class="collapse" id="7T_bet_overlay">
+                                        <img class="responsive-two" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);" src="images/bet/7T_BET_overlay.png"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Registration -->
+                <div id="registration" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-lg-4 col-xs-4"></div>
+                        <div class="col-lg-4 center col-xs-8">
+                            <div class="btn-group btn-group-lg">
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#3T_reg">&nbsp;&nbsp;&nbsp;&nbsp;3T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#7T_reg">&nbsp;&nbsp;&nbsp;&nbsp;7T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xs-0"></div>
+                    </div>
+
+                    <div class="tab-content">
+                        <!-- 3T -->
+                        <div id="3T_reg" class="tab-pane fade in active">
+                            <!-- Description -->
+                            <div class="row">
+                                <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
+                                    <h2>Registration</h2>
+                                    <p>
+                                        Before we can start making comparisons we need to perform one last pre-processing step, registration. Images from different sessions will be 
+                                        placed in a different "3D space" with different spacial coordinates, and so we must transform the images so that they are aligned anatomically. 
+                                        To do this I used FSL's Linear Image Registration Tool (<a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FLIRT" target="_blank" rel="noopener">FLIRT</a>), via the GUI.
+                                        FLIRT was run in 2 different ways, oncee using 6 degrees of freedom (DOF) Rigid body registration and again 12 DOF Affine registration. In both versions I used 
+                                        the MNI 152 atlas as the reference image, which is a template of 152 averaged brains and is the standard used for image registration. 
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-3"></div>
+                            </div>
+                            <!-- Media -->
+                            <!-- Slideshow container -->
+                            <h2>3T</h2>
+                            <div class="slideshow-container">
+                                <!-- Full-width images with number and caption text-->
+                                <div class="mySlides1 fade in active">
+                                    <h4><em>No Registration</em></h4>
+                                    <p>
+                                        An example of the MNI 152 atlas can be seen in Slide 1 below. <b><em>Click</em></b> on the image to see the 3T image overlayed before registration. 
+                                        You can see how the 2 images are not aligned in the same space and that the overlaping tissue does not match anatomically. Hence why we
+                                        must perform registration. The MNI atlas acts as an average for the general population, which is why we use it as the reference for the 
+                                        registration. <b><em>Click</em></b> the arrow to move to slide 2 and see the resutls of the 6 DOF registration. 
+                                    </p><br>
+                                    <img id="3T_reg_Img1" class="responsive-two" src="images/reg/3T_MNI_1mm.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                     onclick="javascript:changeImg('images/reg/3T_MNI_1mm.png','images/reg/3T_MNI_noReg_1.png','3T_reg_Img1')"/>
+                                </div>
+
+                                <div class="mySlides1 fade in">
+                                    <h4><em>6 DOF Registration</em></h4>
+                                    <p>
+                                        Here again we have the 3T overlay. <b><em>Click</em></b> on the image to see the results of the 6 DOF registration. Also refered to as a rigid body 
+                                        registration, this merely rotates and shifts the 3T image so that it roughly aligns with the MNI atlas, there is no re-sizing or 
+                                        shearing of the image. The reason for using a rigid body registration was to register the image to standard space while also 
+                                        preserving the true anatomy of the image for Tissue Classification and Segmentation. 
+                                    </p><br>
+                                    <img id="3T_reg_Img2" class="responsive-two" src="images/reg/3T_MNI_noReg_2.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                     onclick="javascript:changeImg('images/reg/3T_MNI_noReg_2.png','images/reg/3T_MNI_6DOF_1.png','3T_reg_Img2')"/>
+                                </div>
+
+                                <div class="mySlides1 fade in">
+                                    <h4><em>12 DOF Registration</em></h4>
+                                    <p>
+                                        <b><em>Click</em></b> on the image below to see the results of the 12 DOF Affine registration. You can see that the image gets blown up to match the MNI image. Along with 
+                                        rotating and shifting the image the Affine registration scales and warps the image so that it conformts to the MNI reference. The image is now fully aligned 
+                                        with the MNI reference and can use MNI coordinates for navigating and reporting findings. The purpose of the Affine registration was to fully align the image 
+                                        to MNI space for use as an underlay for Resting State fMRI ICA noise removal. 
+                                    </p><br>
+                                    <img id="3T_reg_Img3" class="responsive-two" src="images/reg/3T_MNI_6DOF_2.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                     onclick="javascript:changeImg('images/reg/3T_MNI_6DOF_2.png','images/reg/3T_MNI_12DOF.png','3T_reg_Img3')"/>
+                                </div>
+
+                                <!-- Next and previous buttons -->
+                                <a class="prev" onclick="plusSlides(-1,0)">&#10094</a>
+                                <a class="next" onclick="plusSlides(1,0)">&#10095</a>
+                            </div>
+                        </div>
+   
+                        <!-- 7T -->
+                        <div id="7T_reg" class="tab-pane fade in">
+                            <!-- Description -->
+                            <div class="row">
+                                <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
+                                    <h2>Registration</h2>
+                                    <p>
+                                        Registration for the 7T image was the same as for the 3T image. I used FSL's FLIRT, again using the GUI, aligning to the MNI 152 image for reference. 
+                                        Both kinds of registration, 6 DOF Rigid body and 12 DOF Affine, were also used here. Scroll through the slides below to see the results. 
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-3"></div>
+                            </div>
+
+                            <!-- Media -->
+                            <!-- Slideshow container -->
+                            <h2>7T</h2>
+                            <div class="slideshow-container">
+                                <!-- Full-width images with number and caption text-->
+                                <div class="mySlides2 fade in active">
+                                    <h4><em>No Registration</em></h4>
+                                    <br><p>
+                                        <b><em>Click</em></b> on the image to see the 7T overlay.
+                                    </p>
+                                    <img id="7T_reg_Img1" class="responsive-two" src="images/reg/7T_MNI_1mm.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                     onclick="javascript:changeImg('images/reg/7T_MNI_1mm.png','images/reg/7T_MNI_noReg_1.png','7T_reg_Img1')"/>
+                                </div>
+
+                                <div class="mySlides2 fade in">
+                                    <h4><em>6 DOF Registration</em></h4>
+                                    <br><p>
+                                        <b><em>Click</em></b> on the image to view the results of the 6 DOF Rigid body registration.
+                                    </p>
+                                    <img id="7T_reg_Img2" class="responsive-two" src="images/reg/7T_MNI_noReg_2.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                     onclick="javascript:changeImg('images/reg/7T_MNI_noReg_2.png','images/reg/7T_MNI_6DOF_1.png','7T_reg_Img2')"/>
+                                </div>
+
+                                <div class="mySlides2 fade in">
+                                    <h4><em>12 DOF Registration</em></h4>
+                                    <br><p>
+                                        <b><em>Click</em></b> on the image to view the results of the 12 DOF Affine body registration.
+                                    </p>
+                                    <img id="7T_reg_Img3" class="responsive-two" src="images/reg/7T_MNI_6DOF_2.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                     onclick="javascript:changeImg('images/reg/7T_MNI_6DOF_2.png','images/reg/7T_MNI_12DOF.png','7T_reg_Img3')"/>
+                                </div>
+
+                                <!-- Next and previous buttons -->
+                                <a class="prev" style="top:54%" onclick="plusSlides(-1,1)">&#10094</a>
+                                <a class="next" style="top:54%" onclick="plusSlides(1,1)">&#10095</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tissue Classification -->
+                <div id="tissue-class" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-lg-4 col-xs-4"></div>
+                        <div class="col-lg-4 center col-xs-8">
+                            <div class="btn-group btn-group-lg">
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#3T_tissue-class">&nbsp;&nbsp;&nbsp;&nbsp;3T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#7T_tissue-class">&nbsp;&nbsp;&nbsp;&nbsp;7T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xs-0"></div>
+                    </div>
+
+                    <div class="tab-content">
+                        <!-- 3T -->
+                        <div id="3T_tissue-class" class="tab-pane fade in active">
+                            <!-- Description -->
+                            <div class="row">
+                                <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
+                                    <h2>Tissue Classification</h2>
+                                    <p>
+                                         Here's where things get a bit more interesting. Tissue Classification is a process in which we segment the tissue types into individual parts, 
+                                         Grey Matter (GM), White Matter (WM), and Cerebrospinal Fluid (CSF). For this step I used FMRIB's Automated Segmentation Tool 
+                                         (<a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FAST" target="_blank" rel="noopener">FAST</a>). This tool will first perform a "hard" segmentation 
+                                         where the tissue types will be defined dichotomously, as either fully belonging to a one tissue type or another. This is refered to as a binary segmentation 
+                                         and can be seen below in the first slide. However, this is an oversimplification of the true anatomy. Indeed there are many voxel in an image that 
+                                         are 100% one tissue type or another, but that is not the case for all voxels. There are many voxels that possess a mixture of tissue types, which is where the 
+                                         partial volume estimation (PVE) comes in. An example of a PVE map can be seen below in slide 2. Additionally, you can view the code I used to run the classificaiton, 
+                                         videos for both the "hard" segmentation and the PVE maps, as well as a calculation of the volume for each tissue type. 
+                                
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-3"></div>
+                            </div>
+                            <!-- Media -->
+                            <!-- Slideshow container -->
+                            <h2>3T</h2>
+                            <div class="slideshow-container">
+                                <!-- Full-width images with number and caption text-->
+                                <div class="mySlides3 fade in active">
+                                    <h4><em>Binary Segmentation</em></h4>
+                                    <p>
+                                        An example of the processed image is provided below. <b><em>Click</em></b> on the image to see the results of the "hard" segmentation. 
+                                        The image is colored so that the CSF appears Green, the Grey Matter appears Blue, and the White Matter appears Red. You'll notice that there is no 
+                                        gradual change in the coloring, they are either classified/colored as belonging to one or another. Hence why it's called a binary or "hard" segmentation.
+                                    </p><br>
+                                    <img id="3T_tissue-class_seg" class="responsive-two" src="images/tissue_class/3T_seg_underlay.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                     onclick="javascript:changeImg('images/tissue_class/3T_seg_underlay.png','images/tissue_class/3T_seg_overlay.png','3T_tissue-class_seg')"/>
+                                </div>
+                                
+                                <div class="mySlides3 fade in">
+                                    <h4><em>Partial Volume Estimation</em></h4>
+                                    <p>
+                                        <b><em>Click</em></b> on the image to see the results of the Partial Volume Estimation. The PVE maps are colored such that the Grey Matter (GM) ranges from 
+                                        a Cyan to Dark Blue, cyan being classified as 100% GM and dark blue being a mixture of pirmarily GM and one of the other two tissue types. 
+                                        Similarly the White Matter (WM) ranges from Yellow to Red, such that Yellow areas represent 100% pure WM and Red areas represent a mixture of mostly WM and one or more of the 
+                                        othe two tissue types. Lastly CSF is ranges from light to dark green, the ligher areas being pure CSF and the darker areas being a mixture. 
+                                    </p><br>
+                                    <img id="3T_tissue-class_pve" class="responsive-two" src="images/tissue_class/3T_pve_underlay.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                     onclick="javascript:changeImg('images/tissue_class/3T_pve_underlay.png','images/tissue_class/3T_pve_overlay.png','3T_tissue-class_pve')"/>
+                                </div>
+                                <!-- Next and previous buttons -->
+                                <a class="prev" onclick="plusSlides(-1,2)">&#10094</a>
+                                <a class="next" onclick="plusSlides(1,2)">&#10095</a>
+                            </div>
+
+                            <br><br>
+                            <!-- Model Box Code -->
+                            <!-- Trigger/Open The Modal -->
+                            <button class="modal-button" href="#Modal-3T-tissue-class_seg">View Code</button>
+
+                            <!-- The Modal -->
+                            <div id="Modal-3T-tissue-class_seg" class="modal">
+
+                                <!-- Modal Content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <span class="close">x</span>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            fast -N -o 3T_N4_BET_FLIRT2MNI 3T_N4_BET_FLIRT2MNI_6DOF.nii.gz 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Model Box Volume -->
+                            <!-- Trigger/Open The Modal -->
+                            <button class="modal-button" href="#Modal-3T-VolumeCalc_seg">Volume Calculation</button>
+                            
+                            <!-- The Modal -->
+                            <div id="Modal-3T-VolumeCalc_seg" class="modal">
+
+                                <!-- Modal Content -->
+                                <div class="modal-content" style="width:29%">
+                                    <div class="modal-header">
+                                        <span class="close">x</span>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            fslstats 3T/3T_N4_BET_FLIRT2MNI_pve_0.nii.gz -M -V<br>
+                                            fslstats 3T/3T_N4_BET_FLIRT2MNI_pve_1.nii.gz -M -V<br>
+                                            fslstats 3T/3T_N4_BET_FLIRT2MNI_pve_2.nii.gz -M -V<br>
+                                            <br><br>
+                                            CSF Volume = 269,686   mm Cubed<br>
+                                            GM  Volume = 667,309.8 mm Cubed<br>
+                                            WM  Volume = 448,930.1 mm Cubed
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Collapsable 3T Seg Video Button -->
+                            <button class="myButton" data-toggle='collapse' href="#seg_vid_3T">Segmentation Video</button>
+
+                            <!-- Collapsable 3T PVE Video Button -->
+                            <button class="myButton" data-toggle='collapse' href="#pve_vid_3T">Partial Volume Estimate Video</button>
+                        
+                            <!-- Collapsable Contents 3T SEG -->
+                            <div class="collapse" id="seg_vid_3T">
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <video height="325" width="380" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
+                                    <source src="videos/tissue-class/3T_seg/3T_seg_sagittal.mp4" type="video/mp4">
+                                </video> 
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <video height="325" width="380" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                    <source src="videos/tissue-class/3T_seg/3T_seg_coronal.mp4" type="video/mp4">
+                                </video> 
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <video height="325" width="380" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                    <source src="videos/tissue-class/3T_seg/3T_seg_axial.mp4" type="video/mp4">
+                                </video> 
+                            </div>
+
+                            <!-- Collapsable Contents 3T PVE -->
+                            <div class="collapse" id="pve_vid_3T">
+                                <br>
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#PVE_CSF_3T">PVE: Cerebrospinal Fluid</a>
+                                            </h4>
+                                        </div>
+                                        <div id="PVE_CSF_3T" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
+                                                    <source src="videos/tissue-class/3T_pve_0_csf/3T_pve_csf_sagittal.mp4" type="video/mp4">
+                                                </video> 
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/3T_pve_0_csf/3T_pve_csf_coronal.mp4" type="video/mp4">
+                                                </video> 
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/3T_pve_0_csf/3T_pve_csf_axial.mp4" type="video/mp4">
+                                                </video> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#PVE_GM_3T">PVE: Grey Matter</a>
+                                            </h4>
+                                        </div>
+                                        <div id="PVE_GM_3T" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
+                                                    <source src="videos/tissue-class/3T_pve_1_gm/3T_pve_gm_sagittal.mp4" type="video/mp4">
+                                                </video> 
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/3T_pve_1_gm/3T_pve_gm_coronal.mp4" type="video/mp4">
+                                                </video> 
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/3T_pve_1_gm/3T_pve_gm_axial.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#PVE_WM_3T">PVE: White Matter</a>
+                                            </h4>
+                                        </div>
+                                        <div id="PVE_WM_3T" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
+                                                    <source src="videos/tissue-class/3T_pve_2_wm/3T_pve_wm_sagittal.mp4" type="video/mp4">
+                                                </video> 
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/3T_pve_2_wm/3T_pve_wm_coronal.mp4" type="video/mp4">
+                                                </video> 
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/3T_pve_2_wm/3T_pve_wm_axial.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+
+                        </div>
+
+                        <!-- 7T -->
+                        <div id="7T_tissue-class" class="tab-pane fade">
+                           <!-- Description -->
+                           <div class="row">
+                                <div class="col-12 col-lg-10 center" style="border-bottom: 2px solid rgb(76, 78, 82)">
+                                    <h2>Tissue Classification</h2>
+                                    <p>
+                                        There are little differences to mention between the 3T and 7T results. So I will use this to talk more about various other details about the methods I used and 
+                                        the process in general. For starters I used the "-N" option in my run of FAST, this prefents the tool from performing running bias field correction. Since 
+                                        I had already done this I didn't feel it necessary to do it again. As for the volume calculation, if I had more data I could use this to make comparisons between subjects 
+                                        or groups for differences in either Grey Matter or White Matter volume. 
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-3"></div>
+                            </div>
+                           <!-- Media -->
+                           <!-- Slideshow container -->
+                           <h2>7T</h2>
+                           <div class="slideshow-container">
+                                <!-- Full-width images with number and caption text-->
+                                <div class="mySlides4 fade in active">
+                                    <h4><em>Pure Segmentation</em></h4>
+                                    <p>
+                                        An example of the processed image is provided below. <b><em>Click</em></b> on the image to see the results of the "hard" segmentation. 
+                                        The image is colored so that the CSF appears Green, the Grey Matter appears Blue, and the White Matter appears Red. You'll notice that there is no 
+                                        gradual change in the coloring, they are either classified/colored as belonging to one or another. Hence why it's called a binary or "hard" segmentation.
+                                    </p><br>
+                                    <img id="7T_tissue-class_seg" class="responsive-two" src="images/tissue_class/7T_seg_underlay.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                     onclick="javascript:changeImg('images/tissue_class/7T_seg_underlay.png','images/tissue_class/7T_seg_overlay.png','7T_tissue-class_seg')"/>
+                                </div>
+
+                                <div class="mySlides4 fade in">
+                                    <h4><em>Partial Volume Estimation</em></h4>
+                                    <p>
+                                        <b><em>Click</em></b> on the image to see the results of the Partial Volume Estimation. The PVE maps are colored such that the Grey Matter (GM) ranges from 
+                                        a Cyan to Dark Blue, cyan being classified as 100% GM and dark blue being a mixture of pirmarily GM and one of the other two tissue types. 
+                                        Similarly the White Matter (WM) ranges from Yellow to Red, such that Yellow areas represent 100% pure WM and Red areas represent a mixture of mostly WM and one or more of the 
+                                        othe two tissue types. Lastly CSF is ranges from light to dark green, the ligher areas being pure CSF and the darker areas being a mixture.
+                                    </p><br>
+                                    <img id="7T_tissue-class_pve" class="responsive-two" src="images/tissue_class/7T_pve_underlay.png" height="450" width="900" style="border: 9px outset rgb(107, 110, 119);"  
+                                     onclick="javascript:changeImg('images/tissue_class/7T_pve_underlay.png','images/tissue_class/7T_pve_overlay.png','7T_tissue-class_pve')"/>
+                                </div>
+                                <!-- Next and previous buttons -->
+                                <a class="prev" onclick="plusSlides(-1,3)">&#10094</a>
+                                <a class="next" onclick="plusSlides(1,3)">&#10095</a>
+                            </div>
+
+                            <br><br>
+                            <!-- Model Box Code -->
+                            <!-- Trigger/Open The Modal -->
+                            <button class="modal-button" href="#Modal-7T-tissue-class_seg">View Code</button>
+
+                            <!-- The Modal -->
+                            <div id="Modal-7T-tissue-class_seg" class="modal">
+
+                                <!-- Modal Content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <span class="close">x</span>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            fast -N -o 7T_N4_BET_FLIRT2MNI 7T_N4_BET_FLIRT2MNI_6DOF.nii.gz  
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Model Box Volume -->
+                            <!-- Trigger/Open The Modal -->
+                            <button class="modal-button" href="#Modal-7T-VolumeCalc_seg">Volume Calculation</button>
+                            
+                            <!-- The Modal -->
+                            <div id="Modal-7T-VolumeCalc_seg" class="modal">
+
+                                <!-- Modal Content -->
+                                <div class="modal-content" style="width:29%">
+                                    <div class="modal-header">
+                                        <span class="close">x</span>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            fslstats 7T/7T_N4_BET_FLIRT2MNI_pve_0.nii.gz -M -V<br>
+                                            fslstats 7T/7T_N4_BET_FLIRT2MNI_pve_1.nii.gz -M -V<br>
+                                            fslstats 7T/7T_N4_BET_FLIRT2MNI_pve_2.nii.gz -M -V<br>
+                                            <br><br>
+
+                                            CSF Volume = 268,469.6 mm Cubed<br>
+                                            GM Volume  = 525,629.8 mm Cubed<br>
+                                            WM Volume  = 583,386.5 mm Cubed
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Collapsable 7T Seg-->
+                            <button class="myButton" data-toggle='collapse' href="#seg_vid_7T">Segmentation Video</button>
+
+                            <!-- Collapsable 7T PVE -->
+                            <button class="myButton" data-toggle='collapse' href="#pve_vid_7T">Partial Volume Estimate Video</button>
+                        
+                            <!-- Collapsable Contents 7T SEG -->
+                            <div class="collapse" id="seg_vid_7T">
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <video height="355" width="360" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
+                                    <source src="videos/tissue-class/7T_seg/7T_seg_sagittal.mp4" type="video/mp4">
+                                </video> 
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <video height="355" width="360" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                    <source src="videos/tissue-class/7T_seg/7T_seg_coronal.mp4" type="video/mp4">
+                                </video> 
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <video height="355" width="360" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                    <source src="videos/tissue-class/7T_seg/7T_seg_axial.mp4" type="video/mp4">
+                                </video> 
+                            </div>
+
+                            <!-- Collapsable Contents 7T PVE -->
+                            <div class="collapse" id="pve_vid_7T">
+                                <br>
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#PVE_CSF_7T">PVE: Cerebrospinal Fluid</a>
+                                            </h4>
+                                        </div>
+                                        <div id="PVE_CSF_7T" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
+                                                    <source src="videos/tissue-class/7T_pve_0_csf/7T_pve_csf_sagittal.mp4" type="video/mp4">
+                                                </video> 
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/7T_pve_0_csf/7T_pve_csf_coronal.mp4" type="video/mp4">
+                                                </video> 
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/7T_pve_0_csf/7T_pve_csf_axial.mp4" type="video/mp4">
+                                                </video> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#PVE_GM_7T">PVE: Grey Matter</a>
+                                            </h4>
+                                        </div>
+                                        <div id="PVE_GM_7T" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
+                                                    <source src="videos/tissue-class/7T_pve_1_gm/7T_pve_gm_sagittal.mp4" type="video/mp4">
+                                                </video> 
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/7T_pve_1_gm/7T_pve_gm_coronal.mp4" type="video/mp4">
+                                                </video> 
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/7T_pve_1_gm/7T_pve_gm_axial.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#PVE_WM_7T">PVE: White Matter</a>
+                                            </h4>
+                                        </div>
+                                        <div id="PVE_WM_7T" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted preload>
+                                                    <source src="videos/tissue-class/7T_pve_2_wm/7T_pve_wm_sagittal.mp4" type="video/mp4">
+                                                </video> 
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/7T_pve_2_wm/7T_pve_wm_coronal.mp4" type="video/mp4">
+                                                </video> 
+                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <video height="323" width="330" style="border: 9px outset rgb(107, 110, 119);" controls muted>
+                                                    <source src="videos/tissue-class/7T_pve_2_wm/7T_pve_wm_axial.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sub-Cortical Segmentation-->
+                <div id="sub-seg" class="tab-pane fade">
+                    <center><h1>Work in Progress, come back later</h1></center>
+                    <img class="center" src="images/Geolytes/Geolyte1.png" alt="Geolyte Place Holder">
+                    <!--
+                    <div class="row">
+                        <div class="col-lg-4 col-xs-4"></div>
+                        <div class="col-lg-4 center col-xs-8">
+                            <div class="btn-group btn-group-lg">
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#3T_sub-seg">&nbsp;&nbsp;&nbsp;&nbsp;3T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#7T_sub-seg">&nbsp;&nbsp;&nbsp;&nbsp;7T&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xs-0"></div>
+                    </div>
+                    -->
+                    <comment><div class="tab-content">
+                        <!-- 3T -->
+                        <div id="3T_sub-seg" class="tab-pane fade in active">
+                            <!-- Description -->
+                            <!-- Media -->
+                        </div>
+   
+                        <!-- 7T -->
+                        <div id="7T_sub-seg" class="tab-pane fade">
+                           <!-- Description -->
+                           <!-- Media -->
+                        </div>
+                    </div></comment>
+                </div>   
+            </div>
+        </div>
+    </div>
+</section>
+<!-- endregion Structural-->
+
+
+<!-- Functional -->
+<section class="center" id="functional-section">
+    <div class="container">
+        <!-- Description -->
+        <div class="row">
+            <!-- Description -->
+            <div class="col-12 col-lg-7 col-md-push-5">
+                <h1>Functional Imaging</h1>
+                <br>
+
+                <p>
+                    This section will present functional data collected on myslef at USC, specifically resting state data. Structural data was processed using the 
+                    methods described in the Structural section (Skull Striping, Bias Field Correction, etc). Functional data was corrected for EPI distortions using 
+                    Blip-Up and Blip-Down Field Maps following the <a href="https://lcni.uoregon.edu/kb-articles/kb-0003" target="_blank" rel="noopener">Instructions</a> 
+                    provided by The Lewis Center for Neuroimaging at the University of Oregon. Both structural and functional data were registered to MNI space. 
+                    An independent component analysis was run using FSL's <a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/MELODIC" target="_blank" rel="noopener">MELODIC</a>, 
+                    and FSL's MELODIC viewer was used to label each Independent Component. 
+                    
+                </p>
+            </div>
+
+            <!-- Media -->
+            <div class="col-12 col-lg-5 col-md-pull-7">
+                <img class="responsive" height="300" width="400" style="border: 9px outset rgb(107, 110, 119);" src="images/fMRI_DMN_lightbox.png" alt="default mode network">
+            </div>
+        </div>
+        <br>
+        <a data-toggle="collapse" id="view-hide-func" data-target="#functional-content" onClick="javascript:viewHideCollapse('View', 'Hide', 'view-hide-func')">View</a>
+
+        <!-- Content -->
+        <div class="row collapse" id="functional-content">
+            <center><h1 class="center">Work in Progress, come back later</h1></center>
+            <img class="center" src="images/Geolytes/Geolyte1.png" alt="Geolyte Place Holder"> 
+
+
+            <!-- Button Tool Bar-->
+            <!--
+            <div class="btn-group btn-group-lg">
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab1">Tab 1</a>
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab2">Tab 2</a>
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab3">Tab 3</a>
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab4">Tab 4</a>
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab5">Tab 5</a>
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab6">Tab 6</a>
+            </div> -->
+
+            <!-- Tab Content -->
+            <!-- <div class="tab-content"> -->
+                <!-- Tab 1 -->
+
+                <!-- Tab 2 -->
+                
+                <!-- Tab 3 -->
+                
+                <!-- Tab 4 -->
+                
+                <!-- Tab 5 -->
+                
+                <!-- Tab 6 -->
+            <!-- </div> -->
+        </div>
+    </div>
+</section>
+<!-- endregion Functional -->
+
+
+<!-- Diffusion -->
+<section class="center" id="diffusion-section">
+    <div class="container">
+        <!-- Description -->
+        <div class="row">
+            <!-- Description -->
+            <div class="col-12 col-lg-7 center">
+                <h1>Diffusion Imaging</h1>
+                <br>
+
+                <p>
+                    This section will present diffusion weighted data collected on myself at USC. Non-Diffusion weighted B0 images 
+                    were prepared using FLS <a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Fslutils" target="_blank" rel="noopener">fslmerge</a>, 
+                    <a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Fslutils" target="_blank" rel="noopener">fslmaths</a>, and 
+                    <a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/topup" target="_blank" rel="noopener">topup</a>. 
+                    Diffusion Data was corrected for susceptibility distortions, EDDY currents, and movement using 
+                    <a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/eddy" target="_blank" rel="noopener">eddy</a>. 
+                    Fractional Anisotropy (FA) and Mean Diffusivity (MD) images were generated using fsl's 
+                    <a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FDT/UserGuide#DTIFIT" target="_blank" rel="noopener">dtifit</a>, 
+                    with which I was able to generate tensors. I was also able to use fsl to generate an FA skeleton that could be used for 
+                    Tract-Based Spatial Statistics (TBSS). Lastly using <a href="https://dsi-studio.labsolver.org/" target="_blank" rel="noopener">DSI Studio</a>, 
+                    I was able to produce a estimated whole brain reconstruciton of the white matter architacture of my brain, seen on the right. 
+                </p>
+            </div>
+
+            <!-- Media -->
+            <div class="col-12 col-lg-5 center">
+                <video class="responsive" height="325" width="400" style="border: 9px outset rgb(107, 110, 119);" autoplay loop muted>
+                    <source src="videos/gqi.odf.whole.brain.fiber.track.rotation.movie.mp4" type="video/mp4">
+                </video> 
+            </div>
+        </div>
+        <br>
+        <a data-toggle="collapse" id="view-hide-diff" data-target="#diffusion-content" onClick="javascript:viewHideCollapse('View', 'Hide', 'view-hide-diff')">View</a>
+
+        <!-- Content -->
+        <div class="row collapse" id="diffusion-content">
+            <center><h1>Work in Progress, come back later</h1></center>
+            <img class="center" src="images/Geolytes/Geolyte1.png" alt="Geolyte Place Holder">
+
+            <!-- Button Tool Bar-->
+            <!----
+            <div class="btn-group btn-group-lg">
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab1">Tab 1</a>
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab2">Tab 2</a>
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab3">Tab 3 </a>
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab4">Tab 4</a>
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab5">Tab 5</a>
+                <a class="btn btn-primary btn-lg" data-toggle="pill" href="#tab6">Tab 6</a>
+            </div> -->
+
+            <!-- Tab Content -->
+            <!-- <div class="tab-content"> -->
+                <!-- Tab 1 -->
+
+                <!-- Tab 2 -->
+                
+                <!-- Tab 3 -->
+                
+                <!-- Tab 4 -->
+                
+                <!-- Tab 5 -->
+                
+                <!-- Tab 6 -->
+            <!-- </div> -->
+        </div>
+    </div>
+</section>
+<!-- endregion Diffusion -->
+
+
+
+<!-- #region Contact Info-->
+<section class="center" id="contact">
+    <footer class="container">
+        <div class="row">
+            <div class="col-12 col-lg-5">
+                <h1>Contact<br><br></h1>
+            </div>
+            
+            <div class="col-12 col-lg-7">
+                <ul class="fa-ul">
+                    <li style="font-family: Arial, Helvetica, sans-serif;font-weight: bold;">
+                        <i class="fa-li fas fa-envelope contact-icon" aria-hidden="true"></i>
+                        <a href="mailto:stephengonz151@gmail.com">stephengonz151@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fa-li fas fa-map-marker contact-icon" aria-hidden="true"></i>
+                        1200 E. California Blvd., Pasadena, CA 91125
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-phone contact-icon" aria-hidden='true'></i>
+                        Office: 626-395-8111
+                    </li>
+                    <li>
+                        <i class="fa-li fas fa-inbox contact-icon" aria-hidden="true"></i>
+                        MC 228-77
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</section>
+<!-- endregion -->
+
+<!-- Smooth Scroll -->
+<script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+    
+        // Prevent default anchor click behavior
+        event.preventDefault();
+    
+        // Store hash
+        var hash = this.hash;
+    
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function(){
+    
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+          });
+        } // End if
+      });
+    })
+</script>
+
+<!-- Change Image on Click -->
+<script>
+    function changeImg(img1,img2,imgId){
+        var image = document.getElementById(imgId);
+        if (image.src.match(img1)){
+            image.src = img2;
+        } else {
+            image.src = img1
+        }
+    }
+</script>
+
+<!-- View Hide Collapable -->
+<script>
+    function viewHideCollapse(text1,text2,vhcID){
+        var element = document.getElementById(vhcID);
+        if (element.innerHTML === text1) element.innerHTML = text2;
+        else {
+            element.innerHTML = text1;
+        }
+    }
+</script>
+
+
+<!-- Slide Show -->
+<script>
+    var slideIndex = [1,1,1,1];
+    var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4"]
+    showSlides(1, 0);
+    showSlides(1, 1);
+    showSlides(1, 2);
+    showSlides(1, 3);
+    
+    function plusSlides(n, no) {
+      showSlides(slideIndex[no] += n, no);
+    }
+    
+    function showSlides(n, no) {
+      var i;
+      var x = document.getElementsByClassName(slideId[no]);
+      if (n > x.length) {slideIndex[no] = 1}    
+      if (n < 1) {slideIndex[no] = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex[no]-1].style.display = "block";  
+    }
+</script>
+
+<!-- Box Modal -->
+<script>
+    // Get the button that opens the modal
+    var btn = document.querySelectorAll("button.modal-button");
+
+    // All page modals
+    var modals = document.querySelectorAll('.modal');
+
+    // Get the <span> element that closes the modal
+    var spans = document.getElementsByClassName("close");
+
+    // When the user clicks the button, open the modal
+    for (var i = 0; i < btn.length; i++) {
+    btn[i].onclick = function(e) {
+        e.preventDefault();
+        modal = document.querySelector(e.target.getAttribute("href"));
+        modal.style.display = "block";
+    }
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    for (var i = 0; i < spans.length; i++) {
+    spans[i].onclick = function() {
+        for (var index in modals) {
+        if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+        }
+    }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+        for (var index in modals) {
+        if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+        }
+        }
+    }
+</script>
+</body>
+</html>
+

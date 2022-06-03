@@ -9,6 +9,153 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link rel="icon" href="images/tab-icon/favicon-32x32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=0.45">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="projects.css">
+</head>  
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<!-- #region Navbar-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            <a class="navbar-brand" href="#" style="color: white !important;font-weight: bold;font-size: 26px;">Stephen A Gonzalez</a>
+        </div>    
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav" style="font-size:20px;">
+                <li><a href="index.html">Home</a></li>
+                <!--<li><a href="#experience">Experience</a></li>-->
+                <!--<li><a href="index.html#publications">Publications</a></li>-->
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="MRI-Processing.html">MRI</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!--<li><a href="files/Stephen_Gonzalez_CV.pdf">CV</a></li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- endregion Navbar-->
+
+<!-- #region Carousel-->
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="background-color:var(--light)">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <!-- <li data-target="#myCarousel" data-slide-to="3"></li> -->
+    </ol>
+
+    <!-- Wrapper for slides-->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="images/carousel/MIP.png" alt="MIP image">
+        </div>
+
+        <div class="item">
+            <img src="images/carousel/7T_struck3.png" alt="skull sctriped 7T images">
+        </div>
+
+        <div class="item">
+            <img src="images/carousel/DTI_V1.png" alt="Diffusion color map">
+        </div>
+        <!--
+        <div class="item">
+            <img src="images/carousel/cortico_spinal_tract.png" alt="cortico spinal tractography">
+        </div> -->
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- endregion Carousel-->
+
+<!-- #region Intro/Description -->
+<!--
+<section class="center" id="intro">
+    <div class="container">
+        <div class="row">
+             Description 
+            <div class="col-12 col-lg-7 center">
+                <h1>Projects</h1>
+                <br>
+
+                <p>
+                    The purpose of this section is to present major projects I have worked on in more detail. 
+                    
+                </p>
+                
+            </div>
+        </div>
+    </div> -->
+
+</section>
+<!-- endregion Intro/Description -->
+
+<!-- #region Web Development -->
+<section class="center" id="web-development">
+    <div class="container">
+        <div class="row">
+            <!-- Description -->
+            <div class="col-12 col-lg-7">
+                <h1>Web Development</h1>
+                <br>
+
+                <p>
+                    A project that I work on during my free time is developing this website. The current state of this site is very sophisticated, 
+                    but that wasn't how it started. Here I've provided early examples of my work in web design to document how my skills have evolved 
+                    and grown over time, and to demonstrate how this version of the site came to fruition. 
+                </p>
+            </div>
+
+            <!-- Media -->
+            <div class="col-12 col-lg-5">
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <div id="travel" class="tab-pane fade in active">
+                        <a href="pokemon-project/visit_Kanto.html" target="_blank" rel="noopener">
+                            <img class="responsive" height="325" width="400" style="border: 9px outset rgb(107, 110, 119);" src="images/visiting-kanto-screen.png" alt="Visiting Kanto Web Page screenshot">
+                        </a>
+                    </div>
+                    
+                    <div id="site-v1" class="tab-pane fade in">
+                        <a href="site-version-1/index.html" target="_blank" rel="noopener">
+                            <img class="responsive" height="325" width="400" style="border: 9px outset rgb(107, 110, 119);" src="images/site-V1-screen.png" alt="Personal Site Version 1 screenshot">    
+                        </a>
+                    </div>
+                </div>
+                <br>
+                <!-- Button Tool Bar-->
+                <div class="row">
+                    <div class="col-lg-2 col-xs-2"></div>
+                    <div class="col-lg-8 center col-xs-8">
+                        <div class="btn-group btn-group-lg">
+                            <a class="btn btn-primary btn-lg" data-toggle="pill" href="#travel">Travel Page</a>
+                            <a class="btn btn-primary btn-lg" data-toggle="pill" href="#site-v1">Site Version 1.0</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-xs-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- endregion Web Development -->
+
     <meta name="viewport" content="width=device-width"> 
 </head>
 <style>
@@ -129,6 +276,180 @@
         </table>    
     </footer>
 
-    <!-- endregion -->
+<!-- #region MRI Processing -->
+<section class="center" id="mri-processing">
+    <div class="container">
+        <div class="row">
+            <!-- Description -->
+            <div class="col-12 col-lg-7 col-md-push-5">
+                <h1>MRI Processing</h1>
+                <br>
+
+                <p>
+                    I studied MRI based Neuroimaging for scientific research at the University of Southern California's 
+                    Keck School of Medicine. My training involved utlizing MRI to research the structural and functional architecture of the 
+                    human brain using various imaging modalities, study designs and analytical approaches. 
+                    This section demonstrates the skills I learned in <a href="MRI-Processing.html" target="_blank" rel="noopener">MRI Processing and Visualizaiton</a> using 37 and 7T scans.
+                    
+                </p>
+                
+            </div>
+            
+            <!-- Media -->
+            <div class="col-12 col-lg-5 col-md-pull-7">
+                <a href="MRI-Processing.html" target="_blank" rel="noopener">
+                    <video class="responsive" height="325" width="400" style="border: 9px outset rgb(107, 110, 119);" autoplay loop muted>
+                        <source src="videos/gqi.odf.whole.brain.fiber.track.rotation.movie.mp4" type="video/mp4">
+                    </video> 
+                </a>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- endregion MRI Processing -->
+
+
+<!-- #region Code Demos -->
+<section class="center" id="code-demo">
+    <div class="container">
+        <div class="row">
+            <!-- Description -->
+            <div class="col-12 col-lg-7">
+                <h1>Code Demo's</h1>
+                <br>
+                <p>
+                    This section provides a snapshot of the programming projects I have worked on and this skills I have optained in programming for scientific research. 
+                    These include a variety of examples ranging from behavioral tasks to data visualization. The first example is a behavioral task 
+                    for an experiment investigating human decision making. The task records participants decisions, reaction times, as well as eye-tracking data, and was 
+                    programmed in Matlab. The next example demonsgtrates some graphs vizualising the data from the eye-tracking task, and was programmed in R. 
+                    The last exmaple is a random number generator that generates unique subject ID's for experiments, and was also programmed in R. 
+                </p>
+            </div>
+
+
+            <!-- Media -->
+            <div class="col-12 col-lg-5">
+                <div class="tab-content">
+                    <div id="task-demo" class="tab-pane fade in active">
+                        <a href="https://github.com/sgonzalez122/aDDM_win_loss_lottery/tree/Task-Demo" target="_blank" rel="noopener">
+                            <img class="responsive" height="325" width="400" style="border: 9px outset rgb(107, 110, 119);" src="images/win_choice.png" alt="lottery stimulus">    
+                        </a>
+                    </div>
+                    
+                    <div id="graph-demo" class="tab-pane fade in">
+                        <a href="https://github.com/sgonzalez122/graph-examples" target="_blank" rel="noopener">
+                            <img class="responsive" height="325" width="400" style="border: 9px outset rgb(107, 110, 119);" src="images/graphs.jpg" alt="lottery graphs">    
+                        </a>
+                    </div> 
+
+                    <div id="SID-gen" class="tab-pane fade in">
+                        <a href="https://github.com/sgonzalez122/SID_RNG" target="_blank" rel="noopener">
+                            <img class="responsive" height="325" width="400" style="border: 9px outset rgb(107, 110, 119);" src="images/dice.png" alt="Dice">    
+                        </a>
+                    </div>
+                </div>
+                <br>
+                <!-- Button Tool Bar-->
+                <div class="row">
+                    <div class="btn-group btn-group-lg">
+                        <a class="btn btn-primary btn-lg" data-toggle="pill" href="#task-demo">Task Demo</a>
+                        <a class="btn btn-primary btn-lg" data-toggle="pill" href="#graph-demo">Graph Demo</a>
+                        <a class="btn btn-primary btn-lg" data-toggle="pill" href="#SID-gen">Subject ID Generator</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- endregion Code Examples -->
+
+
+<!-- #region Contact Info-->
+<section class="center" id="contact">
+    <footer class="container">
+        <div class="row">
+            <div class="col-12 col-lg-5">
+                <h1>Contact<br><br></h1>
+            </div>
+            
+            <div class="col-12 col-lg-7">
+                <ul class="fa-ul">
+                    <li style="font-family: Arial, Helvetica, sans-serif;font-weight: bold;">
+                        <i class="fa-li fas fa-envelope contact-icon" aria-hidden="true"></i>
+                        <a href="mailto:stephengonz151@gmail.com">stephengonz151@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fa-li fas fa-map-marker contact-icon" aria-hidden="true"></i>
+                        1200 E. California Blvd., Pasadena, CA 91125
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-phone contact-icon" aria-hidden='true'></i>
+                        Office: 626-395-8111
+                    </li>
+                    <li>
+                        <i class="fa-li fas fa-inbox contact-icon" aria-hidden="true"></i>
+                        MC 228-77
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</section>
+
+
+<!-- Smooth Scroll -->
+<script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+    
+        // Prevent default anchor click behavior
+        event.preventDefault();
+    
+        // Store hash
+        var hash = this.hash;
+    
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function(){
+    
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+          });
+        } // End if
+      });
+    })
+</script>
+
+
+<!-- Slide Show -->
+<script>
+    var slideIndex = [1,1,1,1];
+    var slideId = ["mySlides1", "mySlides2"]
+    showSlides(1, 0);
+    showSlides(1, 1);
+    
+    function plusSlides(n, no) {
+      showSlides(slideIndex[no] += n, no);
+    }
+    
+    function showSlides(n, no) {
+      var i;
+      var x = document.getElementsByClassName(slideId[no]);
+      if (n > x.length) {slideIndex[no] = 1}    
+      if (n < 1) {slideIndex[no] = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex[no]-1].style.display = "block";  
+    }
+</script>
 </body>
+
 </html>
